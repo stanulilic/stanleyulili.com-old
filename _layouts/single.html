@@ -42,6 +42,9 @@ layout: default
             </nav>
           </aside>
         {% endif %}
+        {% if page.feature_image %}
+      <img src="{{ page.feature_image | relative_url }}" alt="" class="lazyload entry-image fade-in">
+        {% endif %}
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>

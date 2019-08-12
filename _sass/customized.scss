@@ -22,6 +22,27 @@
         }
 }
 
+.page__content img{
+        margin: 0 0 1.3em;
+}
+
+.list__item {    border: 1px solid #f2f3f3;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-bottom: 1.3rem;
+}
+.items_modified {    border: 0;
+        padding: 0;
+        border-radius: 0;
+        margin-bottom: .3rem;
+}
+
+.items_modified a {
+        font-size: 17px;
+}
+.entry__image img {
+        margin: 0.9rem 0 1.3rem 0;
+}
 .page__footer {
         border-top: 1px solid #f2f3f3;
         background: #fff;
@@ -29,3 +50,5 @@
                 text-align: center;
         }
 }
+
+

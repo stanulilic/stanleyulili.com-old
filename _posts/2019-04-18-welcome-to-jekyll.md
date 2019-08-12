@@ -3,6 +3,8 @@ title: "Welcome to Jekyll!"
 date: 2019-04-18T15:34:30-04:00
 feature_image:  /assets/images/hello.png
 featured_image_alt: welcome to jekyll blog
+header:
+  og_image: /assets/images/hello.png
 categories:
   - blog
 tags:
