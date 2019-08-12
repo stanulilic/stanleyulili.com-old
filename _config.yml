@@ -26,6 +26,8 @@ search: true
 markdown: kramdown
 # remote_theme: mmistakes/minimal-mistakes
 theme: minimal-mistakes-jekyll
+# repository
+repository: stanulilic/stanleyulili.com
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
