@@ -28,6 +28,7 @@ markdown: kramdown
 theme: minimal-mistakes-jekyll
 # repository
 repository: stanulilic/stanleyulili.com
+url: "https://www.stanleyulili.com"
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
@@ -114,3 +115,7 @@ comments:
   provider: "disqus"
   disqus:
     shortname: "stanleyulili"
+
+
+google-site-verification: "a7bVs9AJyBUrtI7ohUE8S7yS00QUUppjNJBMn0pfRUs"
+google_analytics: "UA-130192148-2"
