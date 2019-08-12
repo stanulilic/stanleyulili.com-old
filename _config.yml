@@ -118,4 +118,7 @@ comments:
 
 
 google-site-verification: "a7bVs9AJyBUrtI7ohUE8S7yS00QUUppjNJBMn0pfRUs"
-google_analytics: "UA-130192148-2"
+analytics:
+  provider: "google"
+  google:
+    tracking_id: UA-130192148-2 
