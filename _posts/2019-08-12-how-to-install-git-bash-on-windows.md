@@ -67,14 +67,18 @@ Next, select the default editor for Git to use. Choose the one you like and clic
 
 Choose the option you want depending on where you want to use Git and click "Next".
 
-Select "Use Git from Git Bash only" option if want to use Git and Unix commands from Git Bash only. This means that you won't be able to run Git commands such as `git status` on Windows Command Prompt or Powershell. They will only be found on Git Bash.
+Select **"Use Git from Git Bash only"** option if want to use Git and Unix commands from Git Bash only. This means that you won't be able to run Git commands such as `git status` on Windows Command Prompt or Powershell. They will only be found on Git Bash.
 
-Select "Git from the command line and also from 3rd-party software" option if you want to use git on Windows Command Prompt or Powershell. Note that Unix tools won't work on Command Prompt or Powershell but only Git commands will work. 
+Select **"Git from the command line and also from 3rd-party software"** option if you want to use git on Windows Command Prompt or Powershell.
 
-tip: If you need
-Unix tools, you will have to open the Git Bash. So go ahead with this option if this what you want.
- 
-Select "Use Git and optional Unix tools from the Command Prompt" option if you want to use both Git and Unix commands that come with Git Bash on Windows Command Prompt or Powershell. This option will override some default Windows Command Prompt tools like find and sort. I don't use CMD or Powershell that much, so I will go ahead with this option by clicking "Next".
+**Notice:**  Unix tools won't work on Command Prompt or Powershell with this option, but only Git commands will work.
+{: .notice--warning}  
+
+**Tip:** If you need
+Unix tools, you will have to open the Git Bash. So go ahead with this option if that is what you want. 
+{: .notice--info}
+
+Select **"Use Git and optional Unix tools from the Command Prompt"** option if you want to use both Git and Unix commands that come with Git Bash on Windows Command Prompt or Powershell. This option will override some default Windows Command Prompt tools like find and sort. I don't use CMD or Powershell that much, so I will go ahead with this option by clicking "Next".
 
 ![Adjust Path Environment](/assets/images/posts/2019-08-13-install-git-bash/path-environment.jpg)
 
