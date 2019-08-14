@@ -122,3 +122,15 @@ analytics:
   provider: "google"
   google:
     tracking_id: UA-130192148-2 
+
+# Social Sharing
+twitter:
+  username               : &twitter "stanleyulili"
+
+# For specifying social profiles, used in _includes/seo.html
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
+    - "https://twitter.com/stanleyulili"
