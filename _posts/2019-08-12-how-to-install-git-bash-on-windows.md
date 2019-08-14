@@ -1,6 +1,8 @@
 ---
 feature_image: /assets/images/posts/2019-08-13-install-git-bash/featured-image.jpg
 featured_image_alt: featured-image
+excerpt: In this tutorial, we are going to learn how to install Git Bash on Windows. Git Bash for windows is a package that comprises of `git` and `bash`.
+
 categories:
  - Git
 tags:
@@ -9,7 +11,9 @@ tags:
  - bash
 ---
 ## Introduction
-Git Bash for windows is a package that comprises of `git` and `bash`.
+In this tutorial, we are going to learn how to install Git Bash on Windows.
+
+ Git Bash for windows is a package that comprises of `git` and `bash`.
 
 **Git** is an open-source version control system for tracking source code changes when developing software. It keeps a commit history which allows you to revert to a stable state in case you mess up your code. Git also allows multiple developers to collaborate on the same code base.
 
@@ -67,6 +71,8 @@ Next, select the default editor for Git to use. Choose the one you like and clic
 
 Choose the option you want depending on where you want to use Git and click "Next".
 
+![Adjust Path Environment](/assets/images/posts/2019-08-13-install-git-bash/path-environment.jpg)
+
 Select **"Use Git from Git Bash only"** option if want to use Git and Unix commands from Git Bash only. This means that you won't be able to run Git commands such as `git status` on Windows Command Prompt or Powershell. They will only be found on Git Bash.
 
 Select **"Git from the command line and also from 3rd-party software"** option if you want to use git on Windows Command Prompt or Powershell.
@@ -78,9 +84,8 @@ Select **"Git from the command line and also from 3rd-party software"** option i
 Unix tools, you will have to open the Git Bash. So go ahead with this option if that is what you want. 
 {: .notice--info}
 
-Select **"Use Git and optional Unix tools from the Command Prompt"** option if you want to use both Git and Unix commands that come with Git Bash on Windows Command Prompt or Powershell. This option will override some default Windows Command Prompt tools like find and sort. I don't use CMD or Powershell that much, so I will go ahead with this option by clicking "Next".
+Select **"Use Git and optional Unix tools from the Command Prompt"** option if you want to use both Git and Unix commands that come with Git Bash on Windows Command Prompt or Powershell. This option will override some default Windows Command Prompt tools like find and sort. I don't use CMD or Powershell that much to worry about that. So I will go ahead with this option by clicking "Next".
 
-![Adjust Path Environment](/assets/images/posts/2019-08-13-install-git-bash/path-environment.jpg)
 
 **Step 9:**
 
