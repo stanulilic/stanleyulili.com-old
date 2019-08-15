@@ -24,34 +24,47 @@ In this tutorial, we are going to learn how to install Git Bash on Windows.
 ## Download Git Bash
 **Step 1:**
 
-Download the latest version of git bash from their official website: https://git-scm.com/
+Download the latest version of git bash from their official website: [https://git-scm.com/](https://git-scm.com/)
 
 ![git bash official page](/assets/images/posts/2019-08-13-install-git-bash/official-homepage.jpg)
 
+Click "Download for windows" button.  
+
 **Step 2:**
 
-Click "Download for windows". You will then be redirected to a page which lets you know that the download it's about to start. 
+Next, you will  be redirected to a page that lets you know that you are about to start downloading.
 
 ![git bash download page](/assets/images/posts/2019-08-13-install-git-bash/download-starting.jpg) 
 
-If the download doesn't start, click on the "click here to download manually" link.
+If all goes well, the download should start automatically.
+
+**Tip:** If the download doesn't start, click on the "click here to download manually" link.
+{: .notice--info}
+
+![download bash](/assets/images/posts/2019-08-13-install-git-bash/permission.jpg) 
+
+Click on "Save File" to start downloading the executable.
+
 
 ## Install Git Bash
 **Step 3:**
 
-Once you have downloaded the executable file. Click on the executable and run the installer. Click "Next" after you have read the license
+Once you have downloaded the Git Bash executable, click it to run the installer.
 
 ![accept license](/assets/images/posts/2019-08-13-install-git-bash/accept-license.jpg)
 
+Click "Next" after you have read the license
+
+
 **Step 4:**
 
-Next, select the location you want to install git bash. I would recommend you just leave the default option as it is, and click "Next".
+Next, select the location you want to install Git Bash. I would recommend you just leave the default option as it is, and click "Next".
 
 ![choose default](/assets/images/posts/2019-08-13-install-git-bash/installation-directory.jpg)
 
 **Step 5:**
 
-Choose the components you want to install, or you can just proceed with the default options and click "Next". Personally, I prefer selecting the "Additional icons" component which creates a Git Bash shortcut on the desktop.
+Choose the components you want to install, or you can just proceed with the default options and click "Next". I prefer selecting the "Additional icons" component which creates a Git Bash shortcut on the desktop.
 
 ![select components](/assets/images/posts/2019-08-13-install-git-bash/select-components.jpg)
 
@@ -75,18 +88,18 @@ Choose the option you want depending on where you want to use Git and click "Nex
 
 ![Adjust Path Environment](/assets/images/posts/2019-08-13-install-git-bash/path-environment.jpg)
 
-Select **"Use Git from Git Bash only"** option if want to use Git and Unix commands from Git Bash only. This means that you won't be able to run Git commands such as `git status` on Windows Command Prompt or Powershell. They will only be found on Git Bash.
+Select **"Use Git from Git Bash only"** option if want to run Git and Bash commands from Git Bash only. This means that you won't be able to run Git commands such as `git status` on Windows Command Prompt or Powershell. They will only be found on Git Bash.
 
-Select **"Git from the command line and also from 3rd-party software"** option if you want to use git on Windows Command Prompt or Powershell.
+Select **"Git from the command line and also from 3rd-party software"** option if you want to run Git commands on Windows Command Prompt or Powershell.
 
-**Notice:**  Unix tools won't work on Command Prompt or Powershell with this option, but only Git commands will work.
+**Notice:**  Bash commands won't work on Command Prompt or Powershell with this option, but only Git commands will work.
 {: .notice--warning}  
 
 **Tip:** If you need
-Unix tools, you will have to open the Git Bash terminal. So go ahead with this option if that is what you want. 
+run bash commands, you will have to open the Git Bash. So go ahead with this option if that is what you want. 
 {: .notice--info}
 
-Select **"Use Git and optional Unix tools from the Command Prompt"** option if you want to use both Git and Unix commands that come with Git Bash on Windows Command Prompt or Powershell. This option will override some default Windows Command Prompt tools like find and sort. I don't use CMD or Powershell that much to worry about that. So I will go ahead with this option by clicking "Next".
+Select **"Use Git and optional Unix tools from the Command Prompt"** option if you want to use both Git and Bash commands on Windows Command Prompt or Powershell. This option will override some default Windows Command Prompt tools like find and sort. I don't use CMD or Powershell that much to worry about that. So I will go ahead with this option by clicking "Next".
 
 
 **Step 9:**
@@ -121,7 +134,7 @@ Enable experimental options if you want. Enabling them allows you to try out new
 
 **Step 14:**
 
-Now, wait for a few minutes as the Setup wizard installs Git on your computer.
+Now, wait for a few minutes as the Setup Wizard installs Git on your computer.
 
 ![Setup wizard](/assets/images/posts/2019-08-13-install-git-bash/installing.jpg)
 
@@ -131,7 +144,7 @@ After the installation has finished, check the "Launch Git Bash" and click "Fini
 
 ![finish installation](/assets/images/posts/2019-08-13-install-git-bash/completed-installation.jpg)
 
-The Git Bash terminal will now open and you will be able to enter Git and Unix commands.
+The Git Bash terminal will now open and you will be able to enter Git and Bash commands.
 
 ![git bash opened](/assets/images/posts/2019-08-13-install-git-bash/git-bash.jpg)
 
