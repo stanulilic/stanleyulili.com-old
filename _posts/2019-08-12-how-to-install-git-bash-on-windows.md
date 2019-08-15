@@ -3,7 +3,7 @@ header:
   teaser: /assets/images/posts/2019-08-13-install-git-bash/featured-image.jpg
 feature_image: /assets/images/posts/2019-08-13-install-git-bash/featured-image.jpg
 featured_image_alt: featured-image
-excerpt: In this tutorial, we are going to learn how to install Git Bash on Windows. Git Bash for windows is a package that comprises of `git` and `bash`.
+excerpt: In this tutorial, we are going to learn how to install Git Bash on Windows. Git Bash for Windows is a package that comprises of `git` and `bash`.
 
 categories:
  - Git
@@ -15,24 +15,24 @@ tags:
 ## Introduction
 In this tutorial, we are going to learn how to install Git Bash on Windows.
 
- Git Bash for windows is a package that comprises of `git` and `bash`.
+ Git Bash for Windows is a package that comprises of `git` and `bash`.
 
 **Git** is an open-source version control system for tracking source code changes when developing software. It keeps a commit history which allows you to revert to a stable state in case you mess up your code. Git also allows multiple developers to collaborate on the same code base.
 
-**Bash** is a Unix command-line shell. The name is an acronym for the 'Bourne-Again Shell'. It comes with useful Unix commands like cat, ssh, SCP, etc., which are not usually found on windows.
+**Bash** is a Unix command-line shell. The name is an acronym for the 'Bourne-Again Shell'. It comes with useful Unix commands like cat, ssh, SCP, etc., which are not usually found on Windows.
 
 ## Download Git Bash
 **Step 1:**
 
-Download the latest version of git bash from their official website: [https://git-scm.com/](https://git-scm.com/)
+Download the latest version of Git Bash from their official website: [https://git-scm.com/](https://git-scm.com/)
 
 ![git bash official page](/assets/images/posts/2019-08-13-install-git-bash/official-homepage.jpg)
 
-Click "Download for windows" button.  
+Click the "Download for windows" button.  
 
 **Step 2:**
 
-Next, you will  be redirected to a page that lets you know that you are about to start downloading.
+Next, you will be redirected to a page that lets you know that you are about to start downloading.
 
 ![git bash download page](/assets/images/posts/2019-08-13-install-git-bash/download-starting.jpg) 
 
@@ -53,7 +53,7 @@ Once you have downloaded the Git Bash executable, click it to run the installer.
 
 ![accept license](/assets/images/posts/2019-08-13-install-git-bash/accept-license.jpg)
 
-Click "Next" after you have read the license
+Click "Next" after you have read the license.
 
 
 **Step 4:**
@@ -116,7 +116,7 @@ Select how Git should treat line endings in text files. It's probably safe to go
 
 **Step 11:**
 
-Next, select the terminal emulator you want Git Bash to use. I will proceed with default option "Use MinTTY(the default terminal of MSYS2) and click "Next".
+Next, select the terminal emulator you want Git Bash to use. I will proceed with the default option "Use MinTTY(the default terminal of MSYS2) and click "Next".
 
 ![choose terminal emulator](/assets/images/posts/2019-08-13-install-git-bash/terminal-emulator.jpg)
 
