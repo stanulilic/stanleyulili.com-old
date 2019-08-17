@@ -15,7 +15,7 @@ tags:
 ## Introduction
 In this tutorial, we are going to learn how to install Git Bash on Windows.
 
- Git Bash for Windows is a package that comprises of `git` and `bash`.
+ Git Bash for Windows is a package that includes `git` and `bash`.
 
 **Git** is an open-source version control system for tracking source code changes when developing software. It keeps a commit history which allows you to revert to a stable state in case you mess up your code. Git also allows multiple developers to collaborate on the same code base.
 
