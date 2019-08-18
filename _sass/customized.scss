@@ -55,6 +55,12 @@
         font-size: 16px;
 }
 
+.page__related {
+        .entry__image, .archive__item-excerpt {
+                display: none;
+        }
+}
+
 /*
 ------------------------------------
 MAILCHIMP STYLES
