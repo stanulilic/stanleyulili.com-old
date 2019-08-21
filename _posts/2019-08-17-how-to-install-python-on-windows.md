@@ -48,7 +48,7 @@ Click on the **Close** button to close the setup window.
 
 Before we call it quits, let us verify that Python has been successfully installed.
 
-1\. Open the **Run** dialog box by pressing **Windows** key and the **R** key at the same time.
+1\. Open the **Run** dialog box by pressing **Windows logo** key and the **R** key at the same time.
 
 ![open cmd](/assets/images/posts/2019-08-17-install-python-on-windows/run.jpg)
 
