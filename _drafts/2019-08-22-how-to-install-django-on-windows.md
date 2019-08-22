@@ -12,12 +12,13 @@ tags:
  - windows
  - bash
 toc: true;
+toc_sticky: true
 toc_label: "Installing Django on Windows"
 ---
 
 The ultimate to installing Django on windows
 
-This tutorial focuses on Installing Django on Windows 7,8,10. It comes in two parts, the first part focuses on installing Django with windows Command Prompt and Powershell. The second half focuses on installing Django on Windows Git bash terminal.
+This tutorial focuses on Installing Django on Windows 7,8,10. It comes in two parts, the first part focuses on installing Django on windows Command Prompt and Powershell. The second half focuses on installing Django on Windows Git bash terminal.
 
 ## Install Python
 Before you install Django, you must make sure that you have installed Python. You can checkout this guide: [how to install python on windows]() to learn how to install Python on Windows.
