@@ -50,7 +50,7 @@ This command will allow you to run scripts that are on your local computer(unsig
  ![execution policy change](/assets/images/posts/2019-08-22-running-scripts-is-disabled-on-this-system-powershell/execution-policy-change.jpg)
 
 
-**Step 4**: Close the Powershell admin window and  go back to your Powershell Window where you got the error and **run the commmand again**(the one that gave the error).
+**Step 4**: Close the Powershell admin window and  go back to your Powershell Window where you got the error and **run the commmand again**.
 
  ![virtualenv works](/assets/images/posts/2019-08-22-running-scripts-is-disabled-on-this-system-powershell/virtualenv-works.jpg)
 
