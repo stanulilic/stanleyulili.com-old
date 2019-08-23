@@ -30,8 +30,7 @@ Note: make sure you check the "Add Python 3.7 to PATH " checkbox" checkbox when 
 This first half of the tutorial we will focus on installing Django on Windows. The commands that we will run should work on both Windows Command Prompt prompt and Powershell.In this tutorial, we are going to use Powershell
 because it comes with useful commands which are not usually found on Windows Command Prompt.
 
-**Step 1**: 
-### Open Powershell
+### 1\. Open Powershell
 
  You can just search for Powershell or you can open the **Run** dialog box by pressing Windows key together with R and type powershell and then click **ok**.
 
@@ -39,8 +38,7 @@ You should now have Powershell window opened.
 
 []IMAGE COMEs HERE
 
-**Step 2**:
-### Verify Python Installation
+### 2\. Verify Python Installation
 
 Type **python** on the prompt to verify that Python has been successfully installed
 
@@ -57,8 +55,7 @@ Type **exit()** to exit out of the Python prompt:
 
 ![]IMAGE OF exiting out of prompt
 
-**Step 3**:
-### Upgrade Pip
+### 3\. Upgrade Pip
 
 Python now comes with **pip** by default. But most of the times, it comes with an old version. it is always a good practice to upgrade pip to  the latest version
 

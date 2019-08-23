@@ -34,11 +34,13 @@
       <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
+<!-- 
   {% if post.feature_image %}
     <div class="entry__image">
       <img src="{{ post.feature_image | relative_url }}" alt="" class="lazyload entry-image fade-in">
     </div>
  {% endif %}
+ -->
 
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
   </article>
