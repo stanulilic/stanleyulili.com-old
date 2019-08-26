@@ -21,21 +21,21 @@ Hold down the **Windows logo key** and press **R** on your keyboard(Win + R). it
 
 If you want to run **Powershell** as an administrator, type **powershell** in the Run dialog, and press **Ctrl + Shift + Enter**.
 
-## 2\. Open Powershell by Searching
-
-Open Windows search bar and type 
-**pow** or **power** or **powershell** and on the search results, click on **Windows Powershell**.
-
-![search powershell](/assets/images/posts/2019-08-21-launch-powershell-on-windows/search-powershell.jpg)
-
-
-## 3\. Open Powershell from Windows Start Menu Context
+## 2\. Open Powershell from Windows Start Menu Context
 You can easily open the start menu context by holding the **Windows logo key** and then pressing **X** on the keyboard(Win + X). Clicking  **Windows Powershell** on the context menu will open Powershell.
 
 
 Another way is right-clicking on the start menu button which also opens the start menu context where you can open Powershell.
 
 ![start menu context](/assets/images/posts/2019-08-21-launch-powershell-on-windows/start-menu-context.jpg)
+
+## 3\. Open Powershell by Searching
+
+Open Windows search bar and type 
+**pow** or **power** or **powershell** and on the search results, click on **Windows Powershell**.
+
+![search powershell](/assets/images/posts/2019-08-21-launch-powershell-on-windows/search-powershell.jpg)
+
 
 
 ## 4\. Open Powershell from the Start Menu
