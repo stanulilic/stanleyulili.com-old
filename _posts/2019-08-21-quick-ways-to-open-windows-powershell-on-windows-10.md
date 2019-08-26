@@ -51,7 +51,12 @@ Powershell will open in the folder/directory location.
 ![start menu](/assets/images/posts/2019-08-21-launch-powershell-on-windows/file-explorer.jpg)
 
 ## 6\. Open Powershell in a Specific Location using the File  Explorer Menu Bar
-Open **Windows File Explorer** and click on the  **File** menu and select **Open Windows Powershell**. 
+Open **Windows File Explorer** and press **Alt**, and then **F** and lastly **R** (Alt, F, R) and Powershell will open.
+
+**Note:**  Don't hold Alt, F, R together. Press each key after the other.
+{: .notice--warning}  
+
+Another option is to open **Windows File Explorer** and then click on the  **File** menu and select **Open Windows Powershell**. 
 
 ![start menu](/assets/images/posts/2019-08-21-launch-powershell-on-windows/file-menu.jpg)
 
