@@ -19,6 +19,8 @@ Hold down the **Windows logo key** and press **R** on your keyboard(Win + R). it
 
 ![run powershell](/assets/images/posts/2019-08-21-launch-powershell-on-windows/run-powershell.jpg)
 
+If you want to run **Powershell** as an administrator, type **powershell** in the Run dialog, and press **Ctrl + Shift + Enter**.
+
 ## 2\. Open Powershell by Searching
 
 Open Windows search bar and type 
