@@ -152,7 +152,7 @@ a **(venv)** at the begging of the prompt.
 (venv) PS C:\Users\Stanley\Projects\django_project>
 ```
 
-If you run into an error like the one below on Pwershell, for brevity sake, I wrote the solution(it's simple) on a seperate post(link here).:
+If you run into an error like the one below on Pwershell, for the sake of brevity sake, I wrote the solution(it's simple) on a seperate post(link here).:
 
 ```
 PS C:\Users\Stanley\Projects\django_project> .\venv\Scripts\activate
