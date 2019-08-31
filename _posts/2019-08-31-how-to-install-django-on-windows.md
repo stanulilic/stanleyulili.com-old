@@ -26,7 +26,7 @@ Note: make sure you check the "Add Python 3.7 to PATH " checkbox" checkbox when 
 
 ## Install Django on Windows
 
-The commands that we will run in this tutorial will work on both Windows Command Prompt(CMD) and Powershell. In this tutorial, we are going to use Powershell but you are free to use CMD if that's what you like.
+The commands that we will run in this coming steps will work on both Windows Command Prompt(CMD) and Powershell. I will use Powershell but you can CMD if that's what you prefer.
 
 ### Step 1 - Open Powershell
 
@@ -40,28 +40,37 @@ Now that we have opened Powershell, Let's verify that Python has been installed.
 
 ### Step 2 - Verify Python Installation
 
-Type **python** on the prompt to verify that Python has been successfully installed, you should see a prompt similar to the one below:
+Type **python -V** on the prompt to verify that Python has been successfully installed
 
 ```
-PS C:\Users\Stanley> python
-Python 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 20:34:20) [MSC v.1916 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
->>>
+> python -V
 ```
+you should see the  Python version installed, being printed like below:
 
-Type **exit()** to exit out of the Python prompt:
-
-![]IMAGE OF exiting out of prompt
-
+```
+PS C:\Users\Stanley> python -V
+Python 3.7.4
+```
 
 ### Step 3 - Upgrade Pip
 
 Python now comes with **pip** by default. But most of the times, it comes with an old version. it is always a good practice to upgrade pip to  the latest version
 
 ```
-> py -m pip install --upgrade pip
+> python -m pip install --upgrade pip
 ```
 You should see something like the screenshot below showing that the upgrade was a success
+
+```
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/30/db/9e38760b32e3e7f40cce46dd5fb107b8c73840df38f0046d8e6514e675a1/pip-19.2.3-py2.py3-none-any.whl (1.4MB)
+     |████████████████████████████████| 1.4MB 386kB/s
+Installing collected packages: pip
+  Found existing installation: pip 19.2.2
+    Uninstalling pip-19.2.2:
+      Successfully uninstalled pip-19.2.2
+Successfully installed pip-19.2.3
+```
 
 ![]SCREENSHOT of pip downloding and finishing downloading
 
@@ -75,13 +84,13 @@ To create the directory:
 > mkdir django_project
 ```
 
-Change into `django_project` directory:
+Change into the `django_project` directory:
 
 ```
 > cd django_project
 ````
 
-Your prompt should now look like:
+Your prompt should now look like this, showing that you are in the `django_project` directory:
 
 ```
 PS C:\Users\Username\django_project>
@@ -107,10 +116,10 @@ When virtual env is activated, you will see
 a **(venv)** at the beggining of the prompt.
 
 ```
-(venv) PS C:\Users\Stanley\Projects\django_project>
+(venv) PS C:\Users\Stanley\django_project>
 ```
 
-If you run into an error like the one below on Pwershell, for the sake of brevity sake, I wrote the solution(it's simple) on a seperate post(link here).:
+If you run into an error like the one below on Pwershell, for the sake of brevity sake, I described the reason and the solution on this post(link here).:
 
 ```
 PS C:\Users\Stanley\Projects\django_project> .\venv\Scripts\activate
@@ -134,7 +143,20 @@ Run the following command:
 (venv)> pip install django
 ````
 The command will install the latest version of Django. You shoud see something the screenshot below showing Django being downloaded:
-
+```
+Collecting django
+  Downloading https://files.pythonhosted.org/packages/d6/57/66997ca6ef17d2d0f0ebcd860bc6778095ffee04077ca8985928175da358/Django-2.2.4-py3-none-any.whl (7.5MB)
+    100% |████████████████████████████████| 7.5MB 546kB/s
+Collecting sqlparse (from django)
+  Downloading https://files.pythonhosted.org/packages/ef/53/900f7d2a54557c6a37886585a91336520e5539e3ae2423ff1102daf4f3a7/sqlparse-0.3.0-py2.py3-none-any.whl
+Collecting pytz (from django)
+  Downloading https://files.pythonhosted.org/packages/87/76/46d697698a143e05f77bec5a526bf4e56a0be61d63425b68f4ba553b51f2/pytz-2019.2-py2.py3-none-any.whl (508kB)
+    100% |████████████████████████████████| 512kB 595kB/s
+Installing collected packages: sqlparse, pytz, django
+Successfully installed django-2.2.4 pytz-2019.2 sqlparse-0.3.0
+You are using pip version 19.0.3, however version 19.2.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+```
 ![]SCREENSHOT comes here
 
 If you want to install a different django version, you can specify the version:
@@ -163,5 +185,14 @@ Navigate into the **testsite** directory by running the following command:
 Let's now run the development server using the **manage.py runserver**:
 
 >python manage.py runserver
+```
+Watching for file changes with StatReloader
+Performing system checks...
 
+System check identified no issues (0 silenced).
+August 31, 2019 - 04:35:54
+Django version 2.2.4, using settings 'testsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+```
 Your are now ready to start developing your project
