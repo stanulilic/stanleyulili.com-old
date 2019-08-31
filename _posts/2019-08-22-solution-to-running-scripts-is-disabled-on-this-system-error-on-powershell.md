@@ -14,7 +14,7 @@ tags:
 title: Solution to "Running Scripts Is Disabled On This System" Error On Powershell
 ---
 
-I run into this error **"running scripts is disabled on this system"**  as I was trying to activate  Python virtual environment on Powershell.
+I run into this error **"running scripts is disabled on this system"**  as I was trying to activate  Python's virtualenv on Powershell.
 
  ![running scripts disabled](/assets/images/posts/2019-08-25-running-scripts-is-disabled-on-this-system-powershell/error.jpg)
 
@@ -31,16 +31,17 @@ Here is how I fixed the error:
 
 **Step 1**: **Open Windows Powershell as Admin**
 
-Open the ** Start menu** on Windows and search for **powershell** and right-click on it. Click on **"run as administrator"**. 
+Open the **Start menu** on Windows and search for **powershell** and right-click on it. Click on **"run as administrator"**. 
 
- You **don't need to close the Powershell window** with the error.
+**Note**: You don't need to close the Powershell window where you got the error.
+{: .notice--warning}
 
  ![get execution policy](/assets/images/posts/2019-08-25-running-scripts-is-disabled-on-this-system-powershell/powershell-admin.jpg)
 
-**Step 2**: Type the following command:
+**Step 2**: Type the following command the new Powershell window:
 
 ```
-PS C:\Windows\system32> set-executionpolicy remotesigned
+> set-executionpolicy remotesigned
 ```
 
 This command will allow you to run scripts that are on your local computer(unsigned) and remote scripts(from the internet) which have been signed.
@@ -57,5 +58,5 @@ This command will allow you to run scripts that are on your local computer(unsig
 
 The command has worked! virtualenv has been activated.
 ```
-(venv) PS C:\Users\Stanley\Projects\django_project>
+(venv) PS C:\Users\Stanley\django_project>
 ```
