@@ -3,7 +3,7 @@ header:
  teaser: /assets/images/posts/2019-09-16-setup-eslint-global-vscode/featured-image.jpg
 feature_image: /assets/images/posts/2019-09-16-setup-eslint-global-vscode/featured-image.jpg
 featured_image_alt: featured-image
-excerpt: In this tutorial, we are going to install and set up ESLint globally Airbnb Style Guide and then set it up to work with  VSCode
+excerpt: In this tutorial, we are going to install and set up ESLint globally with Airbnb Style Guide, and then set it up to work with  VSCode
 
 categories:
  - Javascript
@@ -18,7 +18,7 @@ title: "How to Set Up ESLint Globally with VSCode"
 I decided to try out ESLint the other day after years of coding with Javascript without any linter. A linter is a tool that helps in enforcing a consistent style in your code. It will highlight errors with your code as you write, and it also offers some tips on how to improve your code. 
 
 
-In this tutorial, we are going to install and set up ESLint globally Airbnb Style Guide and then set it up to work with  VSCode. Setting up ESLint globally is very helpful because it acts as a default configuration for every project you work on. Every time you start a new project, you will have ESLint ready for you. In cases where a project would require different settings, you can always override the global configuration by setting up ESLint locally.
+In this tutorial, we are going to install and set up ESLint globally with Airbnb Style Guide, and then set it up to work with VSCode. Setting up ESLint globally is very helpful because it acts as a default configuration for every project you work on. Every time you start a new project, you will have ESLint ready for you. In cases where a project would require different settings, you can always override the global configuration by setting up ESLint locally.
 
 When you're done with this tutorial, you will be able to use ESLint in every project with VSCode.
 
