@@ -42,11 +42,14 @@ Now that we have made sure that we have the latest version of **Node** and **NPM
 
 Let us now install ESLint together with the Airbnb style guide.
 Airbnb Style Guide requires the following packages:
-eslint-config-airbnb : contains standards and Eslint rules
-eslint-plugin-import: supports import syntax
-eslint-plugin-react: It has ESLint rules for React
- eslint-plugin-react-hooks: has Eslint rules for  React Hooks
-eslint-plugin-jsx-a11y: enforces react accessibility rules.
+
+- `eslint-config-airbnb` : contains standards and Eslint rules
+- `eslint-plugin-import`: supports import syntax
+- `eslint-plugin-react`: It has ESLint rules for React
+ - `eslint-plugin-react-hooks`: has Eslint rules for  React Hooks
+- `eslint-plugin-jsx-a11y`: enforces react accessibility rules.
+
+
 Let's type the following command, which will install ESLint together with Airbnb Style guide ad its dependencies:
 ```
 npm install -g eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
@@ -112,8 +115,8 @@ You can always override the global config by setting up the `.eslintrc' in the p
 
 Now that we have our  `.eslintrc` file created, let's setup ESLint with VSCode.
 
-**Tip**: Even without a code editor, you can be able to lint a javascript file anywhere in a project by typing `eslint filename.js`. It will display the errors in the terminal, it can come handy sometimes.
-
+**Tip**: Even without a code editor, you can be able to lint a javascript file anywhere in a project by typing `eslint filename.js`. It will display the errors in the terminal, it can come in handy sometimes.
+{: .notice--info}
 
 ## Step 4 — Set up ESLint with VSCode
 

@@ -23,13 +23,13 @@ In order for you best understand where  __init__ method and self comes in.  it's
 
 This way, we will able to see the importance of it,
 
-First off, you can create an empty class which do nothing:
+First off, lets' create an empty class that does nothing:
 ```
     class Person:
         pass
     person1 = Person()
 ```
-even after creating the instance, the class will still do nothing
+we have created an instance **person**, the class will still do nothing
 
 This class, doesn't do us any good, so lets try to something useful.
 
