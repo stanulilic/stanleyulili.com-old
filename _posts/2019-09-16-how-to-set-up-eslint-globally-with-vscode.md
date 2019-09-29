@@ -10,6 +10,7 @@ categories:
 tags:
  - javascript
  - eslint
+ - vscode
 title: "How to Set Up ESLint Globally with VSCode"
 ---
 
