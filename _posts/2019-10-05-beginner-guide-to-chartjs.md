@@ -151,7 +151,7 @@ We need to store the data in arrays. We are going to store the names of the fram
 So open the `script.js` file and type the following code:
 
 ```
-var stars = [135,850, 52,122, 148,825, 16,939, 9,763];
+var stars = [135850, 52122, 148825, 16939, 9763];
 var frameworks = ['React', 'Angular', 'Vue', 'Hyperapp', 'Omi'];
 ```
 
@@ -223,7 +223,7 @@ By the way, here is how my whole `script.js` file is looking at this stage:
 ```javascript
 var ctx = document.getElementById('myChart');
 
-var stars = [135,850, 52,122, 148,825, 16,939, 9,763];
+var stars = [135850, 52122, 148825, 16939, 9763];
 var frameworks = ['React', 'Angular', 'Vue', 'Hyperapp', 'Omi'];
 
 var myChart = new Chart(ctx, {
