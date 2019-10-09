@@ -57,26 +57,25 @@ npm install -g eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-js
 ```
 If you don't use React, you can reduce the number of dependencies by excluding  `eslint-plugin-jsx-ally`, `eslint-plugin-react-hooks`, and `eslint-plugin-react` like this:
 
-```
+```bash
 npm install -g eslint eslint-config-airbnb-base eslint-plugin-import
 ```
 
 If your on Mac or Linux, use `sudo` to avoid permission errors:
 
-```
+```bash
 sudo npm install -g eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
 ```
-our
 ## Step 3 — Set up ESLint Configuration File
 Let us now set up ESLint configuration file in our home directory.
 
 Navigate to your home directory by typing the following command:
 
-```
+```bash
 cd ~
 ```
 Your prompt should be similar to this:
-```
+```bash
 username@hostname:~$ 
 ````
 On Windows, it should appear like this:
@@ -87,7 +86,7 @@ C:\Users\Username>
 Let's create the `.eslintrc` file
 
 Type the following:
-```
+```bash
 code .eslintrc
 ```
 
@@ -95,7 +94,7 @@ code .eslintrc
 
 Copy and paste the following code in the `.eslintrc` file and save(CTRL+S).
 
-```
+```javascript
 {
  "env": {
  "browser": true,
