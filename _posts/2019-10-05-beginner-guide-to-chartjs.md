@@ -150,7 +150,7 @@ We need to store the data in arrays. We are going to store the names of the fram
 
 So open the `script.js` file and type the following code:
 
-```
+```javascript
 var stars = [135850, 52122, 148825, 16939, 9763];
 var frameworks = ['React', 'Angular', 'Vue', 'Hyperapp', 'Omi'];
 ```
@@ -287,7 +287,7 @@ Before we proceed to style the bars, there is an issue we need to fix. This will
 
 You might notice that the browser is displaying the chart full screen, and it is not respecting the width and height we set on the canvas element previously.
 
-```
+```html
 <canvas id="myChart" width="800" height="400"></canvas>
 ```
 
