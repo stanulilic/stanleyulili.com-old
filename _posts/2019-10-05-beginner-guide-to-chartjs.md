@@ -174,11 +174,10 @@ To create an instance, you need to call the `new Chart()`, so type the following
 
 ```javascript
 var myChart = new Chart(ctx, {
- {
     type: 'bar',
     data: {}
  }
-})
+)
 ```
 
 The `new Chart()` object takes the following arguments:
