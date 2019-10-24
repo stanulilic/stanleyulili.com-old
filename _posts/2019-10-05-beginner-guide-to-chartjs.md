@@ -69,7 +69,7 @@ Another way to include Chart.Js is to download the latest version from Github.
 You can follow the link to download it: https://github.com/chartjs/Chart.js/releases/latest
 
 
-There are still other ways to install Chart.js, we not going to cover them all but you can visit [this link](https://www.chartjs.org/docs/latest/getting-started/installation.html) to learn about more about installing Chart.js
+There are still other ways to install Chart.js, we not going to cover them all but you can visit [this link](https://www.chartjs.org/docs/latest/getting-started/installation.html) to learn more about installing Chart.js.
 
 Now that we have learned how to install Chart.js, let's add it to our project.
 
@@ -78,7 +78,7 @@ You can set up your project on [Codepen](https://codepen.io/) or you can use a t
 
 We are going to create a basic `index.html` file and then load the CDN into the `body` section. We will also create the `script.js` file, which will later add the code to create the charts with Chart.js. 
 
-You can download the [starter files](https://github.com/stanulilic/starter-files-chartjs/archive/master.zip) to use it with the tutorial.
+You can download the [starter files](https://github.com/stanulilic/starter-files-chartjs/archive/master.zip) to use them with the tutorial.
 
 It contains only three files: `index.html`, `main.css` and `script.js`.
 
@@ -175,8 +175,8 @@ To create an instance, you need to call the `new Chart()`, so type the following
 ```javascript
 var myChart = new Chart(ctx, {
  {
- type: 'bar',
- data: {}
+    type: 'bar',
+    data: {}
  }
 })
 ```
@@ -186,6 +186,7 @@ The `new Chart()` object takes the following arguments:
 - **configuration object** which allows you specify the chart type, data and chart options.
 
 The configuration object looks like this:
+
 ```javascript
 {
  type: 'bar',
@@ -210,11 +211,11 @@ Our code does not render the charts yet, for us to render the charts, We need to
 var myChart = new Chart(ctx, {
  type: 'bar',
  data: {
- labels: frameworks,
- datasets: [{
- label: 'Popular JavaScript Frameworks',
- data: stars
- }]
+    labels: frameworks,
+    datasets: [{
+        label: 'Popular JavaScript Frameworks',
+        data: stars
+        }]
  },
 });
 ```
@@ -229,15 +230,15 @@ var frameworks = ['React', 'Angular', 'Vue', 'Hyperapp', 'Omi'];
 var myChart = new Chart(ctx, {
  type: 'bar',
  data: {
- labels: frameworks,
- datasets: [{
- label: 'Github Stars',
- data: stars
- }]
+    labels: frameworks,
+    datasets: [{
+        label: 'Github Stars',
+        data: stars
+    }]
  },
 })
 ```
-Open your `index.html` file with a browser and you should now see a beautiful bar chart.
+Open your `index.html` file with your favorite browser, and you should now see a beautiful bar chart.
 
 ![bar chart](/assets/images/posts/2019-10-05-beginner-guide-to-chartjs/bar-chart.png)
 
@@ -255,17 +256,17 @@ You can checkout the codepen demo below:
 Let me now explain what happened here:
 ```javascript
  data: {
- labels: frameworks,
- datasets: [{
- label: 'Github Stars',
- data: stars
- }]
+    labels: frameworks,
+    datasets: [{
+        label: 'Github Stars',
+        data: stars
+    }]
  },
 ```
 
 The data property object has two properties `labels` and `datasets`.
 
-The 'labels' takes an array(frameworks) and displays every element as a label on the x-axis.
+The `labels` takes an array(frameworks) and displays every element as a label on the x-axis.
 
 ![bar chart labels](/assets/images/posts/2019-10-05-beginner-guide-to-chartjs/bar-chart-labels.jpg)
 
@@ -273,12 +274,12 @@ The `datasets` takes an array of objects which has the following properties:
  - label 
  - data
 
-`label' property, takes a string. It is usually displayed on top of the chart or when hovering the bars.
+`label` property, takes a string. It is usually displayed on top of the chart or when hovering the bars.
 
 ![bar chart label](/assets/images/posts/2019-10-05-beginner-guide-to-chartjs/bar-chart-label.jpg)
 
 
- `data` takes an array of values **Github stars** and displays the data on the y-axis(vertically).
+ `data` takes an array of values(Github stars) and displays the data on the y-axis(vertically).
 
 ![bar chart data](/assets/images/posts/2019-10-05-beginner-guide-to-chartjs/bar-chart-data.jpg)
 
@@ -295,24 +296,24 @@ to fix this we will need to add configurations to our bar chart instance by pass
 
 ```javascript
 var myChart = new Chart(ctx, {
- type: 'bar',
- data: {
- ......
- },
- options: {
- maintainAspectRatio: false
- }
+    type: 'bar',
+    data: {
+    ......
+    },
+    options: {
+        maintainAspectRatio: false
+    }
 })
 ```
-If you try it again in the browser, you will see that the bar chart is 400 pixels long but the width is not being ignored.
+If you try it again in the browser, you will see that the bar chart is 400 pixels tall(height) but the width is being ignored.
 
 To completely gain control of the width, we need to set responsive to false.
 
 ```javascript
  .........
  options: {
- maintainAspectRatio: false,
- responsive: false
+    maintainAspectRatio: false,
+    responsive: false
  }
 ```
 
@@ -324,15 +325,15 @@ If you run the browser now, you will see that the width is 800px and the height 
 You can also check out a working Codepen here: [https://codepen.io/pen/](https://codepen.io/pen/)
 
 
-Another option to **controlling the width and height of your chart is by using css**. But this option requires extra markup in HTML but it is flexible, as our chart will have controlled width and height but it will still be responsive.
+Another option to **controlling the width and height of your chart is by using css**. But this option requires extra markup in HTML, but it is flexible as our chart will have controlled width and height, and it will still be responsive.
 
 First off, you have to remove the options object:
 ```javascript
  ....
  // remove the following code
  options: {
- maintainAspectRatio: false,
- responsive: false
+    maintainAspectRatio: false,
+    responsive: false
  }
 ```
 
@@ -350,8 +351,8 @@ Let us now open the `main.css` and type following code:
 
 ```css
 .wrapper {
- max-width: 800px;
- margin: 0 auto;
+    max-width: 800px;
+    margin: 0 auto;
 }
 ```
 
@@ -413,7 +414,7 @@ Our bar chart is looking good, but we can do better, let us add borders to make 
 
 To create borders for our bar chart, we will be using the `borderColor` property by passing it an array of 5 RGBA color values. We add it after the `backgroundColor` property.
 
-For the borderColor property to work, you must also put add the `borderWidth`, otherwise, you won't see any borders.
+For the borderColor property to work. You must also put add the `borderWidth`, otherwise, you won't see any borders.
 
 ```javascript
  ....
@@ -482,16 +483,16 @@ There are only a few things we need to be aware of to successfully do it:
 var myChart = new Chart(ctx, {
  type: "line",
  data: {
- labels: frameworks,
- datasets: [
- {
- label: "Github Stars",
- data: stars,
- backgroundColor: "rgba(255, 99, 132, 0.2)",
- borderColor: "rgba(255, 99, 132, 1)",
- borderWidth: 1
- }
- ]
+    labels: frameworks,
+    datasets: [
+    {
+        label: "Github Stars",
+        data: stars,
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1
+    }
+    ]
  }
 });
 
@@ -516,7 +517,7 @@ While the line chart looks good, I believe there are a few things we can change,
 
 To achieve that, we will use the following properties:
 
-- `fill` is used to specify whether the area underneath the line should be filled. If the property is not included, the line will have a fill by default, to remove the filling, you use `fill: false`.
+- `fill` is used to specify whether the area underneath the line should be filled. If the property is not included, the line will have a fill by default. To remove the filling, you use `fill: false` property.
 
 - `lineIntensity` is used to increase or decrease the line curvature, to remove the line curvature, set `lineintensity` to zero.
 
@@ -541,10 +542,12 @@ Type the following code after the `borderWidth` property:
 
 ## Conclusion
 
-In this article, you learned how to create bar charts, pie and line charts. You continue learning more about Chart.js by checking out their [documentation](https://www.chartjs.org/docs/latest/).
+In this article, you learned how to create bar charts, pie and line charts.
+
+Chart.js can do so much more and we have only scratched the surface. You can continue learning more about Chart.js by checking out their [documentation](https://www.chartjs.org/docs/latest/).
 
 
-### References
+### Additional Resources
 [https://www.chartjs.org/docs/latest/](https://www.chartjs.org/docs/latest/)
 
 [https://tobiasahlin.com/blog/introduction-to-chartjs/](https://tobiasahlin.com/blog/introduction-to-chartjs/)

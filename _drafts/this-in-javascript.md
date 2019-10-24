@@ -1,10 +1,9 @@
 https://www.reddit.com/r/javascript/comments/7yki4d/explain_like_im_5_this/
 https://javascript.info/global-object
-## Why do we need this in javascript
+https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/
+## This in a nutshell
 ## why objects method need this
 ## why  constructors
-
-### where this comes in
 
 ## This a global context
   - explain what this points to without fuctions - talk about console or just <>
@@ -21,57 +20,46 @@ https://gist.github.com/jim-clark/b9084dac07f48382703c5bf04a70f80e
 
 Understanding this in javascript
 
-## Why do we need this in javascript
-For us to understand why we need `this`. We first need to learn what happens without it instead of just blindly accepting that we need `this`. 
+## `this` in a nutshell
 
-Yes, we have heard `this` is important, But do we need it? let's first answer question as the answer might help use really understand how `this` works.
+`this` is a special variable in Javascript whose value is determined by how a function is called. In technical terms, `this` refers the execution context that calls a function.
 
-let's create a an object. It won't do much apart from just saying my name.
+incorporate this in the post:
+"it's what's on the left of the . , if there is no dot it's the window/global object"
 
-We won't use `this`, lets see how far we can get away without  it.
+An execution context
 
-```javascript
-var person = {
-    name: 'stanley',
-     sayName: function () {
-      console.log(person.name);
-    }
-}
+`this` in the a nutshell, it always points to
 
-person.sayName() // stanley
+## How `this` in a object a method
+`this`  in a method always points to the  object calling the method.
 
-```
-As you can see we can value of the property name('stanley'), by typing the object name(`person`) followed by the property name(`name`), `person.name`
+We can clearly see where `this`  points to by logging `this` in the console.
 
-Great, it works. As a matter of fact, let's add another function that will print where I live:
+To open the console. Open a new empty tab and then press `CTRL+Shift+J` on Windows or `CTRL+Option+J` on Mac:
 
 ```javascript
 var person = {
     name: 'stanley',
-     sayName: function () {
-      console.log(person.name);
-    },
-    favoritePet: function () {
-    console.log(person.name + ' loves dogs');
+     sayThis: function () {
+      console.log(this);
     }
 }
 
-person.sayLocation() // stanley
+person.sayThis() // {name: "stanley", sayThis: ƒ} 
 ```
 
-This is going very well. You know what I just had a thought, I think `user` might not be a good name after all. I think `person` would best represent the object.
+As you can see on the output, `this` is pointing the `person` object which calls the `sayThis()` method.
 
-I am going to rename  `user` to `person`. This means I have to rename all the references to name property from `user.name` to `person.name`. Imagine if I had more that 20 references to the name property? Imagive if I had more than one property in our project and we had hundreds of references.  It would be a very huge task renaming them all not to mention all the bugs we risk introducing.
+ Every time you are in doubt of where  `this` is pointing to, always look to the left side of the dot when a method is being called, i.e `person.sayThis()`. It will tell you where `this` is pointing to.
 
-There is a gotta be a better way. 
-And there is, Come `this'. Instead of directly referencing to the property name our selfs, imagine if there was a property that could do t
 
-###  Where this comes in
-So far I like what my object is doing but I kinda feel like I should give object another name.
 
-- explain what would have happened if this didn't exist.
+##  `this` in global functions.
+`this` in a global function and outside of any function points to the `window` object also known as global object.
 
-## This in a function scope(global)
+Let's type `this` in the console. 
+
 - talk about where this points in a global scope:
 ```javascript
 function hi() {
