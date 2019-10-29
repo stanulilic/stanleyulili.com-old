@@ -195,11 +195,11 @@ const htmlMarkup = `
 element.innerHTML = htmlMarkup;
 ```
 
-As you can see, the HTML markup with template literals is nice and clear. We can easily modify code without worry about messing up concatenation.
+As you can see, the HTML markup with template literals is nice and clear. We can easily modify the code without worry about messing up concatenation.
 
 
 ## Nested Template Literals
-One of the most interesting and useful features of template literals is nesting.
+One of the most interesting and useful features of template literals is **nesting**.
 
 We can nest a template literal inside another template literal.
 
@@ -233,6 +233,17 @@ In our example, we are nesting a template literal inside another one.
 
 
  ![nested templae literals](/assets/images/posts/2019-10-29-template-literals/template-literals.jpg)
+
+ By the way, if you are new to JavaScript and you were confused with this syntax:
+ ```javascript
+ ${person.favoriteMovies
+ .map(movie => `<li>${movie}</li>`).join("")
+ }
+ ```
+We are using the [map() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) which loops though each element of the `person.favoriteMovies` array and returns an HTML list item of every element in the array. 
+
+The map() method takes an anonymous function. And we have passed it an anonymous arrow function. If you don't know about arrow functions, you can learn more about them here: [An introduction to Arrow Functions and Lexical ‘this’](https://www.stanleyulili.com/javascript/an-introduction-to-arrow-functions-and-lexical-this/)  
+
 
 ## Conclusion
 Hopefully, this article has helped you understand the benefits of using template literals in ES6 and most importantly, how to write them.
