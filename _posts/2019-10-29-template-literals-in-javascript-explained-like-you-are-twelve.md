@@ -12,7 +12,7 @@ tags:
 toc: true;
 toc_sticky: true
 toc_label: "Table of Contents"
-title: "Template Literals in JavaScript: Explained Like your Twelve"
+title: "Template Literals in JavaScript: Explained Like you're Twelve"
 ---
 
 ## Introduction
