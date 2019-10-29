@@ -240,7 +240,7 @@ In our example, we are nesting a template literal inside another one.
  .map(movie => `<li>${movie}</li>`).join("")
  }
  ```
-We are using the [map() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) to loop though each element in the `person.favoriteMovies` array, and return an HTML list item of every element in the array. 
+We are using the [map() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) to loop though each element in the `person.favoriteMovies` array, and return an HTML list item of every element. 
 
 The map() method takes an anonymous function. And we have passed it an anonymous arrow function. If you don't know about arrow functions, you can learn more about them here: [An introduction to Arrow Functions and Lexical ‘this’](https://www.stanleyulili.com/javascript/an-introduction-to-arrow-functions-and-lexical-this/)  
 
