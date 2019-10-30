@@ -1,26 +1,38 @@
+---
+header:
+ teaser: /assets/images/posts/2019-10-31-es6-string-methods/featured-image.jpg
+feature_image: /assets/images/posts/2019-10-31-es6-string-methods/featured-image.jpg
+featured_image_alt: featured-image
+excerpt: In this article, we are going to take an in-depth look at how to use the following ES6 string methods
+
+categories:
+ - Javascript
+tags:
+ - javascript
+title: "Introduction to ES6+ String Methods"
+---
 
 ## Introduction
-ECMASript 2015 also known as ES6 comes with exciting new string methods.
+ECMAScript 2015 also known as ES6 comes with exciting new string methods.
 
-In this article, we are going to take an indepth look on how to use the ES6 string methods:
+In this article, we are going to take an in-depth look at how to use the following ES6 string methods:
 - startsWith() method
 - endsWith() method
 - includes() method
 - repeat() method
 
 ## String Basics
-Before we look at the new string methods. Let's recap on what happens when you create a new string.
+Before we look at the new string methods. Let's recap about what happens when you create a new string.
 
-when you create a string, every character in the string is assigned an index:
+When you create a string, every character in the string is assigned an index:
 
 ```javascript
 const myString = 'String Methods';
 ```
 
-- Image of the that shows here
-![image](string-diagram.jpg)
+ ![string method](/assets/images/posts/2019-10-30-es6-string-methods/string-diagram.jpg)
 
-So you can access any character from the string like we can access elements in an array:
+We can access any character from the string the same we access elements in an array:
 
 ```javascript
 const myString = 'String Methods';
@@ -29,7 +41,7 @@ myString[6] // " "
 myString[9] // t
 ```
 
-This does not mean that strings are array. 
+But this does not mean that strings are arrays. 
 
 ```javascript
 Array.isArray(myString) // false
@@ -43,7 +55,7 @@ Now that we have understood the basics of strings, let us now take look at the E
 string.startsWith(str, index)
 ```
 
-The startsWith() method checks if the given string exists at the beggining of the string calling the method.
+The startsWith() method checks if the given string exists at the beginning of the string calling the method.
 
 It will return `true` if the string is found, and `false` if it's not found.
 
@@ -69,7 +81,8 @@ myString.startsWith('ng', 4) // true
 ```
 The code checks if the string starts with "ng" at position 4.
 
-![startswith Diagram](startswith-diagram.jpg)
+ ![startsWith diagram](/assets/images/posts/2019-10-30-es6-string-methods/startswith-diagram.jpg)
+
 
 
 
@@ -90,22 +103,22 @@ myString.endsWith('ods') // true
 myString.endsWith('string') // false
 ```
 
-The `endsWith()` method is case-sensitive:
+The `endsWith()` method is also  case-sensitive:
 
 ```javascript
 const myString = 'String Methods';
 myString.endsWith('methods') // false
 ```
-
-The `endsWith()` method also takes an optional `index` parameter.
+It also takes an optional `index` parameter.
 
 ```javascript
 const myString = 'String Methods';
-myString.endsWith('h', 10) // true
+myString.endsWith('t', 10) // true
 ```
-The code checks if the string ends with "h" at position 10.
+The endsWith() method checks if the string ends with "t" before the position 10.
 
-![endswith Diagram](endswith-diagram.jpg)
+// update diagram
+ ![endsWith diagram](/assets/images/posts/2019-10-30-es6-string-methods/endswith-diagram.jpg)
 
 ## The includes() Method
 ### Syntax
@@ -115,7 +128,7 @@ string.includes(str, index)
 
 The includes() method checks if the string contains the given string anywhere within the string.
 
-It returns `true` if the given string is found, and `false` it is not found.
+It returns `true` if the given string is found, and `false` if it is not found.
 
 ```javascript
 const myString = 'This is a string';
@@ -125,21 +138,22 @@ myString.includes('a'); // true
 myString.includes('apples'); // false
 ```
 
-The `includes()` method is case-sensitive:
+Just like the startsWith() and endsWith methods, the `includes()` method is also case-sensitive:
 
 ```javascript
 const myString = 'This is a string';
 myString.endsWith('This') // false
 ```
-The `includes()` method also takes an optional `index` parameter.
+It also takes an optional `index` parameter.
 
 ```javascript
 const myString = 'This is a string';
 myString.includes('is', 4) // true
 ```
-It searches starting at position 4 for  the given text('is').
+It searches for the given text "is" starting at position 4. 
 
-![includes Diagram](includes.jpg)
+ ![includes diagram](/assets/images/posts/2019-10-30-es6-string-methods/includes.jpg)
+
 
 
 
@@ -159,7 +173,7 @@ console.log("abc".repeat(2)); // abcabc
 console.log("s".repeat(4)); // ssss
 ```
 
-We can do something useful with repeat() method  by making our logs in the console beatiful. We are going to use [template literals](https://www.stanleyulili.com/javascript/template-literals-in-javascript-explained-like-your-twelve/) to print our output:
+We can do something useful with repeat() method by making our logs in the console beautiful. We are going to use [template literals](https://www.stanleyulili.com/javascript/template-literals-in-javascript-explained-like-your-twelve/) to help us log our output:
 ```javascript
 console.log(`
 ${'-'.repeat(32)}
@@ -169,7 +183,7 @@ ${'-'.repeat(32)}`);
 Output:
 ```
 --------------------------------
-          Hello World
+ Hello World
 --------------------------------
 ```
 
@@ -191,6 +205,6 @@ the repeat() method...........................4
 ```
 
 ## Conclusion
-In this article, we have demostrated how to use the string methods that come with ES6. I hope you now have a better understanding on how to use them in your project.
+In this article, we have demonstrated how to use the string methods that come with ES6. I hope you now have a better understanding of how to use them in your project.
 
-If you have an insights or questions, feel free to leave the comment.
+If you have insights or questions, feel free to leave the comment.
