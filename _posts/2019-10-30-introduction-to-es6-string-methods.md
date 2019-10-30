@@ -117,7 +117,6 @@ myString.endsWith('t', 10) // true
 ```
 The endsWith() method checks if the string ends with "t" before the position 10.
 
-// update diagram
  ![endsWith diagram](/assets/images/posts/2019-10-30-es6-string-methods/endswith-diagram.jpg)
 
 ## The includes() Method
