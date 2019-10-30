@@ -1,7 +1,7 @@
 ---
 header:
- teaser: /assets/images/posts/2019-10-31-es6-string-methods/featured-image.jpg
-feature_image: /assets/images/posts/2019-10-31-es6-string-methods/featured-image.jpg
+ teaser: /assets/images/posts/2019-10-30-es6-string-methods/featured-image.jpg
+feature_image: /assets/images/posts/2019-10-30-es6-string-methods/featured-image.jpg
 featured_image_alt: featured-image
 excerpt: In this article, we are going to take an in-depth look at how to use the following ES6 string methods
 
