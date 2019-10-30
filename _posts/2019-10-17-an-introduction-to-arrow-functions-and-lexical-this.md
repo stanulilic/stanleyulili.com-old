@@ -12,7 +12,7 @@ tags:
 toc: true;
 toc_sticky: true
 toc_label: "Table of Contents"
-title: "An introduction to Arrow Functions and Lexical 'this'"
+title: "An Introduction to Arrow Functions and Lexical 'this'"
 ---
 
 

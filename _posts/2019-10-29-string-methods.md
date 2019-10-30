@@ -11,14 +11,14 @@ In this article, we are going to take an indepth look on how to use the ES6 stri
 ## String Basics
 Before we look at the new string methods. Let's recap on what happens when you create a new string.
 
-when you create a string, every character in the string is assigned an index.
+when you create a string, every character in the string is assigned an index:
 
-For example let' create a simple string:
 ```javascript
 const myString = 'String Methods';
 ```
 
 - Image of the that shows here
+![image](string-diagram.jpg)
 
 So you can access any character from the string like we can access elements in an array:
 
@@ -34,6 +34,7 @@ This does not mean that strings are array.
 ```javascript
 Array.isArray(myString) // false
 ```
+Now that we have understood the basics of strings, let us now take look at the ES6 string methods starting with the startsWith() method.
 
 ## The startsWith() Method
 
@@ -68,7 +69,7 @@ myString.startsWith('ng', 4) // true
 ```
 The code checks if the string starts with "ng" at position 4.
 
--- an image here can help
+![startswith Diagram](startswith-diagram.jpg)
 
 
 
@@ -104,8 +105,9 @@ myString.endsWith('h', 10) // true
 ```
 The code checks if the string ends with "h" at position 10.
 
--- an image here can help
-## includes() Method
+![endswith Diagram](endswith-diagram.jpg)
+
+## The includes() Method
 ### Syntax
 ```
 string.includes(str, index)
@@ -137,5 +139,58 @@ myString.includes('is', 4) // true
 ```
 It searches starting at position 4 for  the given text('is').
 
-## repeat() method
+![includes Diagram](includes.jpg)
+
+
+
+## The repeat() method
+### Syntax
+```
+string.repeat(count)
+```
+The repeat() method takes an argument that specifies the number of times a string should be repeated.
+
+It returns a new string with the original string repeated the number of times specified.
+
+
+```javascript
+console.log("string".repeat(3)); // stringstringstring
+console.log("abc".repeat(2)); // abcabc
+console.log("s".repeat(4)); // ssss
+```
+
+We can do something useful with repeat() method  by making our logs in the console beatiful. We are going to use [template literals](https://www.stanleyulili.com/javascript/template-literals-in-javascript-explained-like-your-twelve/) to print our output:
+```javascript
+console.log(`
+${'-'.repeat(32)}
+${' '.repeat(9)} Hello World
+${'-'.repeat(32)}`);
+```
+Output:
+```
+--------------------------------
+          Hello World
+--------------------------------
+```
+
+Let's try another example and format a mini table of contents:
+```javascript
+console.log(`
+the startsWith() method${'.'.repeat(33)}1
+the endsWith() method${'.'.repeat(35)}2
+the includes() method${'.'.repeat(35)}3
+the repeat() method${'.'.repeat(37)}4
+`)
+```
+Output:
+```
+the startsWith() method.......................1
+the endsWith() method.........................2
+the includes() method.........................3
+the repeat() method...........................4
+```
+
 ## Conclusion
+In this article, we have demostrated how to use the string methods that come with ES6. I hope you now have a better understanding on how to use them in your project.
+
+If you have an insights or questions, feel free to leave the comment.
