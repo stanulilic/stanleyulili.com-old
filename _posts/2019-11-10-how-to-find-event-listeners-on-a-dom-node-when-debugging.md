@@ -64,7 +64,7 @@ Let's say you wanted to find all the event listeners attached to the search icon
 
 Right-click on the **search icon** button and choose "inspect" to open Firefox developer tools.
 
-![context menu](/assets/images/posts/2019-11-10-find-event-listeners-on-a-dom-node/context-menu.jpg)
+![context menu](/assets/images/posts/2019-11-10-find-event-listeners-on-a-dom-node/context-menu-firefox.jpg)
 
 The "search icon" button DOM node will be automatically highlighted in the Firefox "Inspector" tab.
 
