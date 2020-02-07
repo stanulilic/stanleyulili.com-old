@@ -77,7 +77,7 @@ For example, `person.sayName()`. The value of `this` will be the `person` object
 
 
 ##  `this` in Global Context
-`this` in a regular function and outside of any function refers to the [global object](https://developer.mozilla.org/en-US/docs/Glossary/Global_object). In the browser, it is the `window` object. In Node.js is is `global`.
+`this` in a regular function and outside of any function refers to the [global object](https://developer.mozilla.org/en-US/docs/Glossary/Global_object). In the browser, it is the `window` object. In Node.js it is `global`.
 
 Try to log `this` in your  browser console. 
 ```javascript
