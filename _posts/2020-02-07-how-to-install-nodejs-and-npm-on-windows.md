@@ -1,7 +1,6 @@
 
 ### Introduction
 
-<!-- Our articles have a specific structure. Learn more at https://do.co/style/structure -->
 Node.js is a run-time enviroment that allows execution of Javascript outside the browser. It allows you to create automation scripts, build backend web applications and API's, etc. with Javascript. NPM is a JavaScript package manager commonly used for installing packages for Node.js.
 
 In this article, you will learn how to install Node.js and NPM on Windows and verifying the installation.  You will then proceed to learn how to run Node.js code, update Node.js and also, how to uninstall Node.js.
@@ -21,7 +20,7 @@ To follow this tutorial successfully, you'll need the following:
 ## Step 1 — Download Node.js
 Open your web browser and visit the [Node installation page](https://nodejs.org/en/download/]). Click on the **Windows Installer** button to download the latest version of Node.js. The installer comes with NPM and it is in 64 bit.
 
-![node.js download page](/assets/images/posts/2020-02-08-template-literals/download-nodejs.jpg)
+![node.js download page](/assets/images/posts/2020-02-08-install-node-windows/download-nodejs.jpg)
 
 Next we are going run the Node.js installer
 
@@ -31,18 +30,18 @@ Once the installer has been download. Click on the file to run the installer.
 ### Node.js Setup Wizard
 When the setup wizard dialog opens, click **Next**.
 
-![node.js setup wizard](/assets/images/posts/2020-02-08-template-literals/node-setup.jpg)
+![node.js setup wizard](/assets/images/posts/2020-02-08-install-node-windows/node-setup.jpg)
 
 ### License Agreement
 Review the license and then check on the "I accept the terms in the License Agreement" option and then click **Next**.
 
-![license agreement](/assets/images/posts/2020-02-08-template-literals/license-agreement.jpg)
+![license agreement](/assets/images/posts/2020-02-08-install-node-windows/license-agreement.jpg)
 
 ### Choose the Destination Folder
 
 You will be prompted to choose the destination folder  to install Node.js. It is best to just leave the default location and click **Next**. 
 
-![destination folder](/assets/images/posts/2020-02-08-template-literals/destination-folder.jpg)
+![destination folder](/assets/images/posts/2020-02-08-install-node-windows/destination-folder.jpg)
 
 ### Custom Setup
 ****** COME BACK TO THIS********
@@ -50,24 +49,24 @@ You will be prompted to choose the destination folder  to install Node.js. It is
 Proceed with the default option and click "Next". unless there is a specific reason. Click **Next** to start the installation.
 
 
-![Custom Setup](/assets/images/posts/2020-02-08-template-literals/custom-setup.jpg)
+![Custom Setup](/assets/images/posts/2020-02-08-install-node-windows/custom-setup.jpg)
 
 ### Tools for Native Modules
 In this step, it's safe to just go with default option and  click **Next** without modifying anything. You can check the option if you need the tools but I don't have a need for them yet. 
 
-![Tools for native modules option](/assets/images/posts/2020-02-08-template-literals/native-tools.jpg)
+![Tools for native modules option](/assets/images/posts/2020-02-08-install-node-windows/native-tools.jpg)
 
 ### Begin Installation
 The Node.js Setup Wizard is now ready to install Node.js and NPM. Click **Install** to begin the installation.
 
-![Begin Installation](/assets/images/posts/2020-02-08-template-literals/begin-installation.jpg)
+![Begin Installation](/assets/images/posts/2020-02-08-install-node-windows/begin-installation.jpg)
 
 When the User Account Control security prompt pops up, make sure you click **Yes**.
 
 
 ### Finish Installation
 After the installation is finished, click **Finish**.
-![Finish installation](/assets/images/posts/2020-02-08-template-literals/finish-installation.jpg)
+![Finish installation](/assets/images/posts/2020-02-08-install-node-windows/finish-installation.jpg)
 
 
 ##  Step 2 — Verify Node.js and NPM installation
@@ -75,7 +74,7 @@ Let's verifying if the Node.js and NPM were successfully installed.
 
 Open **Powershell** or *Windows Command Prompt* depending on your preferences. It's recommended to use Powershell since it has more features than the Windows Command Prompt. So we will use this in his guide. 
 
-![Open Powershell](/assets/images/posts/2020-02-08-template-literals/search-powershell.jpg)
+![Open Powershell](/assets/images/posts/2020-02-08-install-node-windows/search-powershell.jpg)
 
 Once *Powershell* is opened, Enter the following:
 
@@ -92,14 +91,14 @@ npm -v
 
 If Node and NPM is successfully installed, it should look the same way as this:
 
-![Node works](/assets/images/posts/2020-02-08-template-literals/node-works.jpg)
+![Node works](/assets/images/posts/2020-02-08-install-node-windows/node-works.jpg)
 
 Note: your version numbers don't need to match with the ones in the screenshot since you might be reading this article when a newer version of Node or NPM was released.
 
 ## Running Node.js Code on Windows
 There are two ways to run Node.Js code:
 - Node.js REPL  
-- Cli executable
+- Executing Node.js scripts on command line or terminal
 
 ### Node.js REPL
 REPL stands for Read-Evaluate-Print-Loops. It is a console, just like the browser console that allows you experiment with JavaScript code.
@@ -125,7 +124,7 @@ undefined
 >
 ```
 
-### Cli executable
+### Executing Node.js scripts on command line or terminal
 This method is the one that is commonly used to run Node. You will write Node.js code in a file with an extension of `.js`.
 
 We can see this clealy by writing our first "hello world" program.
@@ -204,11 +203,11 @@ The process of uninstalling Node.js and NPM is the same as how you uninstall any
 
 On Windows 10, search `apps` and click **Apps & features**. 
 
-![start menu](/assets/images/posts/2020-02-08-template-literals/start-menu.jpg)
+![start menu](/assets/images/posts/2020-02-08-install-node-windows/start-menu.jpg)
 
 When the **Apps & features** window open, search for Node and click it. When the popup dialog opens, click "Uninstall". This will start the **uninstall** wizard.
 
-![start menu](/assets/images/posts/2020-02-08-template-literals/uninstall.jpg)
+![start menu](/assets/images/posts/2020-02-08-install-node-windows/uninstall.jpg)
 .
 
 ## Conclusion
@@ -217,77 +216,3 @@ In this article you learned how to install and update Node.js and NPM on Windows
 
 <!-- Speak  to reader benefits of this technique or procedure and optionally provide places for further exploration. -->
 
-
-
-<!-- Some examples of how to mark up various things
-
-This is _italics_ and this is **bold**.
-
-Only use italics and bold for specific things. Learn more at https://do.co/style#bold-and-italics
-
-This is `inline code`. Use it for referencing package names and commands.
-
-Here's a command someone types in the Terminal:
-
-```command
-sudo nano /etc/nginx/sites-available/default
-```
-
-Here's a configuration file. The label on the first line lets you clearly state the file that's being shown or modified:
-
-```nginx
-[label /etc/nginx/sites-available/default]
-server {
-    listen 80 default_server;
-    listen [::]:80 default_server ipv6only=on;
-
-    root <^>/usr/share/nginx/html<^>;
-    index index.html index.htm;
-
-    server_name localhost;
-
-    location / {
-        try_files $uri $uri/ =404;
-    }
-}
-```
-
-Here's output from a command:
-
-```
-[secondary_label Output]
-Could not connect to Redis at 127.0.0.1:6379: Connection refused
-```
-
-Learn about formatting commands and terminal output at https://do.co/style#code
-
-Key presses should be written in ALLCAPS with in-line code formatting: `ENTER`.
-
-Use a plus symbol (+) if keys need to be pressed simultaneously: `CTRL+C`.
-
-This is a <^>variable<^>.
-
-This is an `<^>in-line code variable<^>`
-
-Learn more about how to use variables to highlight important items at https://do.co/style#variables
-
-Use `<^>your_server_ip<^>` when referencing the IP of the server.  Use `111.111.111.111` and `222.222.222.222` if you need other IP addresses in examples.
-
-Learn more about host names and domains at https://do.co/style#users-hostnames-and-domains
-
-<$>[note]
-**Note:** This is a note.
-<$>
-
-<$>[warning]
-**Warning:** This is a warning.
-<$>
-
-Learn more about notes at https://do.co/style#notes-and-warnings
-
-Screenshots should be in PNG format and hosted on imgur. Embed them in the article using the following format:
-
-![Alt text for screen readers](/path/to/img.png)
-
-Learn more about images at https://do.co/style#images-and-other-assets
--->

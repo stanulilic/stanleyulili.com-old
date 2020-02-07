@@ -15,32 +15,6 @@ Node.js is a runtime environment that allows execution of JavaScript outside the
 
 Before node.js, JavaScript only executed in the browser. It all changed in 2009 when [Ryan Dahl](https://en.wikipedia.org/wiki/Ryan_Dahl) created Node.js by building on Google's V8 Engine. The V8 engine is compiler used in Google Chrome and Chromium based browsers to parse JavaScript.
 
-### How Node.js Works?
-Node.js excutes in asynchronous fashion.  To understand what asynchornous means, let's take a a look on how other server side languages work.
-
-When a language such as Php receices a request from the browser, they handle it in syncronous manner. This means  execute the code line after line.  
-
-For example:
-
-Note: please don't worry if you don't undestand the code, I will focus mostly on execution
-
-```php
-echo 'Doing some stuff';
-$result = mysql_query("SELECT names FROM Students");
-echo 'Doing some other stuff';
-```
-The way th code above is executed is as follows:
-
-```
- echo 'Doing some stuff... ';
-```
-This line gets executed first
-
-```
-$result = mysql_query("SELECT names FROM Students");
-```
-
-let's first to understand synchronous
 ### What is Node.js used for?
 Node.js can be used to create the following:
 
