@@ -98,7 +98,7 @@ Note: your version numbers don't need to match with the ones in the screenshot s
 ## Running Node.js Code on Windows
 There are two ways to run Node.Js code:
 - Node.js REPL  
-- Executing Node.js scripts on command line or terminal
+- Executing Node.js scripts on Powershell or Command Prompt
 
 ### Node.js REPL
 REPL stands for Read-Evaluate-Print-Loops. It is a console, just like the browser console that allows you experiment with JavaScript code.
@@ -124,10 +124,12 @@ undefined
 >
 ```
 
-### Executing Node.js scripts on command line or terminal
+To exit out of the REPL, type `.exit` or press `CTRL+D` once. You can also exit out by pressing `CTRL+C` twice.
+
+### Executing Node.js Scripts on Powershell or Command Prompt
 This method is the one that is commonly used to run Node. You will write Node.js code in a file with an extension of `.js`.
 
-We can see this clealy by writing our first "hello world" program.
+We can see this clealy by writing our first Node.js program.
 
 Let's start by creating a folder in the home directory to store our program.
 
