@@ -8,7 +8,7 @@ categories:
 tags:
  - node.js
  - javascript
-excerpt: Node.js is a runtime environment that allows execution of JavaScript outside the browser.
+excerpt: In this article, you will learn how to install Node.js and NPM on Windows and verifying the installation. 
 title: "How to Install Nodejs and Npm on Windows"
 ---
 
