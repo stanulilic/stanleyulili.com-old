@@ -1,14 +1,26 @@
+---
+header:
+ teaser: /assets/images/posts/node-featured-image/featured-image.jpg
+feature_image: /assets/images/posts/node-featured-image/featured-image.jpg
+featured_image_alt: featured-image
+categories:
+ - node
+tags:
+ - node.js
+ - javascript
+excerpt: In this article, you will learn how to use some of the most common and important global objects in Node.js. 
+
+title: "Global Objects in Node.js"
+---
+
 ### Introduction
-Since node.js follows the modular approach. When variables, functions or objects are defined in a file. They are **local** to that file. The file is treated as a module. To use the variables defined in one file in another file. They need to be exported with the `module.exports` syntax and imported in the other file using `require(path_of_file)`.  This is  only how  you can use another module's variables, objects, .etc in another module. 
+Since node.js follows the modular approach. When variables, functions or objects are defined in a file. They are **local** to that file. The file is treated as a module. To use the variables defined in one file in another file. They need to be exported with the `module.exports` syntax and imported in the other file using `require(path_of_file)`.  This is the only way you can use another module's variables, objects, .etc in another module. 
 
-Global objects in Node.js work in a different way. They are global and avaible in all modules. You do not need to import them using `require`, you can use them directly anywhere in your application.
+Global objects in Node.js work differently. They are global and available in all modules. You do not need to export nor import them using `require` syntax, you can use them directly anywhere in your application.
 
+In this article, you will learn how to use some of the most common and important global objects in Node.js. 
 
-Node.js comes with global objects. The objects are global and are availalbe in all modules. In simple terms, you can use these objects anywhere in your application without having to including them.
-
-In this article, you will learn how to use global objects in Node.js. You will also learn about variables that are not true globals but behaves like globals. These variables exist only in the scope of modules.
-
-## Prerequites
+## Prerequisites
 - You should have node.js installed on your computer
 - Basic command line or terminal knowledge
 
@@ -22,13 +34,13 @@ We will learn how to use the following Node.js global objects.
 - module
 - URL
 
-To easily follow these tutorial, create a folder in your home directory named `nodejs`.
+To easily follow this tutorial, create a folder in your home directory named `nodejs`.
 
 ```
 mkdir nodejs
 ```
 
-Go into the directly `nodejs`.
+Move into the `nodejs` folder.
 
 ```
 cd nodejs
@@ -39,26 +51,28 @@ Inside the `nodejs` directory. Create a file named `main.js`.
 ```
 touch main.js
 ```
+
 Note: touch doesn't work on Windows. You can get around that by creating the file using a text editor and saving it in the `nodejs` directory.
 
 
 ## process
 The [process object](https://nodejs.org/api/process.html) is a global object that provides you with information about the environment your program is executing.
 
-Some of the uselful information it provides are architecuture, process id, the platform, uptime, the current working directory, environmental variables and many more.
+Some of the useful information it provides are architecture, process id, the platform, uptime, the current working directory, environmental variables and many more.
 
-Let's take a look at some of the most commonly used properites and functions in the process object:
+Let's take a look at some of the most commonly used properties and functions in the process object:
 - `process.arch`: the property returns the operating system CPU architecture. Some of the values it returns are 'x64', 'x32` and 'ia32'.
-- `process.platform`: the returns the platform or the operating system the program is executing on. Some of the examples of strings it returns are 'linux', 'win32', 'freebsd', `openbsd`.
+- `process.platform`: it returns the platform or the operating system the program is executing on. Some of the examples of strings it returns are 'linux', 'win32', 'freebsd', `openbsd`.
 
 - `process.id`: returns process id(PID) of the node process.
 - `process.cwd()`: the method returns the current working directory of the program executing
 - `process.chdir(directory)`: the method is used to change the current working directory
 
-The process object comes with a lot of properties, but for sake of brevity, let's just focus on the four and use them to create  a program.
+The process object comes with a lot of properties, but for sake of brevity, let's just focus on the four and use them to create a program.
 
 Open your `main.js` and type the following.
 ```javascript
+// print current working directory
 console.log(`Starting directory: ${process.cwd()}`);
 
 console.log(`This platform is ${process.platform}`);
@@ -82,18 +96,18 @@ Starting directory: /home/<your username>/nodejs
 This platform is linux
 Process PID: 19253
 The CPU Architecture is: x64
-Ending directory: /home/stanley/Documents
+Ending directory: /home/<your username>/Documents
 ```
 
 ## require()
 `require` is a method used to load or import local files, `JSON` and modules. 
 
 ### Import a Local Module or JSON
-To import a local module or JSON, you need to the use the relative path of file.
+To import a local module or JSON, you need to use the relative path of the file.
 
 Local Module.
 ```
-const localModule = require('.path/localModule');
+const localModule = require('.path/filename.js');
 ```
 JSON file.
 ```
@@ -109,9 +123,9 @@ const fileSystem = require('fs');
 
 
 ## __dirname
-`__dirname` returns the path of directory the script is executing in. It is not available in the Node.js REPL.
+`__dirname` returns the path of the directory the script is executing in. It is not available in the Node.js REPL.
 
-delete the code in `main.js` and add the following code:
+Remove the code in `main.js` and add the following code:
 ```javascript
 console.log(__dirname);
 ```
@@ -123,7 +137,7 @@ output:
 This can come handy when reading and writing files with Node.js.
 
 ## __filename
-__filename returns the absolute path of the file being executed. It not availble in the Node.js REPL.
+__filename returns the absolute path of the file being executed. It is not available in the Node.js REPL.
 
 Delete the code in `main.js` and add the following code.
 ```javascript
@@ -136,11 +150,9 @@ output.
 ```
 
 ## module
-----Needs more research --
+This global object is a reference to the current module. It contains information about the current module that CommonJs can use to figure out how to import the module.
 
-This this is  reference to the current module. It contains information about the current module that CommonJs can use to figure out how to import it the module.
-
-Everytime you create a file just we did when we created `main.js`, it becomes a module.
+Every time you create a file just like we did when we created `main.js`, it becomes a module.
 
  We can get all the information about the  `main.js` module by logging the `module`.
 
@@ -166,12 +178,12 @@ Everytime you create a file just we did when we created `main.js`, it becomes a 
 }
 ```
 
-When commonjs is importing the `main.js` module, it looks for the `main.js` file in the paths provided by `Module.paths`.
+When Commonjs is importing the `main.js` module in another file, it looks for the `main.js` file in the paths provided by `Module.paths`.
 
 ### URL
-[URL](https://nodejs.org/api/url.html#url_url) is a constructor method that is used to parse url. It returns an object containing the parsed data.
+[URL](https://nodejs.org/api/url.html#url_url) is a constructor method that is used to parse URL. It returns an object containing the parsed data.
 
-Clear everything in the `main.js` file. We are going to parse the following url: https://www.stanleyulili.com/articles/
+Clear everything in the `main.js` file. We are going to parse the following URL: https://www.stanleyulili.com/articles/
 
 ```javascript
 const url = new URL('https://www.stanleyulili.com/articles/');
@@ -189,12 +201,8 @@ The url path : /articles/
 The url hostname: www.stanleyulili.com
 ```
 
-colusuion
+##  Conclusion
+In this tutorial, you learned how to work some of the most common global objects in Node.js. I hope you have been inspired and will find practical uses cases of the objects in your applications.
 
-refrences:
-https://blog.eduonix.com/web-programming-tutorials/learn-work-global-objects-nodejs/
-https://www.javatpoint.com/nodejs-global-objects
-https://www.w3resource.com/node.js/nodejs-global-object.php
-https://nodejs.org/api/globals.html#globals_process
-tutorialspoint.com/nodejs/nodejs_process.htm
-https://www.tutorialspoint.com/nodejs/nodejs_global_objects.htm
+If you have any suggestions or insights, feel free to leave a comment below.
+
