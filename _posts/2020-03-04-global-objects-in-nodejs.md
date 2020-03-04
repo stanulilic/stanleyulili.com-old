@@ -16,7 +16,7 @@ title: "Global Objects in Node.js"
 ### Introduction
 Since node.js follows the modular approach. When variables, functions or objects are defined in a file. They are **local** to that file. The file is treated as a module. To use the variables defined in one file in another file. They need to be exported with the `module.exports` syntax and imported in the other file using `require(path_of_file)`.  This is the only way you can use another module's variables, objects, .etc in another module. 
 
-Global objects in Node.js work differently. They are global and available in all modules. You do not need to export nor import them using `require` syntax, you can use them directly anywhere in your application.
+Global objects in Node.js work differently. They are global and available in all modules. You do not need to export nor import them. You can use them directly anywhere in your application.
 
 In this article, you will learn how to use some of the most common and important global objects in Node.js. 
 
