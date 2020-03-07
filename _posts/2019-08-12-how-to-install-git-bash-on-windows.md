@@ -11,6 +11,7 @@ tags:
  - git
  - windows
  - bash
+toc: true
 ---
 ## Introduction
 In this tutorial, we are going to learn how to install Git Bash on Windows.
@@ -22,7 +23,7 @@ In this tutorial, we are going to learn how to install Git Bash on Windows.
 **Bash** is a Unix command-line shell. The name is an acronym for the 'Bourne-Again Shell'. It comes with useful Unix commands like cat, ssh, SCP, etc., which are not usually found on Windows.
 
 ## Download Git Bash
-**Step 1:**
+### Step 1: Visit the Official Git Bash Website
 
 Download the latest version of Git Bash from their official website: [https://git-scm.com/](https://git-scm.com/)
 
@@ -30,7 +31,7 @@ Download the latest version of Git Bash from their official website: [https://gi
 
 Click the "Download for windows" button.  
 
-**Step 2:**
+### Step 2: Start Git Bash Download
 
 Next, you will be redirected to a page that lets you know that you are about to start downloading.
 
@@ -47,7 +48,7 @@ Click on "Save File" to start downloading the executable.
 
 
 ## Install Git Bash
-**Step 3:**
+### Step 3: Run the Installer
 
 Once you have downloaded the Git Bash executable, click it to run the installer.
 
@@ -56,25 +57,25 @@ Once you have downloaded the Git Bash executable, click it to run the installer.
 Click "Next" after you have read the license.
 
 
-**Step 4:**
+### Step 4: Select Destination Location
 
 Next, select the location you want to install Git Bash. I would recommend you just leave the default option as it is, and click "Next".
 
 ![choose default](/assets/images/posts/2019-08-13-install-git-bash/installation-directory.jpg)
 
-**Step 5:**
+### Step 5: Select Components
 
 Choose the components you want to install, or you can just proceed with the default options and click "Next". I prefer selecting the "Additional icons" component which creates a Git Bash shortcut on the desktop.
 
 ![select components](/assets/images/posts/2019-08-13-install-git-bash/select-components.jpg)
 
-**Step 6:**
+### Step 6: Select Start Menu Folder
 
 You can change the name of start menu folder here if you want, or just leave the default name and click "Next".
 
 ![select start menu folder](/assets/images/posts/2019-08-13-install-git-bash/select-start-menu-folder.jpg)
 
-**Step 7:**
+### Step 7: Choose the Default Editor  used by Git
 
 Next, select the default editor for Git to use. Choose the one you like and click "Next". I would recommend you proceed with **Nano** or **Notepad++**. Don't proceed with the default option "Vim" as it has a steep learning curve.
 
@@ -82,11 +83,9 @@ Next, select the default editor for Git to use. Choose the one you like and clic
 ![Choose nano editor](/assets/images/posts/2019-08-13-install-git-bash/choose-nano.jpg)
 ![editor chosen](/assets/images/posts/2019-08-13-install-git-bash/editor-chosen.jpg)
 
-**Step 8:**
+### Step 8: Adjust your PATH Environment 
 
 Choose the option you want depending on where you want to use Git and click "Next".
-
-![Adjust Path Environment](/assets/images/posts/2019-08-13-install-git-bash/path-environment.jpg)
 
 Select **"Use Git from Git Bash only"** option if want to run Git and Bash commands from Git Bash only. This means that you won't be able to run Git commands such as `git status` on Windows Command Prompt or Powershell. They will only be found on Git Bash.
 
@@ -101,44 +100,46 @@ run bash commands, you will have to open the Git Bash. So go ahead with this opt
 
 Select **"Use Git and optional Unix tools from the Command Prompt"** option if you want to use both Git and Bash commands on Windows Command Prompt or Powershell. This option will override some default Windows Command Prompt tools like find and sort. I don't use CMD or Powershell that much to worry about that. So I will go ahead with this option by clicking "Next".
 
+![Adjust Path Environment](/assets/images/posts/2019-08-13-install-git-bash/path-environment.jpg)
 
-**Step 9:**
+
+### Step 9: Choose HTTPS Transport Backend
 
 Next, select "Use the OpenSSL library" and click "Next".
 
 ![choose https transport backend](/assets/images/posts/2019-08-13-install-git-bash/choosing-https-transport.jpg)
 
-**Step 10:**
+### Step 10: Configure the Line Ending Conversions
 
 Select how Git should treat line endings in text files. It's probably safe to go with the default option "Checkout Windows-Style, commit Unix-style line endings". Click "Next" to proceed.
 
 ![configure line endings conversions](/assets/images/posts/2019-08-13-install-git-bash/configuring-the-line-endings.jpg)
 
-**Step 11:**
+### Step 11: Configure the Terminal Emulator to use with Git Bsh
 
 Next, select the terminal emulator you want Git Bash to use. I will proceed with the default option "Use MinTTY(the default terminal of MSYS2) and click "Next".
 
 ![choose terminal emulator](/assets/images/posts/2019-08-13-install-git-bash/terminal-emulator.jpg)
 
-**Step 12:**
+### Step 12: Configuring Extra Options 
 
 Select the features you want(the default options are fine) and click "Next". 
 
 ![enable features](/assets/images/posts/2019-08-13-install-git-bash/extra-options.jpg)
 
-**Step 13:**
+### Step 13: Configuring Extra Options
 
 Enable experimental options if you want. Enabling them allows you to try out newer features that are still in development. I don't enable this, so I will just proceed by clicking "Install" to start the installation process.
 
 ![enable experimental options](/assets/images/posts/2019-08-13-install-git-bash/experimental-options.jpg)
 
-**Step 14:**
+### Step 14: Wait for Installation
 
 Now, wait for a few minutes as the Setup Wizard installs Git on your computer.
 
 ![Setup wizard](/assets/images/posts/2019-08-13-install-git-bash/installing.jpg)
 
-**Step 15:**
+### Step 15: Complete the Git Setup Wizard
 
 After the installation has finished, check the "Launch Git Bash" and click "Finish" to launch Git Bash.
 
@@ -169,3 +170,4 @@ The following are just some tips on how you can easily launch Git Bash.
 `git --version` tells you the Git version currently installed on a system. It is also a confirmation that Git is installed.
 
 `which git` tells you where the Git executable is located. `which` command is part of Unix commands/bash, it is not available on Windows Command Prompt or Powershell by default. 
+
