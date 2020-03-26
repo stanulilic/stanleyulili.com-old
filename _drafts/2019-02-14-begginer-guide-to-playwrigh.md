@@ -1,4 +1,8 @@
 begginers guide to googles playright
+https://learnscraping.com/nodejs-web-scraping-with-puppeteer/
+
+good:
+https://github.com/emadehsan/thal
 
 Idea:
 
