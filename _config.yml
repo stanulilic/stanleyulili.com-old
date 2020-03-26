@@ -17,7 +17,7 @@ title: Stanley Ulili
 email: stanleyulili@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   I make web development tutorials that my past self would have wanted
-twitter_username: stanleyulili
+twitter_username: stanulilic
 github_username: stanulilic
 minimal_mistakes_skin: default
 search: true
@@ -70,7 +70,7 @@ author:
       url: "mailto:stanleyulili@gmail.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/stanleyulili"
+      url: "https://twitter.com/stanulilic"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/stanulilic"
@@ -79,7 +79,7 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/stanleyulili"
+      url: "https://twitter.com/stanulilic"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/stanulilic"
@@ -125,7 +125,7 @@ analytics:
 
 # Social Sharing
 twitter:
-  username               : &twitter "stanleyulili"
+  username               : &twitter "stanulilic"
 
 # For specifying social profiles, used in _includes/seo.html
 # - https://developers.google.com/structured-data/customize/social-profiles
@@ -133,4 +133,4 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-    - "https://twitter.com/stanleyulili"
+    - "https://twitter.com/stanulilic"
