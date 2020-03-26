@@ -10,11 +10,12 @@ tags:
  - javascript
 excerpt: In this tutorial, you will learn how to create Node.js modules. You will learn how to include functions defined in one file and use them in another file.
 title: "Node.js Modules: Learn how to Import and use Functions from Another File"
+toc: true
 ---
 
-### introduction
+## introduction
 
-In Nodie.js, any file that consists of JavaScript code in a file ending with `.js` is a module. A module can contain definitions of functions, classes, objects, or variables that can be referenced or used in another Javascript file.
+In Node.js, any file that consists of JavaScript code in a file ending with `.js` is a module. A module can contain definitions of functions, classes, objects, or variables that can be referenced or used in another Javascript file.
 
 When your application starts getting larger, maintaining a single file becomes a difficult task.  it is easy to get lost in the codebase and lose track of what a particular piece of code is doing. The problem get's worse when you are debugging code.
 
