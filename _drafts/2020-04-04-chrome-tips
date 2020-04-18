@@ -1,0 +1,46 @@
+Tips
+
+## track changes on the dom node(go to see the code causing dom changes)
+
+right click on the desired element and choose break on > node removal or attribute
+modifictions or subtree modifications
+
+node-removal - break when an element is about to de deleted
+attribute modifications - break when an attribute is modified
+- subtree modificcations - google this
+
+## Computed tab
+it has styles that are applied(or in other words have won specificity)
+You can go to 
+color >  black
+
+The arrow takes you the styles tab and shows you the class/id receiving
+those styles
+
+## 
+## delete or move dom nodes
+- press h to hide a dom node temporaly
+- press delete to delete a dom node(control + z to undo)
+- click and drag the element.
+
+
+## conse elemenet inspection
+- ESC - brings up the console dialog, press $0 to manipulate the current
+select element 
+- inspect on an item and click go to console and type $0, it will show you the selected
+element
+
+## change color format
+- change color format: shift click on the rectangle box, it will show you different
+
+## black boxing
+- if it's open in the sources tab, you can right click and choose "black box script"
+-Under call stack on the left side of the debugger, right click and choose "black box script"
+- click on settings -> choose black boxing
+ - enter the name of the script or regex and click "add pattern"
+
+## shortcuts
+in sources tab, press cotrol + p to search though any file you want to open
+
+Control+shift+p - switch inspector tabs
+ https://raygun.com/javascript-debugging-tips

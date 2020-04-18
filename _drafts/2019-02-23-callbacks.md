@@ -71,9 +71,8 @@ console.log('third'); // third
 
 This behaviour  can be problematic since not all the code not all the code in an application depends on each other.
 
- Imagine if `console.log('second')` and `console.log('third')` were function blocks hanlding different parts of a user interface unrelated to the `first` function. With syncronous execution, the whole UI will come to a halt until the function `first` finishes. As you can imagine, this would give a horrible and a frustrasting experience for users of the application.
+ Imagine if `console.log('second')` and `console.log('third')` were function blocks hanlding different parts of a user interface unrelated to the `first` function. With syncronous execution and javascript being single threaded, the whole UI will come to a halt until the function `first` finishes. As you can imagine, this would give a horrible and a frustrasting experience for users of the application.
 
- ### Asynccronous
 
 Another example where Syncronous execution model is can be problematic, is when there are functions that depends on data supplied external sources:
 - Retrieving data from an API or the database
@@ -137,15 +136,23 @@ As you can see, this ansycnronous behaviour in this scenario is also not desirab
 
 What if there is a way to get around it? What if there is a way to put the `getData()` in the background when accessing an Api and continue with execution the rest of the  code and run `displayData` only when `getData()` finishes executing?  
 
-To answer the questions, "yes, there is a way". And this is the basis of **asysncronous code**. In asyncronous code, Instead of waiting for time aconsuming tasks to finish executing, the task is put in background and all the code execute.
 
-Lets modify our previous example and make it ascrononous. Prior to ES6, a popular way to make code ascyrnoous was by putting the time consuming code inside a  `setTimeout()`  function. A `setTimeout()` is a JavaScript  function that executes a function after a specified amount of time(milliseconds). 
+To answer the questions, "yes, there is a way". And this is the basis of **asysncronous code**.
+
+ ### Asynccronous
+ In asyncronous code, Instead of waiting for time aconsuming tasks to finish executing, the task is put in background and all the code execute.
+
+Lets modify our previous example and make it ascrononous. Prior to ES6, a popular way to make code ascyrnoous was by putting the time consuming code inside a  `setTimeout()`  function. A `setTimeout()` is a method of the Window object  that executes a function after a specified amount of time(milliseconds). 
 
 ```javascript
 setTimeout(function(){ // code comes here }, 0);
 ```
 
 Even if you set the specified time to be 0 milliseconds, `setTimeout()` will still be asyncronous.
+
+`setTimeout` not part of javascript. It is part of the browser, It is exposed to javascript as a window method.
+
+We won't get into details of how it works behind the scenes as it is a topic of it's own. However, the main take away
 
 Let's wrap our code is `getData()` function inside the `setTimeout`.
 ```javascript
@@ -197,6 +204,58 @@ console.log('third');
 ```
 
 Our code here is behaving asyncronous, it is no longer waiting for the time consuming `getData()` function to finish. This is big step, but there is room for improvement. 
+
+We also have a second challege , the `getData()` function has lost the ability to return values. so even if `getData()` was first to run, the variable response would have still been `undefined`. 
+
+You can see this behaviour with simplied code
+
+```javascript
+function getData() {
+  setTimeout(() => {
+    const browsers = ['firefox', 'chrome', 'edge', 'opera'];
+    console.log('data from api received');
+    return browsers;
+  }, 0);
+}
+
+
+const response = getData();
+```
+
+When we run the function, we get:
+
+```
+undefined
+data from api received
+```
+
+If you `console.log(response)`, you will always get `undeinfied`
+
+The function `getData()` run as evidenced by the logging of 'data from api received'. Hoever, even though in the function we returned the 'browsers` array, when it runs runs it never does.
+
+Compare the code with the one without setTimeout.
+```javascript
+function getData() {
+    const browsers = ['firefox', 'chrome', 'edge', 'opera'];
+    console.log('data from api received');
+    return browsers;
+}
+
+
+const response = getData();
+console.log(response);
+```
+Output:
+data from api received
+(4) ["firefox", "chrome", "edge", "opera"]
+```
+
+As you can see from the examples, though we now have the ability for our function to be asysncronous, we hve a lso lost the ability to return the values.
+
+So if this was an api that was getting data from external service, we wound't be able to return it. 
+
+In this scnearoi, if we want to do anything with the `browsers` array, we will need to do it inside the `getData` function only.
+https://stackoverflow.com/questions/24928846/get-return-value-from-settimeout
 
 ## why do we callbacks need?
 Though our code is working asyncrnous,  there is still a problem. `displayData()` executes without waiting for `getData()` to finish. Remember, `displayData()` displays the response(array) from the API call in `getData()`. So having the `displayData()` executing before we receive data is not what we want.
@@ -289,6 +348,7 @@ function sayMessage() {
   console.log('am a callback function');
 }
 
+// pass sayMessage function definition as second argument
 greeting("stanley", sayMessage);
 ```
 You will get the same output.
@@ -371,6 +431,49 @@ const response = getData(displayData);
 console.log('second');
 console.log('third');
 ```
+
+## Callback hell
+https://stackoverflow.com/questions/52733239/is-this-the-right-way-to-do-callback-in-js
+
+https://stackoverflow.com/questions/57001273/combine-two-callbacks-into-one-return/57001448
+Let's continue with the code before our simplified version of code. :
+
+We will remove the data calculations for the sake brevity but keep the `setTimeout()` to make the fake API request asyncronous.
+
+
+
+```javascript
+function getData(displayData) {
+  setTimeout(() => {
+    const browsers = ['firefox', 'chrome', 'edge', 'opera'];
+    console.log('data from api received');
+    displayData(browsers)  // calling the callback
+  }, 0);
+}
+
+function displayData(response) {
+  console.log('Popular browsers are:', response);
+}
+
+const response = getData(displayData);
+console.log('second');
+console.log('third');
+```
+
+We are able to simulate an api request and we receive data. As you notice, we cant not return data out of the setTimeOut() instead we get the data `browsers` and it's only available inside our  `getData` function and we cannot return it out of the setTimeOut.
+
+Due to this limitation, it's why are passing a callback to be use the data returned from our fake API request.
+
+
+To understand callback hell, 
+Let's create  a function `joinData` that creates a joined string from the array `browsers` returned from our fake api reponse first.
+
+The function `displayData` will only display the manipulated output from `joinData`.
+
+As we have learned, we can not returned the data from `getData` function, the only way is to nest the `joinData` function inside `getData`
+
+ The `displayData` function will display data returned from 
+
 
 
 ## References

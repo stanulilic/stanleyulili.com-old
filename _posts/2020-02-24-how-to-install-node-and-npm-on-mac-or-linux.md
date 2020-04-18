@@ -44,13 +44,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 
 ```
 
-If your on Mac, open your `~/.bash_profile` or create a new one if the `~/.bash_profile` file does not exist.
-
-Make sure you add the following command in the file and save. 
-
-```bash
-source ~/.bashrc
-``` 
+**Info**:
+If your on Mac, open your `~/.bash_profile` or create a new one if the `~/.bash_profile` file does not exist. Make sure you add `source ~/.bashrc` in the file and save. 
+{: .notice--info}
 
 Now let's verify if `nvm` was installed successfully.
 
@@ -63,6 +59,11 @@ Your terminal should display the current version of nvm. At the time of writing,
 stanley@hostname:~$ nvm --version
 0.35.2
 ```
+**Note**: On  Linux, if you get `nvm: command not found` or no feedback, close your terminal and open a new terminal and enter the `nvm --version` again.
+{: .notice--info}
+
+**Tip**: On  Mac, if you are having any issues with the `nvm` command not working, check out this [link](https://github.com/nvm-sh/nvm#troubleshooting-on-linux)
+{: .notice--info}
 
 Lets now install Node using nvm's install command.
 
