@@ -10,6 +10,7 @@ tags:
  - javascript
 excerpt: In this article, you will learn how to install Node.js and npm on Mac or Linux. You will also learn how to verify the installation, run Node.js code, and how to update Node.js and npm.
 title: "How to Install Nodejs and npm on Mac or Linux"
+toc: true
 ---
 
 ## Introduction
@@ -59,7 +60,7 @@ Your terminal should display the current version of nvm. At the time of writing,
 stanley@hostname:~$ nvm --version
 0.35.2
 ```
-**Note**: On  Linux, if you get `nvm: command not found` or no feedback, close your terminal and open a new terminal and enter the `nvm --version` again.
+**Note**: On  Linux, if you get `nvm: command not found` or no feedback, close your terminal and open a new terminal and enter the `nvm --version` again. If you using ssh to access linux, you might need to restart your session.
 {: .notice--info}
 
 **Tip**: On  Mac, if you are having any issues with the `nvm` command not working, check out this [link](https://github.com/nvm-sh/nvm#troubleshooting-on-linux)
@@ -203,7 +204,7 @@ I hope you have understood how to run Node.js code on your Mac or Linux system.
 
 Next, we are going to learn how to update Node.js and npm using nvm.
 
-## How to Update Node.js and npm with nvm
+## How to Update Node.js and npm using nvm
 To update to the latest version Node.js and npm. Type the following:
 
 ```bash
