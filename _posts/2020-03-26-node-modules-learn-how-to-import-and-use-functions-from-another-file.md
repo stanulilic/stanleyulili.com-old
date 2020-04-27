@@ -120,7 +120,7 @@ To see that in action, let's import the `lib.js` module by requiring it inside t
 
 **main.js**
 ```javascript
-const lib = require('./lib.js');
+const lib = require('./lib');
 
 const result = lib.add(4, 4);
 console.log(`The result is: ${result}`);
@@ -134,14 +134,20 @@ The result is: 8
 
 What's happening in the code above is that we are importing the `lib.js` module. 
 ```javascript
-const lib = require('./lib.js');
+const lib = require('./lib');
 ```
-When importing the file `lib.js`, it is important to prefix it with `./` inside `require`. This tells Node.js  that we are importing a local module(a  module created by yourself such as the `lib.js` module)
+When importing the file `lib.js`, it is important to prefix it with `./` inside `require`. This tells Node.js  that we are importing a local module(a  module created by yourself such as the `lib.js` module).
+
+ When requiring the module, you can leave out the file as extension as we have done `require('./lib')` or you can put the file extension(`.js`) of the file you want to import.
+
+```javascript
+const lib = require('./lib.js'); // putting an extension also works
+```
 
 When `require` imports the module, it returns an object with `add()` as it's a method and stores it in the `lib` variable.
 
 ```javascript
-const lib = require('./lib.js');
+const lib = require('./lib');
 console.log(lib);
 ```
 Output:
@@ -178,9 +184,9 @@ module.exports = { add, subtract, num };
 
 ```
 
-In `main.js` file.
+In `main.js` file, you can import them as follows:
 ```javascript
-const lib = require('./lib.js');
+const lib = require('./lib');
 
 console.log(lib.add(4, 4)); // 8
 console.log(lib.subtract(8, 4)); // 4
@@ -190,7 +196,7 @@ console.log(lib.num);
 You can also use the [destructuring syntax](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to unpack the properties of the object returned by `require` and store them in variables.
 
 ```javascript
-const { add, subtract, num } = require('./lib.js');
+const { add, subtract, num } = require('./lib');
 
 console.log(add(4, 4)); // 8
 console.log(subtract(8, 4)); // 4
@@ -242,7 +248,7 @@ To import `lib.js` file inside the directory, require `lib.js` by prefixing it w
 
 In `main.js` file.
 ```javascript
-const lib = require('./maths/lib.js');
+const lib = require('./maths/lib');
 
 console.log(lib.add(4, 4)); // 8
 console.log(lib.subtract(8, 4)); // 4
@@ -260,13 +266,13 @@ These are modules that you can create yourself and use them in your application.
 
 **importing Local modules**
 
-To recap, to import a local module, you have to `require('./filename.js')` or `require('./path/filename.js')`.
+To recap, to import a local module, you have to `require('./filename')` or `require('./filename.js')` or `require('./path/filename.js')`.
 
 ```
 const moduleName = require('./filename.js');
 ```
 
-You don't have to add the ".js" extension, Node.js can still load your local module without it.
+You don't have to add the ".js" extension, Node.js can still load your local module without it as we have learned.
 
 ```
 const moduleName = require('./filename');
