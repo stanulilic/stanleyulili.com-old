@@ -18,7 +18,7 @@ Javascript callbacks are one of the most important concepts to understand. I nev
 
 I had trouble understanding promises, I kept asking myself, "Where and why would I use this?". I would read an article talking about using Promises with [Fetch API](https://developer.mozilla.org/en/docs/Web/API/Fetch_API) I would get it in that context but I kept wondering about the situation I would create a Promise for my code.
 
-I must mention I also had a very poor understanding of asynchronous programming in JavaScript, so I was set up to fail. Learning more about asynchronous programming lead to me callbacks which gave me an aha moment, the light bulb went on. I finally understood the hype about Promises and Async/aWait. 
+I must mention I also had a very poor understanding of asynchronous programming in JavaScript, so I was set up to fail. Learning more about asynchronous programming lead to me callbacks which gave me an aha moment, the light bulb went on. I finally understood the hype about Promises and Async/Await. 
 
 In this article, We are going to take a look at the difference between synchronous and asynchronous programming in JavaScript. We will then proceed to learn about the importance of callbacks, creating callbacks, and finally, we will cover about callback hell. 
 
