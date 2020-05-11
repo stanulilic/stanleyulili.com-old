@@ -18,12 +18,12 @@ Javascript callbacks are one of the most important concepts to understand. I nev
 
 I had trouble understanding promises, I kept asking myself, "Where and why would I use this?". I would read an article talking about using Promises with [Fetch API](https://developer.mozilla.org/en/docs/Web/API/Fetch_API) I would get it in that context but I kept wondering about the situation I would create a Promise for my code.
 
-I must mention I also had a very poor understanding of asynchronous programming in JavaScript, so I was set up to fail. Learning more about asynchronous programming lead to me callbacks which gave me an aha moment, the light bulb went on. I finally understood the hype about Promises and Async/Await. 
+I must mention I also had a very poor understanding of asynchronous programming in JavaScript, so I was set up to fail. Learning more about asynchronous programming lead me to callbacks which gave me an aha moment, the light bulb went on. I finally understood the hype about Promises and Async/Await. 
 
 In this article, We are going to take a look at the difference between synchronous and asynchronous programming in JavaScript. We will then proceed to learn about the importance of callbacks, creating callbacks, and finally, we will cover about callback hell. 
 
 By the end of this tutorial, you will understand:
-- Synchronous and asynchronous behavior in Javascript
+- Synchronous and asynchronous behavior in JavaScript
 - Why and when callbacks are needed
 - How to create callbacks.
 - Callback hell
@@ -68,7 +68,7 @@ Let's say you have 3 lines:
 3 console.log('line three')
 ```
 
-One line of code will execute at a time and when it's finished, it moves on to the next line in the order it appears in the code. So in the example above, line 1 executes first, then line two and finally line 3.
+One line of code will execute at a time and when it's finished, it moves on to the next line in the order it appears in the code. So in the example above, line 1 executes first, then line 2 and finally line 3.
 
 In synchronous execution, if there is a piece of code that might take a long time to execute, everything stops and the remaining code must wait for that piece of code to finish.
 
@@ -118,7 +118,7 @@ Finally, the last line executes.
 console.log('third'); // third
 ```
 
-While this behavior can be good sometimes, their circumstances such as the previous code where this behavior is not ideal. 
+While this behavior can be good sometimes, there are circumstances such as the previous code where this behavior is not ideal. 
 
 Imagine if `console.log('second')` and `console.log('third')` were function blocks handling different parts of a user interface unrelated to the `getData` function. With synchronous execution and javascript being single-threaded, the whole UI will come to a halt until the function `getData` finishes. As you can imagine, this would give a horrible and frustrating experience for users of the application.
 
@@ -128,7 +128,7 @@ Another example where the synchronous execution model is not ideal is when there
 
 Retrieving data from an API usually involves sending a request to the server and waiting for the response. This means the code has to wait for a response from a server. The wait time can be a couple of seconds and might vary depending on the internet speed. If there are functions that are depending on the data to be returned from an API, in synchronous execution, they will have to wait for the response from the server before they can run, halting execution.
 
-Let's do another example, let's take some part of the code of the previous code to simulate the delay behavior of asking data from the server thorough an API:
+Let's do another example, let's take some part of the code of the previous example to simulate the delay behavior of asking data from the server thorough an API:
 
 **Example 2:**
 ```javascript
@@ -195,7 +195,7 @@ The two console logs are not related nor do they depend on the functions `getDat
 What if there is a way to get around it? What if there is a way to put the `getData()` in the background when accessing an API and continue executing the rest of the code and then run `displayData` only when `getData()` finishes executing?  
 
 
-To answer the questions, "yes, there is a way". And this is the basis of **asynchronous programming*.
+To answer the questions, "yes, there is a way". And this is the basis of *asynchronous programming*.
 
 ### Asynchronous JavaScript
 In asynchronous code, instead of waiting for a time-consuming task to finish executing, the task is put in the background and all the other code executes.
@@ -210,13 +210,14 @@ Even if you set the specified time to be 0 milliseconds, `setTimeout()` will mak
 
 `setTimeout` is not part of javascript. It is part of the browser, it is exposed to javascript as a window method.
 
-We won't get into details of how it works behind the scenes as it is a different topic of its own. The focus in this tutorial is just to show you how code behaves asynchronously in Javascript.
+We won't get into the details of how it works behind the scenes as it is a different topic of its own. The focus in this tutorial is just to show you how code behaves asynchronously in Javascript.
 
 Continuing with **example 2**, let's wrap our code in `getData()` function inside a `setTimeout` function.
 
 **Example 3**:
 ```javascript
 function getData() {
+  // put the setTimeout here
   setTimeout(() => {
     let myDate;
     for (let i = 0; i < 10000000; i++) {
@@ -227,7 +228,7 @@ function getData() {
     const browsers = ['firefox', 'chrome', 'edge', 'opera'];
     console.log('data from API received');
     return browsers;
-  }, 0);
+  }, 0); // end of setTimeout function call
 }
 
 function displayData(response) {
@@ -267,7 +268,7 @@ Our code as shown in the output, it is now behaving asynchronously, it is no lon
 
 We also have a second challenge, the `getData()` function has lost the ability to return values. So even if `getData()` was first to run, the variable response would have still been `undefined`. 
 
-You can see this behavior with simplified code
+You can see this behavior with simplified code.
 
 **Example 4:**
 ```javascript
@@ -291,9 +292,9 @@ undefined
 data from API received
 ```
 
-If you `console.log(response)`, you will always get `undefined`
+If you `console.log(response)`, you will always get `undefined`.
 
-The function `getData()` run as evidenced by the logging of 'data from API received'. However, even though in the function we returned the 'browsers` array when it runs, it never returns the array.
+The function `getData()` run as evidenced by the logging of 'data from API received'. However, even though in the function we returned the `browsers` array when it runs, it never returns the array.
 
 Compare the code with the one without `setTimeout`.
 
@@ -328,7 +329,7 @@ Though our code(*example 3*) is working asynchronously,  there is still a proble
 
 You can even see from the output that `displayData()` logs `undefined`.
 
-**Example 3 output**
+**Example 3 output:**
 ```
 Popular browsers are: undefined  // displayData(response)
 second
@@ -501,6 +502,7 @@ function displayData(response) {
   console.log('Popular browsers are:', response);
 }
 
+// passing displayData function as a callback inside getData fuction call
 const response = getData(displayData);
 console.log('second');
 console.log('third');
@@ -517,10 +519,11 @@ So let's say you have over 5 functions that need to work on the data returned by
 
 This may sound good in theory but in practice, things can get complex fast as we will learn with the example below.
 
-Example:
-In our example, we are going to pretend as if the income $650 is coming from a being returned from a server after an API request(I want to keep the code as simple as possible). We will have callbacks that subtract the expenses such as rent, utility bills, internet, etc from the income. Our goal is to get the discretionary income(income remaining after deducting basic living costs).
+**Example:**
 
- The following are the functions that will be doing the calculations
+In our new example, we are going to pretend as if the income $650 is coming from a being returned from a server after an API request(I want to keep the code as simple as possible). We will have callbacks that subtract the expenses such as rent, utility bills, internet, etc from the income. Our goal is to get the discretionary income(income remaining after deducting basic living costs).
+
+ The following are the functions that will be doing the calculations:
  - getIcome:  Income = 650
  - payRent - Subtract $200 from income (650 - 200 = 450)
  - payUtilityBills - Subtract $87 from current income (450 - 87 = $363)
@@ -537,7 +540,7 @@ function getIncome(callback) {
   callback(650);
 }
 
-// call getIncome function with a callback as argument
+// call getIncome function with a callback as an argument
 getIncome(function(income) { 
   console.log(income);
 });
@@ -583,6 +586,7 @@ So now, let us create a function `payRent` that will subtract $200 rent from the
 
 ```javascript
 getIncome(function(income) { 
+  // call payRent inside "getIncome" callback
   payRent(income, function(incomeAfterRent) {
     console.log(incomeAfterRent) ;
   });
@@ -591,7 +595,7 @@ getIncome(function(income) {
 
 Here is the full code.
 
-**Example 11: **
+**Example 11:**
 ```javascript
 function getIncome(callback) { 
   callback(650);
@@ -643,7 +647,7 @@ getIncome(function(income) {
 });
 ```
 
-Here is full code:
+Here is the full code:
 
 **Example 12:**
 ```javascript
@@ -673,12 +677,12 @@ getIncome(function(income) {
 
 As you can see our code is becoming harder to comprehend. When using callbacks, it's very common to see callbacks being nested more than 8 or 10 levels deep.  I am sure you can imagine the horror of seeing many callbacks being nested that deep. 
 
-We now remaining with 3 callbacks.
+We are now remaining with 3 callbacks.
  - payInternetBill - subtract $50 from current income(363 - 50 = $313)
  - payPhoneCharges - subtract $75 from income(313 - 75 = $238)
  - payForRepairs - subtract $66 from income(238 - 66 = 172)
 
- We will just write the 3 functions in one go, we will call them by nesting them as we have done with the other functions in the earlier example. Spoiler alert,  we are going to depths of hell.
+We will just write the 3 functions in one go, we will call them by nesting them as we have done with the other functions in the earlier example. Spoiler alert,  we are going to depths of hell.
 
 ```javascript
 function getIncome(callback) { callback(650); }
