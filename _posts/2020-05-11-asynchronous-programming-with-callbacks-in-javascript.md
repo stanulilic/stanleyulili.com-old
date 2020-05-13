@@ -524,7 +524,7 @@ This may sound good in theory but in practice, things can get complex fast as we
 In our new example, we are going to pretend as if the income $650 is being returned from the server after an API request(I want to keep the code as simple as possible). We will have callbacks that subtract the expenses such as rent, utility bills, internet, etc from the income. Our goal is to get the discretionary income(income remaining after deducting basic living costs).
 
  The following are the functions that will be doing the calculations:
- - getIcome:  Income = 650
+ - getIncome:  Income = 650
  - payRent - Subtract $200 from income (650 - 200 = 450)
  - payUtilityBills - Subtract $87 from current income (450 - 87 = $363)
  - payInternetBill - Subtract $50 from current income(363 - 50 = $313)
