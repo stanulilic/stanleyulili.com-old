@@ -128,7 +128,7 @@ Another example where the synchronous execution model is not ideal is when there
 
 Retrieving data from an API usually involves sending a request to the server and waiting for the response. This means the code has to wait for a response from a server. The wait time can be a couple of seconds and might vary depending on the internet speed. If there are functions that are depending on the data to be returned from an API, in synchronous execution, they will have to wait for the response from the server before they can run, halting execution.
 
-Let's do another example, let's take some part of the code of the previous example to simulate the delay behavior of asking data from the server thorough an API:
+Let's do another example, let's take some part of the code of the previous example to simulate the delay behavior of asking data from the server through an API:
 
 **Example 2:**
 ```javascript
