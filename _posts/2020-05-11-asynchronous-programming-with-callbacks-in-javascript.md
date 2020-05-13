@@ -171,7 +171,7 @@ The `getData()` fuction executes first, and logs a message "data from API receiv
 ```
 const response = getData(); 
 ```
-When the `getData()` function finish after executing for a couple of seconds, `displayData()` takes the response(the array) as an argument and logs it in the console.
+When the `getData()` function finishes after executing for a couple of seconds, `displayData()` takes the response(the array) as an argument and logs it in the console.
 
 ```javascript
 displayData(response);
@@ -294,7 +294,7 @@ data from API received
 
 If you `console.log(response)`, you will always get `undefined`.
 
-The function `getData()` run as evidenced by the logging of 'data from API received'. However, even though in the function we returned the `browsers` array when it runs, it never returns the array.
+The function `getData()` runs as evidenced by the logging of 'data from API received'. However, even though in the function we returned the `browsers` array when it runs, it never returns the array.
 
 Compare the code with the one without `setTimeout`.
 
@@ -361,7 +361,7 @@ It is this behavior that allows us to pass a function as an argument of another 
 
 ## Creating Callbacks
 
-Before we make `displayData()` function, let's look at the basics of creating a callback with simplified code. After that, we will proceed to turn `displayData()` into a callback.
+Before we make the `displayData()` function, let's look at the basics of creating a callback with simplified code. After that, we will proceed to turn `displayData()` into a callback.
 
 Let's create a  function.
 
@@ -404,7 +404,7 @@ greeting('Stanley', function() {
   console.log('am a callback function');
 })
 ```
-Inside the `greeting` function, **we call the callback after the code in the greeting function**. Remember, the goal is to make sure that the callback run after the higher order function(a function that takes a callback as argument) has finished executing.
+Inside the `greeting` function, **we call the callback after the code in the greeting function**. Remember, the goal is to make sure that the callback runs after the higher order function(a function that takes a callback as argument) has finished executing.
 
 You are not limited to creating callbacks by defining them in a function call. You can also define a callback outside the function call and pass it as an argument as demonstrated below.
 
@@ -478,7 +478,7 @@ To recap, we passed `displayData` function as an argument of `getData()` functio
 ```
 const response = getData(displayData);
 ```
-Inside the `getData` function, we call the `displayData()` function immediately after we the receive the response. We pass the response(browsers array) as an argument of `displayData`.
+Inside the `getData` function, we call the `displayData()` function immediately after we receive the response. We pass the response(browsers array) as an argument of `displayData`.
 
 ```javascript
 const browsers = ['firefox', 'chrome', 'edge', 'opera'];
@@ -490,7 +490,7 @@ If you are confused, you can check out the simplified version of the example whe
 
 **Example 10:**
 ```javascript
-// simplifed version
+// simplified version
 function getData(displayData) {
     const browsers = ['firefox', 'chrome', 'edge', 'opera'];
     console.log('data from api received');
@@ -502,7 +502,7 @@ function displayData(response) {
   console.log('Popular browsers are:', response);
 }
 
-// passing displayData function as a callback inside getData fuction call
+// passing displayData function as a callback inside getData function call
 const response = getData(displayData);
 console.log('second');
 console.log('third');
@@ -550,7 +550,7 @@ output:
 650
 ```
 
-Here is that what happens during execution. When `getIncome` is called, we pass it a callback `function(income) { console.log(income)}`. Remember a callback is a function passed as an argument in another function.
+Here is what happens during execution. When `getIncome` is called, we pass it a callback `function(income) { console.log(income)}`. Remember a callback is a function passed as an argument in another function.
 
 As the `getIncome` function executes, the `callback` parameter of the getIncome function is set to the anonymous function(callback) `function(income) { console.log(income)}`
 
