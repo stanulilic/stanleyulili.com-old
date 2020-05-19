@@ -70,7 +70,7 @@ Let's say you have 3 lines:
 
 One line of code will execute at a time and when it's finished, it moves on to the next line in the order it appears in the code. So in the example above, line 1 executes first, then line 2 and finally line 3.
 
-In synchronous execution, if there is a piece of code that might take a long time to execute, everything stops and the remaining code must wait for that piece of code to finish.
+In synchronous execution, if there is a piece of code that might take a long time to execute, everything stops and the remaining code must wait for that piece of code to finish. This behaviour is called **blocking**.
 
 We can see this synchronous behavior with the example given below. I have modified the example from [MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Concepts), you don't have to worry about what the function `getData()` is doing, It's just there to simulate a delay as the task of calculating is time-consuming. Your main focus should be the execution.
 
@@ -515,7 +515,7 @@ As you can see, the `DisplayData` callback is called immediately and given an ar
 
 So in Javascript, as we have learned if we have a time-consuming task or an API request. If there are functions that depend on the output of the time-consuming task, you need to create them as callbacks so that they can be called the moment the task is done.
 
-So let's say you have over 5 functions that need to work on the data returned by a time-consuming task. You need to nest the callbacks in a style known as a continuous passing style where one callback passes a value to the nested callback and so on.
+So let's say you have over 5 functions that need to work on the data returned by a time-consuming task. You need to nest the callbacks in a style known as [continuation-passing style](https://en.wikipedia.org/wiki/Continuation-passing_style) where one callback passes a value to the nested callback and so on.
 
 This may sound good in theory but in practice, things can get complex fast as we will learn with the example below.
 
