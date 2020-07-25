@@ -101,12 +101,6 @@ The `script.js` and `main.css` are empty, the `index.html` file contains the fol
 </html>
 ```
 
-If you downloaded Chart.js straight from Github or used NPM,
-You need to include it as:
-```html
-<script src="path/to/Chart.min.js"></script>
-```
-
 Now that we have included Chart.js in our project, lets now proceed to create a place to render the charts first.
 
 
