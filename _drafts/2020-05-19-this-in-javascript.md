@@ -43,7 +43,7 @@ Make sure you clear the console by holding `CTRL+L` on Windows or `Command+L` on
 ##  `this` in Global Context
 In global context, the value of `this` is the [global object](https://developer.mozilla.org/en-US/docs/Glossary/Global_object). In the browser, the global object is the `window` object. In Node.js,  it is `global`.
 
-Now Log the value of `this` in your console. 
+Now log the value of `this` in your console. 
 
 ```javascript
 console.log(this) 
@@ -79,7 +79,7 @@ You might wonder, "why does this refer to the `window` inside a global function?
 
 The answer to that question, you need to understand first what happens when you create a global function.
 
-Here's the thing, when you create a global or top-level function, the function is stored as a method of the `window` object.
+Here's the thing, when you create a global or top-level function, the function is stored as a method of the `window` object. So the function `logThis` is called by the window object.
 
 ```javascript
 Window {
