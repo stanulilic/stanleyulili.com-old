@@ -55,8 +55,8 @@ On each iteration, the loop removes the first child if the condition is true.
   ul.removeChild(ul.firstChild);
 ```
 
-The loop stops once it cannot find the first child anymore, and that is when the ` ul.removeChild` has removed all children nodes.
+The loop stops once it cannot find the first child anymore, and that is when the ` ul.removeChild` has removed all the children nodes.
 
-I hope you find it helpful. If you have any tips or questions, leave a comment below.
+I hope you find this post helpful. If you have any tips or questions, leave a comment below.
 
 Thanks for reading.
