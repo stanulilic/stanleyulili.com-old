@@ -644,3 +644,14 @@ signals, try to put them at or close to the beginning of a
 sentence:).
 
 |this|these|that|those|another|such|second
+
+Principles of concision
+
+**Words that mean little or nothing.**
+
+kind of
+actually
+particular
+really
+certain various
+virtually individual basically generally given practically
