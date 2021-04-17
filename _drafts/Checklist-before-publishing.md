@@ -72,9 +72,10 @@ Checklist: https://developers.google.com/style/highlights
 | Considering the fact that          | because, since, why     |
 | On the grounds that                | because, since, why     |
 | The reason for                     | because, since, why     |
-| gives us the ouput                 | outputs                 |
+| gives us the output                | outputs                 |
+| a number of                        | most                    |
 
-Overused words:
+Overused words: \*\* Needs to be made into regex
 
 |other|alternative times, further suggestions, different opinion|
 |more|additional perspectives, incremental improvements, greater context|
@@ -129,7 +130,7 @@ Overused words:
 
 http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
 
-obviously|basically|simply|clearly|easily|easy|just|everyone knows|however|so |turns out|utilize|in order to|literally|abort|above|access|account name|and so on|allows you to|autoupdate|below|check|CLI|click here|desire|desired|e.g|for instance|grayed-out|hover over|hover|i.e|impact|kill|let's|native|pros|quick|quickly|regex|repo|should|should be|ssh into|ssh'ing|leave out|assistance|numerous|facilitate|individual|remainder|initial|implement|sufficient|attempt|referred to as|called|due to the fact that|lack the ability to|for the purpose of|a bit|a little|sort of|kind of|rather|quite|very|too|pretty much|in a sense|actually|particular|really|certain|various|virtually|individual|basically|generally|given|practically|full and complete|hope and trust|any and all|true and accurate|each and every|basic and fundamental|hope and desire|first and foremost|various and sundry|true and accurate|terrible tragedy|various different|free gift|basic fundamentals|future plans|each individual|final outcome|true facts|consensus of opinion|a position to|the opportunity to|the capacity for|the capacity to|the ability to|is possible|is a chance that|could happen|the possibility exists|in anticipation of|subsequent to|following on|at the same time as|simultaneously with|prior to|not different|not many|not have|not include|not consider|not the same|not often|not allow|not admit|not accept|is necessary that|there is a need|necessity for|is important|is crucial that|as regards|reference to|regard to|concerning the matter|is concerned|under circumstances|on the occasion of|in a situation|should happen|under circumstances in which|despite the fact that|regardless of the fact that|the reason that|to the fact that|under circumstances in which|owing to the face that|in light of the fact that|considering the|on the grounds that|the reason for|not|gives us|that|other|more|new|good|best|many|important|great|first|able|
+|obviously|basically|simply|clearly|easily|easy|just|everyone knows|however|so |turns out|utilize|in order to|literally|abort|above|access|account name|and so on|allows you to|autoupdate|below|check|CLI|click here|desire|desired|e.g|for instance|grayed-out|hover over|hover|i.e|impact|kill|let's|native|pros|quick|quickly|regex|repo|should|should be|ssh into|ssh'ing|leave out|assistance|numerous|facilitate|individual|remainder|initial|implement|sufficient|attempt|referred to as|called|due to the fact that|lack the ability to|for the purpose of|a bit|a little|sort of|kind of|rather|quite|very|too|pretty much|in a sense|actually|particular|really|certain|various|virtually|individual|basically|generally|given|practically|full and complete|hope and trust|any and all|true and accurate|each and every|basic and fundamental|hope and desire|first and foremost|various and sundry|true and accurate|terrible tragedy|various different|free gift|basic fundamentals|future plans|each individual|final outcome|true facts|consensus of opinion|a position to|the opportunity to|the capacity for|the capacity to|the ability to|is possible|is a chance that|could happen|the possibility exists|in anticipation of|subsequent to|following on|at the same time as|simultaneously with|prior to|not different|not many|not have|not include|not consider|not the same|not often|not allow|not admit|not accept|is necessary that|there is a need|necessity for|is important|is crucial that|as regards|reference to|regard to|concerning the matter|is concerned|under circumstances|on the occasion of|in a situation|should happen|under circumstances in which|despite the fact that|regardless of the fact that|the reason that|to the fact that|under circumstances in which|owing to the face that|in light of the fact that|considering the|on the grounds that|the reason for|not|gives us|that|other|more|new|good|best|many|important|great|first|able|number of|the reason|result into|
 
 # good writing is confident, don't a little bit confused, be confused.
 
@@ -655,3 +656,200 @@ particular
 really
 certain various
 virtually individual basically generally given practically
+
+### Connecting Sentences:
+
+- begin a punctuated sentence with a coordinating
+  conjunction such as, and, or but.
+
+**use this pattern no more than once or twice a page, especially
+with _and_**
+"
+Education cannot guarantee a democracy. And when it is
+available to only a few, it becomes a tool of social repression."
+
+## Tips for Concience and stress.
+
+It is sometimes possible to represent a complex idea in a
+simple sentence, but more often you cannot represent it in
+that kind of sentence.
+
+Short Version: It is sometimes possible to represent a complex idea in a
+simple sentence, but more OFten you can NOT.
+
+## Negative to Positive Words Cheatshet
+
+| Negative                                                                     | Positive                                                                 |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Had the agent not given us the wrong directions, we would have been on time. | Had the agent given us the right directions, we would have been on time. |
+| I don’t think I would say I was impressed by his presentation.               | I was unimpressed by his presentation.                                   |
+| She doesn’t get sick very often.                                             | She rarely gets sick.                                                    |
+| The experience was not altogether unpleasant.                                | The experience was somewhat pleasant.                                    |
+| The I in Internet is never lowercase.                                        | The I in Internet is always uppercase.                                   |
+| Unless it is pouring rain, we will not cancel the event.                     | If it is pouring rain, we will cancel the event.                         |
+| You don’t need to be there until 9 p.m.                                      | You need to be there by 9 p.m.                                           |
+
+## Sentence variety
+
+### resumptive modifiers
+
+I now address a problem we have wholly ignored, **which has**
+plagued societies that sell their natural resources to benefit a few today rather than using them to develop new resources
+that benefit everyone tomorrow.
+
+Solution:
+You can use **one that** to create a resumptive modifier.
+
+I now address a problem we have wholly ignored, **one that** has plagued societies that sell their natural resources to benefit a
+few today rather than using them to develop new resources
+that benefit everyone tomorrow.
+
+## Free modifiers
+
+wrong:
+In 1939, we began to assist the British against Germany,
+we were aware that we faced another world war.
+Good:
+✓ In 1939, we began to assist the British against Germany,
+aware that we faced another world war.
+
+### Revive sprawl with the cut method.
+
+example:
+The day is coming when we will all have numbers **that will** identify our financial transactions so that the IRS can monitor all activities **that** involve economic activity.
+
+**Note**: Removing that + will is not enough, you have to turn the verb into an -ing form. Not all the times, but sometimes.
+
+refined version:
+The day is coming when we will all have numbers **identifying** our financial transactions so that the IRS can monitor all activities **involving** economic activity
+
+## Revise Stress
+
+Three Tactical Revisions
+
+1.  **Trim the end**.
+    Sociobiologists claim that our genes control our social behavior in the way we act in situations we are in every day.
+    Since social behavior means the way we act in situations . . . ,
+    we drop everything after behavior:
+    ✓ Sociobiologists claim that our genes control our social behavior.
+
+2.  **Shift peripheral ideas to the left**.
+    The data offered to prove ESP are weak, for the most part.
+    ✓ For the most part, the data offered to prove ESP are weak.
+
+Particularly avoid ending with anticlimactic metadiscourse:
+
+Job opportunities in computer programming are getting scarcer, it must be remembered.
+
+✓ It must be remembered that job opportunities in computer programming are getting scarcer.
+
+3.  Shift new information to the right. A more common way to manage stress is by moving new information to the end of a sentence.
+    Questions about the ethics of withdrawing intravenous
+    feeding are more difficult [than something just mentioned].
+    ✓ More difficult [than something just mentioned] are questions
+    about the ethics of withdrawing intravenous feeding.
+
+## Fix Choppy Sentences.
+
+Use subordinate conjuctions or turn two sentences into one .
+
+example:
+
+In 1967, Congress passed civil rights laws that remedied problems of registration and voting. This had political consequences throughout the South.
+
+✓ When Congress passed civil rights laws to remedy problems of registration and voting in 1967, they had political consequences throughout the South.
+✓ The civil rights laws that Congress passed in 1967 to remedy problems of registration and voting had political consequences
+throughout the South.
+
+## Check for Coordination.
+
+### Coordinate words before and after **and**
+
+- Balance same amount of words.
+
+We should devote a few final words to a matter that reaches beyond the techniques of research to the connections between those subjective
+values that reflect our deepest ethical choices **and** objective research.
+
+Solution.
+between
+(objective research
+and
+those subjective
+values that reflect our)
+(deepest ethical choices
+and
+strongest intellectual
+commitments.)
+
+# dig
+
+> Domain Information Groper: queries and displays information from DNS nameservers.
+> More information: <https://manpages.debian.org/buster/dnsutils/dig.1.en.html>.
+
+- Lookup IP address(A records) for a given domain(displays technical details alongside the IP address):
+
+`dig {{example.com}}`
+
+- Get IP address for a given domain only:
+
+`dig {{example.com}} +short`
+
+- Display the ANSWER SECTION for a given domain only:
+
+`dig {{example.com}} +noall +answer`
+
+- Query a specific DNS record type for a given domain:
+
+`dig {{example.com}} {{A|MX|TXT|CNAME|NS}}`
+
+- Fetch all DNS record types associated with the given domain:
+
+`dig {{example.com}} any`
+
+# dig
+
+> Domain Information Groper: queries and displays information from DNS nameservers.
+> More information: <https://manpages.debian.org/buster/dnsutils/dig.1.en.html>.
+
+- Lookup IP address(A records) for a given domain(displays technical details alongside the IP address):
+
+`dig {{example.com}}`
+
+- Get IP address for a given domain only:
+
+`dig {{example.com}} +short`
+
+- Display the ANSWER SECTION for a given domain only:
+
+`dig {{example.com}} +noall +answer`
+
+- Query a specific DNS record type for a given domain:
+
+`dig {{example.com}} {{A|MX|TXT|CNAME|NS}}`
+
+- Fetch all DNS record types associated with the given domain:
+
+`dig {{example.com}} any`
+
+## Cheatsheet for remoing there is/there are
+
+There are many physicists who like to write.
+-> Many physicists like to write.
+
+The data confirm that there is an association
+between vegetables and cancer.
+
+-> The data confirm an association between
+vegetables and cancer.
+
+There are many ways in which we can
+arrange the pulleys.
+
+-> We can arrange the pulleys in many
+ways.
+
+There was a long line of bacteria on the
+plate.
+-> Bacteria lined the plate.
+
+Remove there was/are
