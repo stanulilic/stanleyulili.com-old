@@ -34,9 +34,10 @@ I believe the knowledge you will gain from reading this tutorial will be an inva
 ## Prerequisites
 
 To follow this tutorial, you must have a good understanding of the following javascript concepts:
-[functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
-[loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
-[arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+- [functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+- [loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+- [arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 ## Synchronous vs Asynchronous Programming in JavaScript
 
