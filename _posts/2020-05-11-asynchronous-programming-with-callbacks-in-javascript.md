@@ -42,7 +42,7 @@ To follow this tutorial, you must have a good understanding of the following jav
 
 First, let's look into synchronous and asynchronous behavior in JavaScript, this will help us comprehend the value of callbacks.
 
-### Synchronous JavaScript
+### Synchronous Programming
 
 JavaScript is single-threaded and **synchronous**. I know they don't mean anything but let's break them down separately.
 
@@ -218,7 +218,7 @@ second
 third
 ```
 
-The `getData()` fuction executes first, and logs a message "data from API received" before it returns the API response which in our case is an array.
+The `getData()` function executes first and logs the message "data from API received" before returning the array.
 
 ```
 const response = getData();
@@ -233,31 +233,31 @@ displayData(response);
 
 In a real-world scenario, the function would be creating HTML lists and appending them into the DOM. For simplicity's sake, the function will just display the array in the console.
 
-Finally, the other code that has nothing to do with the API response will execute.
+Finally, the other code that has nothing to do with the simulated API response will execute.
 
 ```
 second
 third
 ```
 
-As you can see, this synchronous behavior in this scenario is not desirable.
+As you can see, this synchronous behavior in this scenario is undesirable.
 
 ```
 console.log('second');
 console.log('third');
 ```
 
-The two console logs are not related nor do they depend on the functions `getData()` or `displayData` to run. Think of it in a real-world scenario, the code usually contains functions handling different parts of the UI of the application. In synchronous execution, everything will freeze until a time-consuming function such as getData or an API request finishes. As you can imagine, the user experience would be horrible.
+The two console logs are independent of the data that `getData()` returns. Think of the code in a real-world application, this could be handling events or handling different parts of the User Interface(UI) of the application. In synchronous execution, everything will come to a halt until a time-consuming `getData` function finishes executing giving users a bad experience.
 
-What if there is a way to get around it? What if there is a way to put the `getData()` in the background when accessing an API and continue executing the rest of the code and then run `displayData` only when `getData()` finishes executing?
+But what if there is a way to get around it? What if there is a way to put the `getData()` in the background when requesting data from an API and continue executing the rest of the code and then run `displayData` only when `getData()` finishes executing?
 
-To answer the questions, "yes, there is a way". And this is the basis of _asynchronous programming_.
+To answer the questions, "yes, there is a way". And this is the basis of **asynchronous programming**.
 
-### Asynchronous JavaScript
+### Asynchronous Programming
 
 In asynchronous code, instead of waiting for a time-consuming task to finish executing, the task is put in the background and all the other code executes.
 
-Let's modify our previous example and make it asynchronous. Before ES6, a popular way to make code asynchronous was by putting the time-consuming code inside a `setTimeout()` function. A `setTimeout()` is a method of the Window object that executes a function after a specified amount of time(milliseconds).
+Let's modify our previous example and make it asynchronous. Before ES6, a popular way to make code asynchronous was by putting the time-consuming code inside a `setTimeout()` function. A `setTimeout()` is a method of the `Window` object that executes a function after a specified amount of time(milliseconds).
 
 ```javascript
 setTimeout(function(){ // code comes here }, 0);
@@ -265,9 +265,7 @@ setTimeout(function(){ // code comes here }, 0);
 
 Even if you set the specified time to be 0 milliseconds, `setTimeout()` will make the code behave asynchronously.
 
-`setTimeout` is not part of javascript. It is part of the browser, it is exposed to javascript as a window method.
-
-We won't get into the details of how it works behind the scenes as it is a different topic of its own. The focus in this tutorial is just to show you how code behaves asynchronously in Javascript.
+We won't get into the details about how it works behind the scenes. The focus of this tutorial is to show you how code behaves asynchronously in Javascript with a `setTimeout`.
 
 Continuing with **example 2**, let's wrap our code in `getData()` function inside a `setTimeout` function.
 
@@ -275,14 +273,13 @@ Continuing with **example 2**, let's wrap our code in `getData()` function insid
 
 ```javascript
 function getData() {
-  // put the setTimeout here
   setTimeout(() => {
     let myDate;
     for (let i = 0; i < 10000000; i++) {
       const date = new Date();
       myDate = date;
     }
-    // pretend this is the data returned from an API
+    // data returned from our fake API
     const browsers = ["firefox", "chrome", "edge", "opera"];
     console.log("data from API received");
     return browsers;
@@ -318,14 +315,14 @@ Recap of how the functions were called.
 const response = getData();
 // displayData is called second
 displayData(response);
-// code that has nothing to with data returned from the API
+//  finally the console logs
 console.log("second");
 console.log("third");
 ```
 
-Our code as shown in the output, it is now behaving asynchronously, it is no longer waiting for the time consuming `getData()` function to finish. This is a big step, but there is room for improvement.
+Our code as shown in the output is behaving asynchronously, it is no longer waiting for the time consuming `getData()` function to finish. This is a big step, but there is room for improvement.
 
-We also have a second challenge, the `getData()` function has lost the ability to return values. So even if `getData()` was first to run, the variable response would have still been `undefined`.
+We also have a second challenge, the `getData()` function has lost the ability to return values. So even if `getData()` run first, it would would still return `undefined`.
 
 You can see this behavior with simplified code.
 
@@ -353,7 +350,7 @@ data from API received
 
 If you `console.log(response)`, you will always get `undefined`.
 
-The function `getData()` runs as evidenced by the logging of 'data from API received'. However, even though in the function we returned the `browsers` array when it runs, it never returns the array.
+The `getData()` function still runs as proven by the logging of 'data from API received'. Although in the function we returned the `browsers` array when it runs, it never returns the array.
 
 Compare the code with the one without `setTimeout`.
 
