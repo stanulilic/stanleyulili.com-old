@@ -22,10 +22,12 @@ When ECMAScript(ES6) was released, it introduced a lot of features that JavaScri
 In this tutorial, you will learn how to write arrow functions, how `this` works in arrow functions, and when to use or avoid arrow functions.
 
 ## Prerequisites
+
 To follow this tutorial, you will need:
-Familiarity with JavaScript [functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions).
-Knowledge of how [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) keyword works.
-Familiarity with [object literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
+
+- Familiarity with JavaScript [functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions).
+- Knowledge of how [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) keyword works.
+- Familiarity with [object literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
 
 ## What are Arrow Functions?
 
@@ -55,7 +57,6 @@ They also come with a lot of benefits that we are going to look into in great de
 In the coming sections, we will learn how to write arrow functions. You can try the code samples in the Chrome browser console.
 
 To open the console. Open a new empty tab and then press `CTRL+Shift+J` on Windows or `Command+Shift+J` on Mac.
-
 
 ## Arrow Function Syntax with no Parameters
 
@@ -87,7 +88,7 @@ add(); // 5
 
 An implicit return is when a function returns a value without using the `return` statement.
 
-An implicit return works only when you have  **one statement** inside the curly braces.
+An implicit return works only when you have **one statement** inside the curly braces.
 
 Our function has only one statement which makes it a good candidate for an implicit return.
 
@@ -102,6 +103,7 @@ add(); // 5
 Look at how concise the syntax is! now that we know how to define a function without any parameters, in the next section you will learn how to define a parameter with one parameter.
 
 ## Arrow Function with One Parameter
+
 We are going to define an arrow function that takes a parameter.
 
 We will change our previous example(regular function), and pass it one parameter.
@@ -119,6 +121,7 @@ add(3); // 5
 The process of turning the regular function into an arrow function is similar to the arrow functions we defined earlier that take no parameters. The only difference is that it takes one parameter instead of having empty parentheses.
 
 Arrow function with one parameter.
+
 ```javascript
 var add = (x) => {
   return 2 + x;
@@ -128,6 +131,7 @@ add(3); // 5
 ```
 
 Arrow function with an implicit return .
+
 ```javascript
 var add = (x) => 2 + x;
 
@@ -137,12 +141,13 @@ add(3); // 5
 When you have **only one** parameter, you can also omit the parentheses:
 
 ```javascript
-var add = x => 2 + x;
+var add = (x) => 2 + x;
 
 add(3); // 5
 ```
 
 ## Arrow Functions with Multiple Parameters
+
 Arrow functions can also take multiple parameters like regular functions.
 
 Regular function two parameters.
@@ -169,7 +174,7 @@ When a function has multiple parameters, you **must put the parentheses**. You c
 
 ## Object literal
 
-Arrow functions can also return object literals.  The syntax is a bit different from what we have seen so far.   You return an object by wrapping it inside parentheses.
+Arrow functions can also return object literals. The syntax is a bit different from what we have seen so far. You return an object by wrapping it inside parentheses.
 
 Regular function:
 
@@ -184,7 +189,7 @@ var person = function () {
 person(); // {age: 23, name: "stanley"}
 ```
 
-To turn it into an arrow function, remove the `function` keyword and add a fat arrow after `()` as we have done so far. Remove the `return` keyword and wrap the object inside the parentheses. 
+To turn it into an arrow function, remove the `function` keyword and add a fat arrow after `()` as we have done so far. Remove the `return` keyword and wrap the object inside the parentheses.
 
 ```javascript
 var person = () => ({ age: 23, name: "stanley" });
@@ -199,14 +204,14 @@ var person = () => {age: 23, name: 'stanley'};
 
 person() // Uncaught SyntaxError: Unexpected token :
 ```
-This is because the interpreter thinks the curly braces are the function's body, and the code inside the curly braces are statements.
 
+This is because the interpreter thinks the curly braces are the function's body, and the code inside the curly braces are statements.
 
 ## Arrow functions and lexical `this`
 
 Now we are going to learn how `this` works in an arrow function.
 
-`this`  works differently in an arrow function from `this` in a regular function.
+`this` works differently in an arrow function from `this` in a regular function.
 
 If you do not understand how `this` works in a regular function, I would recommend you learn more about it before proceeding since it is a very important topic in JavaScript.
 
@@ -253,7 +258,7 @@ It shows 4 as the output. When the function is called, the variable `x` is check
 
 What you should take away from these two examples is how the variable `x` is looked up.
 
-With that knowledge, let's learn how `this` works in arrow functions. As I explained earlier, the arrow functions do not define `this`, it looks for `this`  in the current scope and the enclosing scopes until it is found. This happens the same way a variable is looked up.
+With that knowledge, let's learn how `this` works in arrow functions. As I explained earlier, the arrow functions do not define `this`, it looks for `this` in the current scope and the enclosing scopes until it is found. This happens the same way a variable is looked up.
 
 We can see how this behavior properly by using practical examples. We will compare`this` in a regular function and `this` in an arrow function.
 
