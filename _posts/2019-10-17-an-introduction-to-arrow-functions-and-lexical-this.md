@@ -3,7 +3,7 @@ header:
   teaser: /assets/images/posts/2019-10-17-introduction-to-arrow-functions/featured-image.jpg
 feature_image: /assets/images/posts/2019-10-17-introduction-to-arrow-functions/featured-image.jpg
 featured_image_alt: featured-image
-excerpt: In this tutorial, we will learn how to write arrow functions, how 'this' works in arrow functions, and finally, when to use or avoid arrow functions.
+excerpt: In this tutorial, you will learn how to write arrow functions, how `this` works in arrow functions, and when to use or avoid arrow functions.
 
 categories:
   - Javascript
@@ -22,12 +22,10 @@ When ECMAScript(ES6) was released, it introduced a lot of features that JavaScri
 In this tutorial, you will learn how to write arrow functions, how `this` works in arrow functions, and when to use or avoid arrow functions.
 
 ## Prerequisites
-
 To follow this tutorial, you will need:
-
-- Familiarity with JavaScript [functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions).
-- Knowledge of how [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) keyword works.
-- Familiarity with [object literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
+Familiarity with JavaScript [functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions).
+Knowledge of how [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) keyword works.
+Familiarity with [object literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
 
 ## What are Arrow Functions?
 
@@ -57,6 +55,7 @@ They also come with a lot of benefits that we are going to look into in great de
 In the coming sections, we will learn how to write arrow functions. You can try the code samples in the Chrome browser console.
 
 To open the console. Open a new empty tab and then press `CTRL+Shift+J` on Windows or `Command+Shift+J` on Mac.
+
 
 ## Arrow Function Syntax with no Parameters
 
@@ -88,7 +87,7 @@ add(); // 5
 
 An implicit return is when a function returns a value without using the `return` statement.
 
-An implicit return works only when you have **one statement** inside the curly braces.
+An implicit return works only when you have  **one statement** inside the curly braces.
 
 Our function has only one statement which makes it a good candidate for an implicit return.
 
@@ -103,7 +102,6 @@ add(); // 5
 Look at how concise the syntax is! now that we know how to define a function without any parameters, in the next section you will learn how to define a parameter with one parameter.
 
 ## Arrow Function with One Parameter
-
 We are going to define an arrow function that takes a parameter.
 
 We will change our previous example(regular function), and pass it one parameter.
@@ -121,7 +119,6 @@ add(3); // 5
 The process of turning the regular function into an arrow function is similar to the arrow functions we defined earlier that take no parameters. The only difference is that it takes one parameter instead of having empty parentheses.
 
 Arrow function with one parameter.
-
 ```javascript
 var add = (x) => {
   return 2 + x;
@@ -131,7 +128,6 @@ add(3); // 5
 ```
 
 Arrow function with an implicit return .
-
 ```javascript
 var add = (x) => 2 + x;
 
@@ -141,13 +137,12 @@ add(3); // 5
 When you have **only one** parameter, you can also omit the parentheses:
 
 ```javascript
-var add = (x) => 2 + x;
+var add = x => 2 + x;
 
 add(3); // 5
 ```
 
 ## Arrow Functions with Multiple Parameters
-
 Arrow functions can also take multiple parameters like regular functions.
 
 Regular function two parameters.
@@ -174,7 +169,7 @@ When a function has multiple parameters, you **must put the parentheses**. You c
 
 ## Object literal
 
-Arrow functions can also return object literals. The syntax is a bit different from what we have seen so far. You return an object by wrapping it inside parentheses.
+Arrow functions can also return object literals.  The syntax is a bit different from what we have seen so far.   You return an object by wrapping it inside parentheses.
 
 Regular function:
 
@@ -189,7 +184,7 @@ var person = function () {
 person(); // {age: 23, name: "stanley"}
 ```
 
-To turn it into an arrow function, remove the `function` keyword and add a fat arrow after `()` as we have done so far. Remove the `return` keyword and wrap the object inside the parentheses.
+To turn it into an arrow function, remove the `function` keyword and add a fat arrow after `()` as we have done so far. Remove the `return` keyword and wrap the object inside the parentheses. 
 
 ```javascript
 var person = () => ({ age: 23, name: "stanley" });
@@ -204,14 +199,14 @@ var person = () => {age: 23, name: 'stanley'};
 
 person() // Uncaught SyntaxError: Unexpected token :
 ```
-
 This is because the interpreter thinks the curly braces are the function's body, and the code inside the curly braces are statements.
+
 
 ## Arrow functions and lexical `this`
 
-Let's now learn how `this` works in an arrow function.
+Now we are going to learn how `this` works in an arrow function.
 
-`this` in the arrow function works differently from `this` in a regular function.
+`this`  works differently in an arrow function from `this` in a regular function.
 
 If you do not understand how `this` works in a regular function, I would recommend you learn more about it before proceeding since it is a very important topic in JavaScript.
 
@@ -221,11 +216,11 @@ A quick refresher:
 
 - `this` outside any function points to the global object/window object. You can see that by typing `this` or `this === window` in the console.
 
-- Regular functions define their own `this`, and the value of `this' always points to object calling the method.
+- Regular functions in an object define their own `this`, and the value of `this' always points to the object calling the method.
 
 Let me now explain how `this` works in arrow functions.
 
-An arrow function does not define it's own `this`, but it looks for `this` in the current scope and the enclosing scopes the same way that a variable is looked up when it being used inside a function.
+An arrow function does not define it's own `this`, but it looks for `this` in the current scope and the enclosing scopes the same way that a variable is looked up when it is being used inside a function.
 
 Let's recap on what happens when we define and use a variable inside a function:
 
@@ -240,7 +235,7 @@ function showNumber() {
 showNumber(); // 5
 ```
 
-When you call the function, it will show 5 as the output because it first checks for the existence of the `x` variable inside the function scope. If the variable definition is found inside the function scope, it is used. In our example, `x` is defined in the function scope, and it is the one that is used.
+When you call the function, it will log 5 as the output because it first checks for the existence of the `x` variable inside the function scope. If the variable definition is found inside the function scope, it is used. In our example, `x` is defined in the function scope, and it is the one that is used.
 
 Now let us remove the x variable inside the function and see what happens:
 
@@ -254,13 +249,13 @@ function showNumber() {
 showNumber(); // 4
 ```
 
-It shows 4 as the output. When the function is called, the variable `x` is checked if it has been defined in the function scope first. In our case, it hasn't. So it will then look for the `x` variable definition in the enclosing scope which turns out to be the global scope. It will use the `x` variable defined in the global scope which encloses our function, hence why the function prints 4.
+It shows 4 as the output. When the function is called, the variable `x` is checked if it has been defined in the function scope first. In our case, it hasn't. So it will then look for the `x` variable definition in the enclosing scope which turns out to be the global scope. It will use the `x` variable defined in the global scope which encloses our function, hence why the function logs 4.
 
-The biggest takeaway from this is how the variable `x` is looked up.
+What you should take away from these two examples is how the variable `x` is looked up.
 
-Now, let's see how `this` works in arrow functions. As I said, the arrow functions do not define `this`, hence it is looked up in the current scope and the enclosing scopes until it is found. This happens the same way a variable is looked up.
+With that knowledge, let's learn how `this` works in arrow functions. As I explained earlier, the arrow functions do not define `this`, it looks for `this`  in the current scope and the enclosing scopes until it is found. This happens the same way a variable is looked up.
 
-We can understand this behavior clearly by comparing `this` in a regular function and `this` in an arrow function.
+We can see how this behavior properly by using practical examples. We will compare`this` in a regular function and `this` in an arrow function.
 
 `this` in a Regular function:
 
@@ -275,7 +270,7 @@ var person = {
 person.sayName(); // stanley
 ```
 
-It prints `stanley` because `this` points to the object calling the method 'sayName()`which is`person`.
+When the method `sayName()` is invoked, it logs `stanley` because `this` points to the object calling the method 'sayName()` which is`person`.
 
 Compare `this` in an arrow function:
 
@@ -328,7 +323,7 @@ var person = {
 person.sayName();
 ```
 
-When we called the method `sayName()`, it checks in the sayName() method scope if `this` has been defined but it doesn't find it(remember arrow funtion do not define `this`).
+When we called the method `sayName()`, it checks in the sayName() method scope if `this` has been defined but it doesn't find it(remember arrow functions do not define `this`).
 
 It then looks in the enclosing scope which in our case is the `person` object. It finds `this` there which has been defined by the object and it points to the window object, and it uses it and stops looking.
 
