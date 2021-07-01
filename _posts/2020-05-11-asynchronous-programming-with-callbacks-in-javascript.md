@@ -34,6 +34,7 @@ I believe the knowledge you will gain from reading this tutorial will be an inva
 ## Prerequisites
 
 To follow this tutorial, you must have a good understanding of the following javascript concepts:
+
 [functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 [loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
 [arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
@@ -76,7 +77,7 @@ Thread 1: A() -> B()
 Thread 2: C() -> D()
 ```
 
-_Synchronous_ means code is executed one after the other in a sequence.
+**Synchronous** means code is executed one after the other in a sequence.
 
 Let's say you have 3 lines:
 
