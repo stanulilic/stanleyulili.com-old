@@ -286,7 +286,7 @@ function getData() {
     const browsers = ["firefox", "chrome", "edge", "opera"];
     console.log("data from API received");
     return browsers;
-  }, 0); // end of setTimeout function call
+  }, 0); // end of setTimeout
 }
 
 function displayData(response) {
