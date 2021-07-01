@@ -8,7 +8,7 @@ categories:
 tags:
   - javascript
 title: "Asynchronous Programming with Callbacks in JavaScript"
-excerpt: In this article, We are going to take a look at the difference between synchronous and asynchronous programming in JavaScript. We will then proceed to learn about the importance of callbacks, creating callbacks, and finally, we will cover about callback hell.
+excerpt: In this article, you are going to learn about synchronous and asynchronous programming in JavaScript. After that, you will learn the significance of callbacks in asynchronous programming, how to create callbacks, and the pitfalls you can run into when using callbacks.
 toc: true
 ---
 
@@ -20,7 +20,7 @@ When learning promises, I kept asking, "where and why them?". I would read an ar
 
 My lack of knowledge of asynchronous programming made things worse. Things started to change when I started focusing more on asynchronous programming, leading me to callbacks which gave me an aha moment, the light bulb went on. I finally understood the hype about Promises and Async/Await.
 
-In this article, you are going to learn about synchronous and asynchronous programming in JavaScript. After that, you will then learn about the significance of callbacks in asynchronous programming, how to create callbacks, and the pitfalls you can run into when using callbacks.
+In this article, you are going to learn about synchronous and asynchronous programming in JavaScript. After that, you will learn the significance of callbacks in asynchronous programming, how to create callbacks, and the pitfalls you can run into when using callbacks.
 
 By the end of this tutorial, you will have a good understanding of:
 
@@ -34,10 +34,11 @@ I believe the knowledge you will gain from reading this tutorial will be an inva
 ## Prerequisites
 
 To follow this tutorial, you must have a good understanding of the following javascript concepts:
+[functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+[loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+[arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
-- [functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
-- [loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
-- [arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+Knowledge of [web APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) would greatly improve your comprehension of the article because I refer to them constantly.
 
 ## Synchronous vs Asynchronous Programming in JavaScript
 
@@ -113,7 +114,7 @@ Finally, line 3 executes.
 
 In synchronous execution, if there is a piece of code that might take a long time to execute, everything comes to halt until the code being executed is finished. This behavior is called **blocking**.
 
-We can see this synchronous behavior with the example given below. I have modified the example from [MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Concepts), you see and run the whole code, let me show a picture of how it works.
+We can see this synchronous behavior with the example given below. I have modified the example from [MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Concepts).
 
 We have a function `getData()`, it loops 10 million times. The reason for this is to delay the function from finishing soon. I want to give you an idea of what happens when a function is doing a time-consuming task and the effect it has on the other code.
 
@@ -146,11 +147,11 @@ When you paste in the console, you will notice that it takes a few seconds to ge
 getData(); // Mon May 11 2020 11:45:06 GMT+0200 (Central Africa Time)
 ```
 
-This is because the function does the time-consuming task of creating 10 million dates and it then logs the date generated at end of the loop as the output of the `getData` function.
+This is because the function does the time-consuming task of creating 10 million dates and it then logs the date generated at end of the loop.
 
-When `getData` runs, everything is halted. The code below must wait for `getData` to finish executing.
+When `getData` runs, everything is halted. The code below the function must wait for `getData` to finish executing.
 
-After it finishes executing, is only when the line after the `getData()` function call executes.
+After it finishes executing, the code after the `getData()` function call executes.
 
 ```javascript
 getData();
@@ -172,8 +173,9 @@ For example, imagine if `console.log('second')` and `console.log('third')` were 
 
 Another situation where the synchronous execution behavior is unwanted is when there are functions that depend on data supplied by external sources:
 
-- Retrieving data from an **Application Programming Interface(API)** or the database.
-- Reading files.
+- Retrieving data from an API
+- Retrieving data from the database.
+- Reading files on a system.
 
 Retrieving data from an [API](https://www.guru99.com/what-is-api.html) usually involves sending a request to the server and waiting for the response. The wait time can be a couple of seconds or minutes and might vary depending on the internet speed. If there are functions that depend on the data to be returned from an API, in synchronous execution, they will have to wait for the response from the server before they can run. Likewise, all the other functions independent of the API won't execute until the response is received from the server.
 
@@ -183,7 +185,6 @@ Let's do another example, let's take some part of the code of the previous examp
 
 ```javascript
 function getData() {
-  // remember the date calculations are just there to simulate an API request delay
   let myDate;
   for (let i = 0; i < 10000000; i++) {
     const date = new Date();
@@ -203,7 +204,7 @@ function displayData(response) {
 
 // call getData() and store the returned value in the response variable
 const response = getData();
-// takes the returned array from getData() as an argument
+// call displayData() with the array as an argument
 displayData(response);
 // code that has nothing to with data returned from the API
 console.log("second");
@@ -248,7 +249,7 @@ console.log('second');
 console.log('third');
 ```
 
-The two console logs are independent of the data that `getData()` returns. Think of the code in a real-world application, this could be handling events or handling different parts of the User Interface(UI) of the application. In synchronous execution, everything will come to a halt until a time-consuming `getData` function finishes executing giving users a bad experience.
+The two console logs are independent of the data that `getData()` returns. Think of the code in a real-world application, this code could be handling events or handling different parts of the User Interface(UI) of the application. In synchronous execution, everything will come to a halt until the time-consuming `getData` function finishes executing giving users a bad experience.
 
 But what if there is a way to get around it? What if there is a way to put the `getData()` in the background when requesting data from an API and continue executing the rest of the code and then run `displayData` only when `getData()` finishes executing?
 
@@ -256,7 +257,7 @@ To answer the questions, "yes, there is a way". And this is the basis of **async
 
 ### Asynchronous Programming
 
-In asynchronous code, instead of waiting for a time-consuming task to finish executing, the task is put in the background and all the other code executes.
+In **asynchronous** code, instead of waiting for a time-consuming task to finish executing, the task is put in the background and all the other code executes.
 
 Let's modify our previous example and make it asynchronous. Before ES6, a popular way to make code asynchronous was by putting the time-consuming code inside a `setTimeout()` function. A `setTimeout()` is a method of the `Window` object that executes a function after a specified amount of time(milliseconds).
 
@@ -351,7 +352,7 @@ data from API received
 
 If you `console.log(response)`, you will always get `undefined`.
 
-The `getData()` function still runs as proven by the logging of 'data from API received'. Although in the function we returned the `browsers` array when it runs, it never returns the array.
+The `getData()` function still runs as proven by the logging of 'data from API received'. Although the function returns the `browsers` array when it runs, we still get `undefined`.
 
 Compare the code with the one without `setTimeout`.
 
@@ -375,19 +376,19 @@ data from api received
 (4) ["firefox", "chrome", "edge", "opera"]
 ```
 
-As you can see from the examples, though we now have the ability for our function to be asynchronous, we have also lost the ability to return the values.
+As you can see from the examples, though we now have the ability for our function to be asynchronous, we have also lost the ability to get the values the function returns.
 
-So if this was an API that was getting data from an external server or manipulating data in a time-consuming task, we wouldn't be able to return it and use it in another function.
+So if this was a function accessing a web API to get data from an external server or manipulating data in the time-consuming function, we wouldn't be able to return data and pass it into another function to work on it.
 
 In this scenario, if we want to do anything with the `browsers` array, we will need to do it inside the `getData` function only.
 
 ## Why do we Need Callbacks?
 
-Though our code(_example 3_) is working asynchronously, there is still a problem. `displayData()` executes without waiting for `getData()` to finish.
+Though our code(**example 3**) is working asynchronously, there is still a problem. `displayData()` executes without waiting for `getData()` to finish.
 
-Remember, `displayData()` displays the response(a browsers array) from the fake API call in `getData()`. So having the `displayData()` executing before we receive data is not what we want.
+Remember, `displayData()` displays the response(a browsers array) from the fake API call in `getData()`. So having `displayData()` executing before we receive the data isn't what we want.
 
-You can even see from the output that `displayData()` logs `undefined`.
+You can see why from the output why `displayData()` shouldn't run before `getData`. finishes. It logs `undefined`.
 
 **Example 3 output:**
 
@@ -395,18 +396,18 @@ You can even see from the output that `displayData()` logs `undefined`.
 Popular browsers are: undefined  // displayData(response)
 second
 third
-data from API received
+data from API received                // getData() executes here
 ```
 
 What would be desirable in our case is executing `displayData()` only when `getData()` has finished executing. But how do we do that? How do we know that `getData()` has finished executing?
 
-The answer is **JavaScript callbacks**. A callback is a function that is passed as an argument into another function, and it is invoked or called when the function that takes the callback finishes executing.
+The answer is **JavaScript callbacks**. A callback is a function that is passed as an argument into another function, and it is invoked when the function that takes the callback finishes executing.
 
 A function that accepts or takes a callback as an argument is known as a **higher-order function**. This function is the one that calls the callback after it finishes executing.
 
-So if we want `displayData()` to execute only when `getData()` finish, we need to pass it as a callback. When `getData()` finish, we will execute
+So if we want `displayData()` to execute only when `getData()` finishes, we need to pass it as a callback. Before `getData()` finishes executing, we will invoke `displayData` inside the `getData()` function.
 
-Before we proceed to create callback functions, we need to understand that functions are objects in JavaScript.
+Before we proceed to create callback functions, we need to understand more about functions first.
 
 ## Functions Are Objects
 
@@ -414,9 +415,9 @@ Functions in JavaScript are first-class objects. This means functions can be tre
 
 - They can be stored in a variable, array, or object.
 - They can be passed as an argument of another function.
-- A function can be returned as a result of another function.
+- A function can return another function.
 
-It is important to understand this behavior as it will help in understanding how and why callbacks work.
+It is important to understand this concept as it will help in understanding how and why callbacks work.
 
 It is this behavior that allows us to pass a function as an argument of another function.
 
@@ -438,7 +439,7 @@ greeting("Stanley"); // Hello Stanley
 
 Our `greeting()` function takes a `name` variable as an argument and logs a greeting in the console.
 
-Let's now add a callback, remember a callback is a function passed as an argument in another function. So after the `name` argument, we will create our callback that will be called after `greeting()` finishes executing.
+Next, we will create a callback, remember a callback is a function passed as an argument in another function. So after the `name` parameter, we will pass a function as the second parameter that will be invoked before the `greeting()` function finishes executing.
 
 **Example 7:**
 
@@ -469,9 +470,9 @@ greeting("Stanley", function () {
 });
 ```
 
-Inside the `greeting` function, **we call the callback after the code in the greeting function**. Remember, the goal is to make sure that the callback runs after the higher order function(a function that takes a callback as argument) has finished executing.
+Inside the `greeting` function, **we call the function before the end of the greeting function**. Remember, the goal is to make sure that the callback runs after the higher-order function(a function that takes a callback as an argument) has finished executing its statements.
 
-You are not limited to creating callbacks by defining them in a function call. You can also define a callback outside the function call and pass it as an argument as demonstrated below.
+Apart from creating callbacks by defining them in a function call, you can also define a callback outside the function call and pass it as an argument as demonstrated below.
 
 **Example 8:**
 
@@ -555,7 +556,7 @@ console.log("data from API received");
 displayData(browsers); // calling the callback
 ```
 
-If you are confused, you can check out the simplified version of the example where I have removed the `setTimeout` and the date calculations. Hopefully, you might understand what's happening.
+If you are confused, you can check out the simplified version of the example where I have removed the `setTimeout` and the loop. Hopefully, you understand what's happening now.
 
 **Example 10:**
 
@@ -578,19 +579,23 @@ console.log("second");
 console.log("third");
 ```
 
-As you can see, the `DisplayData` callback is called immediately and given an argument of `browsers` after `getData` logs _data from API received_ to the console.
+As you can see, the `DisplayData` callback is called immediately and given an argument of `browsers` after `getData` logs `data from API received` in the console.
+
+I hope now you can see how callbacks can be helpful in asynchronous programming. But like all good things, there are downsides to them.
 
 ## Callback hell
 
-So in Javascript, as we have learned if we have a time-consuming task or an API request. If there are functions that depend on the output of the time-consuming task, you need to create them as callbacks so that they can be called the moment the task is done.
+So far, you have learned that if you have a time-consuming task or an API request. If there are functions that depend on the output of the time-consuming task, you need to create them as callbacks so that they can be called the moment the task is done.
 
-So let's say you have over 5 functions that need to work on the data returned by a time-consuming task. You need to nest the callbacks in a style known as [continuation-passing style](https://en.wikipedia.org/wiki/Continuation-passing_style) where one callback passes a value to the nested callback and so on.
+If for example, you have about 5 functions that need to work on the data that the time-consuming function returns, you need to nest the callbacks in a style known as [continuation-passing style](https://en.wikipedia.org/wiki/Continuation-passing_style) where one callback passes a value to the nested callback and so on.
 
-This may sound good in theory but in practice, things can get complex fast as we will learn with the example below.
+This may sound good in theory but in practice, things can get tedious fast as we will learn soon.
 
-**Example:**
+**Example: 10**
 
-In our new example, we are going to pretend as if the income $650 is being returned from the server after an API request(I want to keep the code as simple as possible). We will have callbacks that subtract the expenses such as rent, utility bills, internet, etc from the income. Our goal is to get the discretionary income(income remaining after deducting basic living costs).
+In our new example, we are going to pretend to get the $650 income i from the server after an API request(I want to keep the code as simple as possible).
+
+We will have callbacks that subtract the expenses such as rent, utility bills, internet, etc from the income. Our goal is to get the discretionary income(income remaining after deducting basic living costs).
 
 The following are the functions that will be doing the calculations:
 
@@ -603,11 +608,11 @@ The following are the functions that will be doing the calculations:
 
 We will find that our discretionary income is $172.
 
-So let's first start with our function where `getIncome` function pretends to get the income data($650) from the server. Our goal is to simulate a situation where different functions need to work on the data returned by a server.
+First, create the `getIncome` function pretends to get the income amount($650) from the server.
 
 ```javascript
 function getIncome(callback) {
-  callback(650);
+  callback(650); // calling the callback
 }
 
 // call getIncome function with a callback as an argument
@@ -622,7 +627,7 @@ output:
 650
 ```
 
-Here is what happens during execution. When `getIncome` is called, we pass it a callback `function(income) { console.log(income)}`. Remember a callback is a function passed as an argument in another function.
+Here is what happens during execution. When `getIncome` is called, we pass it a callback `function(income) { console.log(income)}`.
 
 As the `getIncome` function executes, the `callback` parameter of the getIncome function is set to the anonymous function(callback) `function(income) { console.log(income)}`
 
@@ -644,13 +649,13 @@ getIncome(function (income) {
 
 The execution finishes.
 
-So now, let us create a function `payRent` that will subtract $200 rent from the income $650. it will take a callback(we will define it shortly).
+Next, create the function `payRent` to subtract $200(rent) from the income $650.
 
 ```javascript
 function getIncome(callback) {
   callback(650);
 }
-// add the function here
+//  payRent is created here
 function payRent(income, callback) {
   callback(income - 200);
 }
@@ -660,7 +665,7 @@ To give the ability for the `PayRent` callback function to access the `income`(6
 
 ```javascript
 getIncome(function (income) {
-  // call payRent inside "getIncome" callback
+  // call payRent inside the "getIncome" callback
   payRent(income, function (incomeAfterRent) {
     console.log(incomeAfterRent);
   });
@@ -692,7 +697,7 @@ getIncome(function (income) {
 
 After the code executes, it finishes with `discretionIncome` set to 450 inside the anonymous function in the `payRent` function call.
 
-We are now entering the gates of hell, continuing with our previous example, let's create a function that pays the utility bills by subtracting $87 from the `discretionIncome` variable which has $450:
+We are now entering the gates of callback hell, continuing with our previous example, let's create a function that pays the utility bills by subtracting $87 from the `discretionIncome` variable which has $450:
 
 - payUtilityBills - Subtract $87 from current income(450 - 87 = $363
 
@@ -750,7 +755,7 @@ getIncome(function (income) {
 });
 ```
 
-As you can see our code is becoming harder to comprehend. When using callbacks, it's very common to see callbacks being nested more than 8 or 10 levels deep. I am sure you can imagine the horror of seeing many callbacks being nested that deep.
+As you can see our code is becoming harder to read. When using callbacks, it's very common to see callbacks being nested more than 8 or 10 levels deep. If 3 levels are confusing, imagine the horror of seeing callbacks nested 8 or more levels deep.
 
 We are now remaining with 3 callbacks.
 
@@ -758,7 +763,7 @@ We are now remaining with 3 callbacks.
 - payPhoneCharges - subtract $75 from income(313 - 75 = $238)
 - payForRepairs - subtract $66 from income(238 - 66 = 172)
 
-We will just write the 3 functions in one go, we will call them by nesting them as we have done with the other functions in the earlier example. Spoiler alert, we are going to depths of hell.
+We will just write the 3 functions in one go, we will call them by nesting them as we have done with the other functions in the earlier example. Spoiler alert!! we are going to the depths of hell.
 
 ```javascript
 function getIncome(callback) {
@@ -813,16 +818,16 @@ Output:
 discretionary income is 172
 ```
 
-I think now, we have seen it for ourselves as to why this is called a _callback hell_. Just imagine trying to read the code. It's so hard to see what's happening with the code and not to mention it's very ugly.
+I think now, we have seen it for ourselves as to why this is called a _callback hell_. Just imagine trying to read the code. It's so hard to see what's happening with the code and not to mention it's ugly.
 
 ## Conclusion
 
-Wow, I think we have covered a lot in this article. We have learned the difference between synchronous and asynchronous programming in Javascript. We also took a deeper look at creating and using callbacks. Finally, we went to depths of hell with callback hell.
+Wow, I think we have covered a lot in this article. We have learned the difference between synchronous and asynchronous programming in Javascript. We also take a deeper look at creating and using callbacks. Finally, we have learned about the pitfalls of callbacks and experienced the callback hell.
 
 From here, you might want to look into [Promises](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise) and then [Async/Await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await), I will write the articles about Promises and Async/Await very soon. So please subscribe to make sure you don't miss them.
 
 I have put a lot of effort into creating the examples and the tutorial. If you enjoyed it, please share it with anyone who might find it useful.
 
-If you have insights or ideas or if you noticed a mistake, please let me know in the comments.
+If you have insights or ideas or if you noticed a mistake, please let me know in the comments or you can reach out to me on [twitter](https://twitter.com/stanulilic).
 
 Thank you for reading this article.
