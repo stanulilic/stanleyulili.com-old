@@ -141,7 +141,7 @@ add(3); // 5
 When you have **only one** parameter, you can also omit the parentheses:
 
 ```javascript
-var add = (x) => 2 + x;
+var add = x => 2 + x;
 
 add(3); // 5
 ```
