@@ -150,9 +150,7 @@ add(3); // 5
 
 Arrow functions can also take multiple parameters like regular functions.
 
-Regular function two parameters.
-
-Regular function:
+Regular function two parameters:
 
 ```javascript
 var add = function (x, y) {
