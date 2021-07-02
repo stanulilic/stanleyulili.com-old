@@ -150,7 +150,7 @@ add(3); // 5
 
 Arrow functions can also take multiple parameters like regular functions.
 
-Regular function two parameters:
+Regular function with two parameters.
 
 ```javascript
 var add = function (x, y) {
@@ -203,7 +203,7 @@ var person = () => {age: 23, name: 'stanley'};
 person() // Uncaught SyntaxError: Unexpected token :
 ```
 
-This is because the interpreter thinks the curly braces are the function's body, and the code inside the curly braces are statements.
+The error is generated because the interpreter thinks the curly braces are the function's body, and the code inside the curly braces are statements.
 
 ## Arrow functions and lexical `this`
 
@@ -217,15 +217,15 @@ You can learn more about `this` from MDN: [ this - JavaScript](https://developer
 
 A quick refresher:
 
-- `this` outside any function points to the global object/window object. You can see that by typing `this` or `this === window` in the console.
+- `this` outside any function points to the global object/window object. You can verify that by typing `this` or `this === window` in the console.
 
 - Regular functions in an object define their own `this`, and the value of `this' always points to the object calling the method.
 
 Let me now explain how `this` works in arrow functions.
 
-An arrow function does not define it's own `this`, but it looks for `this` in the current scope and the enclosing scopes the same way that a variable is looked up when it is being used inside a function.
+An arrow function does not define its own `this`, instead, it looks for `this` in the current scope and the enclosing scopes the same way that a variable is looked up when it is being used inside a function.
 
-Let's recap on what happens when we define and use a variable inside a function:
+Before I go into more details, let's review what happens when you define and use a variable inside a function:
 
 ```javascript
 var x = 4;
@@ -252,7 +252,7 @@ function showNumber() {
 showNumber(); // 4
 ```
 
-It shows 4 as the output. When the function is called, the variable `x` is checked if it has been defined in the function scope first. In our case, it hasn't. So it will then look for the `x` variable definition in the enclosing scope which turns out to be the global scope. It will use the `x` variable defined in the global scope which encloses our function, hence why the function logs 4.
+It shows 4 as the output. When the function is called, the variable `x` is checked if it has been defined in the function scope first. In our case, it hasn't. So it will then look for the `x` variable definition in the enclosing scope which turns out to be the global scope. It will use the `x` variable defined in the global scope which encloses our function, hence why the function logs `4`.
 
 What you should take away from these two examples is how the variable `x` is looked up.
 
@@ -273,9 +273,9 @@ var person = {
 person.sayName(); // stanley
 ```
 
-When the method `sayName()` is invoked, it logs `stanley` because `this` points to the object calling the method 'sayName()` which is`person`.
+When the method `sayName()` is invoked, it logs `stanley` because `this` points to the object calling the method 'sayName()` which is `person`.
 
-Compare `this` in an arrow function:
+Now, compare `this` in an arrow function:
 
 ```javascript
 var person = {
@@ -330,7 +330,7 @@ When we called the method `sayName()`, it checks in the sayName() method scope i
 
 It then looks in the enclosing scope which in our case is the `person` object. It finds `this` there which has been defined by the object and it points to the window object, and it uses it and stops looking.
 
-That's why we got the output showing `this` points to the `window` object.
+That's why we got the output showing that  `this` points to the `window` object.
 
 Let's look at a **second example**, you can use Codepen or your favorite text editor to follow along.
 
@@ -391,7 +391,7 @@ When you click on the link and check in the browser console, you will get the fo
 Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
 ```
 
-We have the `window` object as the output because `this` is looked in the arrow function when the event is fired but it is not found. It then looks in the enclosing scope which happens to be the global scope where it will find `this` which points to the window object.
+We have the `window` object as the output because `this` is looked up in the arrow function when the event is fired but it is not found. Next, `this` is looked up in the enclosing scope which happens to be the global scope where it finds `this` pointing to the `window` object.
 
 Let's modify our previous regular function and add a setTimeout method inside.
 
@@ -407,13 +407,13 @@ btn.addEventListener("click", function () {
 
 Can you guess what `this` going to be?
 
-Well, here is output:
+Well, here is the output:
 
 ```
 Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
 ```
 
-Remember, setTimeout is a window method. So `this` points to the window object since the `setTimeout` method is called by the window.
+`setTimeout` is a window method. So `this` points to the `window` object since the `setTimeout` method is called by the `window` object.
 
 The previous example could also be rewritten like this and it will show the same output:
 
@@ -425,7 +425,7 @@ btn.addEventListener("click", function () {
 });
 ```
 
-Perhaps in this example, you can see why `this` is pointing to the window object. Notice how the `setTimeout` method is being called by the window object? Like I said before, `setTimeout` is a window object. So even when you omit `window` when calling the `setTimeout` method like in the previous example, it will still be called by the window object.
+Perhaps in this example, you can see why `this` is pointing to the `window` object. Notice how the `setTimeout` method is being invoked by the window object? As explained before, `setTimeout` is a window object. So even when you omit `window` when calling the `setTimeout` method like in the previous example, it will still be called by the window object.
 
 Lets now convert the `setTimeout` regular function into the an arrow function. We are going to leave the regular function in the event listener as is, so that `this` points to the element that was clicked:
 
@@ -445,7 +445,7 @@ If you guessed it correctly, the output will be the element that was clicked.
 <a id="btn" href="#">Click Me</a>
 ```
 
-When the `setTimeout()` method is called, the arrow function looks for `this` in its function scope but it doesn't find. It then look for `this` in the enclosing scope(the event listener) where it finds it and uses it.
+When the `setTimeout()` method is called, the arrow function looks for `this` in its functional scope but it doesn't find it. It then looks for `this` in the enclosing scope(the event listener) where it finds it and uses it.
 
 The value of `this` is the element that was clicked, we already looked into why this was the case in the previous examples.
 
@@ -461,7 +461,7 @@ The following are some of the ways that arrow functions can come in handy.
 
 Arrow functions are frequently used with Array methods like filter, forEach, Map, etc. because of their conciseness.
 
-Array.Map() with a regular function:
+`Array.Map()` with a regular function:
 
 ```javascript
 var numbers = [1, 2, 3, 4];
@@ -473,7 +473,7 @@ numbers.map(function (num) {
 // [2, 4, 6, 8]
 ```
 
-Array.Map() with a arrow function:
+`Array.Map()` with a arrow function:
 
 ```javascript
 var numbers = [1, 2, 3, 4];
@@ -485,7 +485,7 @@ numbers.map((num) => num * 2);
 
 ### Promises and Fetch API
 
-[Fetch API](https://developer.mozilla.org/en/docs/Web/API/Fetch_API) which implements a promise takes callback functions which can greatly benefit from arrow function concise syntax.
+[Fetch API](https://developer.mozilla.org/en/docs/Web/API/Fetch_API) which implements a promise takes callback functions that hugely benefit from arrow functions concise syntax.
 
 Lets see the Fetch API with a regular function:
 
@@ -516,12 +516,13 @@ fetch(url)
 With an arrow function, our code is much shorter and readable.
 
 ## When to avoid arrow functions
+Arrow functions can significantly improve the readability of your code. Though it comes with a lot of benefits, there are situations where using arrow functions can lead to problems.
 
 ### When you need to use `this` in an event listener
 
 We have already looked at what happens when you use an arrow function in an event listener, `this` points to the window object.
 
-So in cases where you need to to use `this` in an event listener, it is best to use a regular function:
+So in cases where you need to to use `this` in an event listener, it is better to use a regular function:
 
 ```javascript
 const btn = document.getElementById("btn");
@@ -544,9 +545,9 @@ btn.addEventListener("click", (event) => {
 
 ### When creating a method for an object
 
-We also looked at what happens when you create a method with an arrow function, `this` points to window object instead of the object calling the method.
+We also looked at what happens when you create a method with an arrow function, `this` points to the `window` object instead of the object calling the method.
 
-So it's best to use a regular function when creating a method for an object.
+So it's recommended to use a regular function when creating a method for an object.
 
 ```javascript
 const person = {
@@ -562,4 +563,4 @@ person.sayName() // stanley
 
 In this article, you have learned how to write arrow functions. I hope you now have a firm grasp on how `this` works in the arrow function and when to use or avoid arrow functions.
 
-Thanks for reading this article, if you have any feedback feel free to leave a comment.
+Thanks for reading this article, if you have any feedback feel free to leave a comment or contact me on [twitter](https://twitter.com/stanulilic).
