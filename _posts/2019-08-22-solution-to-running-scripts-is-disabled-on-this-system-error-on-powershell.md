@@ -1,8 +1,6 @@
 ---
 header:
   teaser: /assets/images/posts/2019-08-25-running-scripts-is-disabled-on-this-system-powershell/featured-image.jpg
-feature_image: /assets/images/posts/2019-08-25-running-scripts-is-disabled-on-this-system-powershell/featured-image.jpg
-featured_image_alt: featured-image
 excerpt: I run into this error **"running scripts is disabled on this system"**  as I was trying to activate
 
 categories:
