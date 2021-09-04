@@ -231,7 +231,7 @@ You've now installed Django on your system, great job! You'll begin to create a 
 
 ## Step 8 - Creating the Django Project
 
-Now it's time to create a project. A project has a different meaning from what you may be used to. The Django documentation defines it as:
+Now it's time to create a project. A project has a different meaning from what you may be used to. The [Django documentation](https://docs.djangoproject.com/en/3.2/glossary/#term-project) defines it as:
 
 >
 A Python package – i.e. a directory of code – that contains all the settings for an instance of Django. This would include database configuration, Django-specific options and application-specific settings.
