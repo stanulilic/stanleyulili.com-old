@@ -46,9 +46,7 @@ Before you install Django, first, you need to make sure that you installed Pytho
 To do that, type the following command in PowerShell prompt to verify the installation:
 
 ```powershell
-
 > python -V
-
 ```
 
 `-V` option logs the Python version installed on your system.
@@ -56,11 +54,8 @@ To do that, type the following command in PowerShell prompt to verify the instal
 After running the command, you should see output like this:
 
 ```powershell
-
 PS C:\Users\Username> python -V
-
 Python 3.9.7
-
 ```
 
 At the time of writing, it is Python 3.9.7. You might have a different version from mine, and that's fine. As long as you see the Python version logged, Python is installed on your system.
@@ -74,9 +69,7 @@ Python comes with `pip` by default. But most of the time, it comes with an old v
 Enter the following command to upgrade `pip` on your system:
 
 ```
-
 > python -m pip install --upgrade pip
-
 ```
 
 You'll get output identical to the following screenshot showing you that the upgrade was a success:
@@ -92,33 +85,25 @@ In this section, you will create a directory that will contain your Django appli
 Change into your `Desktop` directory with the `cd` command:
 
 ```powershell
-
 > cd Desktop
-
 ```
 
 Create the directory using the `mkdir` command:
 
 ```powershell
-
 > mkdir django_project
-
 ```
 
 Move into the `django_project` directory using the `cd` command:
 
 ```powershell
-
 > cd django_project
-
 ```
 
 Your prompt should now show you that you're in the `django_project` directory as shown in the following output:
 
 ```powershell
-
 PS C:\Users\Stanley\Desktop\django_project>
-
 ```
 
 Now that you've created the working directory for your project, you'll create a virtual environment where you'll install Django.
@@ -134,9 +119,7 @@ You can learn more about the virtual environment by following  [Python Virtual E
 To create a virtual environment, type the following command and wait for a few seconds:
 
 ```
-
 > python -m venv venv
-
 ```
 
 The command will create a directory called `venv` inside your project directory.
@@ -144,9 +127,7 @@ The command will create a directory called `venv` inside your project directory.
 Next, confirm the `venv` directory has been created by listing the directory contents using the `ls` command:
 
 ```powershell
-
 > ls 
-
 ```
 
 You should see the directory `venv` in the output as shown in the following screenshot:
@@ -162,9 +143,7 @@ In this section, you'll activate the virtual environment in your directory.
 Run the following command to activate the virtual environment:
 
 ```
-
 > venv\Scripts\activate
-
 ```
 
 After you run the command, you will see
@@ -172,9 +151,7 @@ After you run the command, you will see
 a `(venv)` at the beginning of the prompt. This shows that the virtual environment is activated:
 
 ```
-
 (venv) PS C:\Users\Stanley\Desktop\django_project>
-
 ```
 
 If you run into the error shown in the following screenshot on PowerShell when activating the virtual environment, for the sake of brevity, I described the reason and the solution in another post. Follow [Solution to "Running Scripts Is Disabled On This System" Error on PowerShell](https://www.stanleyulili.com/powershell/solution-to-running-scripts-is-disabled-on-this-system-error-on-powershell/) and don't close your PowerShell:
@@ -190,9 +167,7 @@ In this section, you will install Django on your system using `pip`.
 Run the following command to install Django using `pip install`: 
 
 ```
-
 (venv)> pip install django
-
 ````
 
 The command will install the latest version of Django. You should see Django being downloaded as shown in the following screenshot:
@@ -202,27 +177,20 @@ The command will install the latest version of Django. You should see Django bei
 If you want to install a different Django version, you can specify the version as follows:
 
 ```
-
 (venv)> pip install django==3.1
-
 ````
 
 Once the installation finishes, you need to verify that Django has been installed. To do that, type the following command:
 
 ```
-
 (venv)> django-admin --version
-
 ```
 
 You will get output showing you the Django version installed on your system:
 
 ```powershell
-
 (venv) PS C:\users\stanley\Desktop\django_project> django-admin --version
-
 3.2.7
-
 ```
 
 At the time of writing, the latest Django version is `3.2.7`, and that's why my output shows that.
@@ -236,37 +204,29 @@ Now it's time to create a project. A project has a different meaning from what y
 >
 A Python package – i.e. a directory of code – that contains all the settings for an instance of Django. This would include database configuration, Django-specific options and application-specific settings.
 
-
 You create a project by using the command-line utility `django-admin` that comes with Django. The command generates files where you can configure the settings for your database, add third-party packages for your project to mention a few. 
 
 Create the project using the  `django-admin startproject` command:
 
 ```
-
 (venv)> django-admin startproject test_project
-
 ```
 
 Change into the `test_project` directory: 
 
 ```powershell
-
 (venv)> cd test_project
-
 ```
 
 Type the following command to see the contents in the project directory:
 
 ```powershell
-
 (venv)> ls test_project
-
 ```
 
 You will get output similar to this:
 
 ```
-
 (venv) PS C:\users\stanley\Desktop\django_project\test_project> ls
 
    Directory: C:\users\stanley\Desktop\django_project\test_project
@@ -278,7 +238,6 @@ Mode                LastWriteTime         Length Name
 d-----         9/4/2021   1:25 AM                test_project
 
 -a----         9/4/2021   1:25 AM            690 manage.py
-
 ```
 
 The directory `test_project` contains Django configuration files. The `manage.py` file comes in handy when starting a development server, and that's what you will do in the next step.
@@ -290,9 +249,7 @@ Now that the project has been created, we will start the Django development serv
 Start the development server using the `manage.py runserver` command:
 
 ```
-
 (venv)> python manage.py runserver
-
 ```
 
 ![run server](/assets/images/posts/2019-08-31-how-to-install-django-on-windows/runserver.jpg)
