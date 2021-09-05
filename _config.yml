@@ -62,9 +62,9 @@ plugins:
   - jekyll-minifier
 
 author:
-  name   : "Stanley Ulili"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Am a web developer and I love sharing things I learn."
+  name: "Stanley Ulili"
+  avatar: "/assets/images/bio-photo.jpg"
+  bio: "Am a web developer and I love sharing things I learn."
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
@@ -112,26 +112,25 @@ tag_archive:
   type: liquid
   path: /tags/
 
-comments:
-  provider: "disqus"
-  disqus:
-    shortname: "stanleyulili"
-
+#comments:
+#  provider: "disqus"
+#  disqus:
+#    shortname: "stanleyulili"
 
 google-site-verification: "a7bVs9AJyBUrtI7ohUE8S7yS00QUUppjNJBMn0pfRUs"
 analytics:
   provider: "google"
   google:
-    tracking_id: UA-130192148-2 
+    tracking_id: UA-130192148-2
 
 # Social Sharing
 twitter:
-  username               : &twitter "stanulilic"
+  username: &twitter "stanulilic"
 
 # For specifying social profiles, used in _includes/seo.html
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type: # Person or Organization (defaults to Person)
+  name: # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
     - "https://twitter.com/stanulilic"
