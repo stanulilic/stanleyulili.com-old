@@ -199,7 +199,7 @@ The following are just some tips on how you can easily launch Git Bash.
 
 ![git bash shortcut](/assets/images/posts/2019-08-13-install-git-bash/git-bash-shortcut.jpg)
 
-As mentioned in **Step **, you will be able to run Git commands on Git bash terminal, Windows Command Prompt, and Powershell. 
+As mentioned in **Step 7**, you will be able to run Git commands on Git bash terminal, Windows Command Prompt, and Powershell. 
 
 Quickly, lets verify that Git works on **CMD** and **PowerShell** by typing the following commands:
 
