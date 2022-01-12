@@ -16,7 +16,6 @@ excerpt:  The purpose is to track my goals, accomplishments and failures so that
 At the end of 2020, I wrote a [2020 year in review]() post for the first time. The purpose is to track my goals, accomplishments and failures so that in the future I can see how far I have come. This year I almost didn't write  a year in review article because I felt like I didn't achieve most of my goals. But I realize now that's it normal, and I need to keep myself accountable. Even though I didn't achieve most of my goals, other great things happened.
 
 ## Highlights:
-___
 
 ### Wrote for other publications
 In 2020, I set a goal to write for other publications. I got accepted to write for DigitalOcean and LogRocket. In 2021,  I have written 3 articles on DigitalOcean and one article on LogRocket(it will publish this month, I finished writing last year).
@@ -41,7 +40,6 @@ I grew my stock market portfolio from $320 to $2760.  My original $320 investmen
 I enrolled in May, 2021 to a driving school and obtained a license in August. I don't have a car yet, LOL.  I have been trying to learn for a few years, but always pushed it aside because I wasn't ready to make the time commitment. So last year I decided that it was now or never. 
 
 ## Lows
-___
 Let me now share some of my lows.
 
 ### Blogging
@@ -76,7 +74,6 @@ The following are some of the major goals I wrote for 2021 and I failed most of 
 Since most of the goals in this section I failed, I will attempt them again this year, no  need to make other goals for now.
 
 ## What I Have Learned Last Year
-___
 
 I learned a lot of new things, I enjoy learning new things and updating my brain with new ideas. Here are some few things I found intereting:
 
