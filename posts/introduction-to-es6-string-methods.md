@@ -10,6 +10,7 @@ categories:
 tags:
  - javascript
 title: "Introduction to ES6+ String Methods"
+date: '2019-10-30'
 ---
 
 ## Introduction
