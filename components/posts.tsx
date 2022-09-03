@@ -11,9 +11,9 @@ export default function Articles({ data, heading }) {
           </NextLink>
         </h2>
         <div className="articles">
-          {data.map(({ id, date, title }) => (
+          {data.map(({ id, date, title, categories }) => (
             <div className="article" key={id}>
-              <NextLink href={id}>
+              <NextLink href={`${categories[0].toLowerCase()}/${id}`}>
                 <a>
                   <div className="article-row">
                     <time>{date}</time>

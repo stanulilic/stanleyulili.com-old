@@ -17,6 +17,7 @@ export async function getStaticProps() {
 }
 
 const Home: NextPage = ({ recentPosts }) => {
+  console.log(recentPosts);
   return (
     <Layout className={styles.container}>
       <Hero />
