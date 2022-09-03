@@ -24,7 +24,7 @@ const socialItems = [
 
 export default function Navigation() {
   return (
-    <section>
+    <header>
       <div className="wrapper">
         <div className="logo">
           <NextLink href="/" className="">
@@ -52,6 +52,6 @@ export default function Navigation() {
           </ul>
         </div>
       </div>
-    </section>
+    </header>
   );
 }
