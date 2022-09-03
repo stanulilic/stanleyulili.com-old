@@ -10,6 +10,7 @@ tags:
   - personal
 title: "2021 Year in Review and into 2022"
 excerpt:  The purpose is to track my goals, accomplishments and failures so that in the future I can see how far I have come .
+date: '2022-01-12'
 ---
 
 

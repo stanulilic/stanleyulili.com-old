@@ -9,7 +9,7 @@ tags:
   - javascript
 title: "Asynchronous Programming with Callbacks in JavaScript"
 excerpt: In this article, you are going to learn about synchronous and asynchronous programming in JavaScript. After that, you will learn the significance of callbacks in asynchronous programming, how to create callbacks, and the pitfalls you can run into when using callbacks.
-toc: true
+date: '2020-05-11'
 ---
 
 ## Introduction

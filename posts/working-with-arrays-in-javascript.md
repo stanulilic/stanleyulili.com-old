@@ -13,6 +13,7 @@ toc: true;
 toc_sticky: true
 toc_label: "Table of Contents"
 title: "Working with Arrays in JavaScript"
+date: '2019-11-09'
 ---
 
 

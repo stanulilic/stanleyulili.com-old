@@ -10,7 +10,8 @@ tags:
   - windows
   - python
 title: Solution to "Running Scripts Is Disabled On This System" Error On PowerShell
-last_modified_at: 2021-09-04
+date: '2019-08-22'
+last_modified_at: '2021-09-04'
 ---
 
 I run into this error **"running scripts is disabled on this system"** as I was trying to activate the **virtual environment** on PowerShell.

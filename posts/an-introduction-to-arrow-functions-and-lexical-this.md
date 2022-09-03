@@ -9,10 +9,8 @@ categories:
   - Javascript
 tags:
   - javascript
-toc: true;
-toc_sticky: true
-toc_label: "Table of Contents"
 title: "An Introduction to Arrow Functions and Lexical 'this'"
+date: '2019-10-17'
 ---
 
 ## Introduction

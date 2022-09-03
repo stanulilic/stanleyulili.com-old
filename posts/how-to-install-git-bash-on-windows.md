@@ -3,7 +3,7 @@ header:
   teaser: /assets/images/posts/2019-08-13-install-git-bash/featured-image.jpg
 feature_image: /assets/images/posts/2019-08-13-install-git-bash/featured-image.jpg
 featured_image_alt: featured-image
-excerpt: In this tutorial, we are going to learn how to install Git Bash on Windows. Git Bash for Windows is a package that comprises of `git` and `bash`.
+excerpt: 'In this tutorial, we are going to learn how to install Git Bash on Windows. Git Bash for Windows is a package that comprises of `git` and `bash`.'
 
 categories:
  - Git
@@ -11,8 +11,8 @@ tags:
  - git
  - windows
  - bash
-toc: true
-last_modified_at: 2021-09-12
+date: '2019-08-12'
+last_modified_at: '2021-09-12'
 ---
 ## Introduction
 In this tutorial you will install Git Bash on your Windows operating system. Git Bash is one of the most popular packages on Windows system.  It comprises of [git](https://en.wikipedia.org/wiki/Git) and [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)). Git was created in 2005 by Linus Torvalds, and was built around  a Unix-based system, such as the Linux operating system and MacOS. These operating systems have a built-in shell called bash that allows Git to run smoothly.

@@ -13,6 +13,7 @@ toc: true;
 toc_sticky: true
 toc_label: "Table of Contents"
 title: "Template Literals in JavaScript: Explained like You're Twelve"
+date: '2019-10-29'
 ---
 
 ## Introduction

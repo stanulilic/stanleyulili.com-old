@@ -10,6 +10,7 @@ categories:
 tags:
  - javascript
 title: "How to find Event Listeners on a DOM Node when Debugging"
+date: '2019-11-10'
 ---
 ## Problem
 Say you want to find all the event listeners attached to a DOM node. How do you go about it?

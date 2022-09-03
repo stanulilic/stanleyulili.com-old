@@ -14,6 +14,7 @@ toc: true;
 toc_sticky: true
 toc_label: "Table of Contents"
 title: "The Beginner's Guide to Chart.js"
+date: '2019-10-05'
 ---
 
 ## Introduction
@@ -130,12 +131,12 @@ I currently have the following table which contains popular Javascript framework
 
 
 | Name of JavaScript Framework | Github Stars |
-|------------------------------|--------------|
-| React | 136,850 |
-| Angular | 52,122 |
-| Vue | 148,825 |
-| Hyperapp | 16,939 |
-| Omi | 9,763 |
+| ---------------------------- | ------------ |
+| React                        | 136,850      |
+| Angular                      | 52,122       |
+| Vue                          | 148,825      |
+| Hyperapp                     | 16,939       |
+| Omi                          | 9,763        |
 
 
 We are going to represent the data in a bar chart. The x-axis(horizontal) will be used to plot the Javascript frameworks as labels while the y-axis(cross axis) will be used to plot the number of Github stars each framework has.

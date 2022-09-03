@@ -12,9 +12,10 @@ tags:
 - django
 toc: true;
 toc_sticky: true
-toc_label: "Table of Contents"
-title: "How to Install Django on Windows:  Step by Step Guide"
-last_modified_at: 2021-09-04
+toc_label: 'Table of Contents'
+title: 'How to Install Django on Windows:  Step by Step Guide'
+date: '2019-08-31'
+last_modified_at: '2021-09-04'
 ---
 
 ## Introduction

@@ -10,6 +10,7 @@ tags:
   - personal
 title: "2020 Year in Review"
 excerpt: I have been reading year in review posts lately, they have inspired me to start a habit of documenting my annual progress.
+date: '2020-12-31'
 ---
 
 I have been reading year in review posts lately, they have inspired me to start a habit of documenting my annual progress. I had a lot of goals for 2020, sadly I failed to achieve most of them. But still, there are some that I have achieved that are worth sharing, and of course, It's also worth sharing my failures. Hopefully, in a few years, I will look back at this post and see how far I have come.

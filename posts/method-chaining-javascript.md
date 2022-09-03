@@ -8,6 +8,7 @@ categories:
 tags:
  - javascript
 title: "Understanding Method Chaining in JavaScript"
+date: '2019-11-14'
 ---
 ### introduction
 Method chaining is a technique that involves calling multiple methods on the same object in a chain-like sequence. This is made possible by returning an instance of an object in each method. 
