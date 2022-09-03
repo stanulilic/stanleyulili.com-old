@@ -5,6 +5,9 @@
   --link-color: #65ddd9;
   --font-family: "Inter", Roboto, Ubuntu, "Droid Sans", "Helvetica Neue",
     sans-serif;
+  --content-width: 1060px;
+  --content-width--small: 560px;
+  --content-width--medium: 700px;
 }
 html,
 body {
@@ -24,7 +27,16 @@ a {
 * {
   box-sizing: border-box;
 }
-
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.wrapper {
+  max-width: var(--content-width);
+  margin-right: auto;
+  margin-left: auto;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
