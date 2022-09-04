@@ -89,13 +89,15 @@ export async function getRecentPosts() {
 
 export async function getPopularPosts() {
   const popularPosts = await getPostsWithPageViews();
-  return popularPosts.sort(({ page_views: a }, { page_views: b }) => {
-    if (a < b) {
-      return 1;
-    } else if (a > b) {
-      return -1;
-    } else {
-      return 0;
-    }
-  });
+  return popularPosts
+    .sort(({ page_views: a }, { page_views: b }) => {
+      if (a < b) {
+        return 1;
+      } else if (a > b) {
+        return -1;
+      } else {
+        return 0;
+      }
+    })
+    .slice(0, 7);
 }
