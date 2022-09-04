@@ -3,7 +3,7 @@ import NextLink from "next/link";
 export default function Articles({ data, heading }) {
   return (
     <section>
-      <div class="wrapper">
+      <div className="wrapper">
         <h2>
           <span>{heading}</span>
           <NextLink href="/articles">
