@@ -4,14 +4,14 @@ header:
 excerpt: I run into this error **"running scripts is disabled on this system"**  as I was trying to activate
 
 categories:
-  - Powershell
+  - powershell
 tags:
   - powershell
   - windows
   - python
 title: Solution to "Running Scripts Is Disabled On This System" Error On PowerShell
-date: '2019-08-22'
-last_modified_at: '2021-09-04'
+date: "2019-08-22"
+last_modified_at: "2021-09-04"
 ---
 
 I run into this error **"running scripts is disabled on this system"** as I was trying to activate the **virtual environment** on PowerShell.
@@ -29,7 +29,7 @@ It turns out on my Windows 10 system, the [**Execution Policy**](https://docs.mi
 
 The following steps show you how to fix the error.
 
-## Open  Windows PowerShell as Admin
+## Open Windows PowerShell as Admin
 
 Open the **Start Menu** on Windows and search for **powershell** and right-click on it. Click on **"run as administrator"**.
 
@@ -40,7 +40,7 @@ Open the **Start Menu** on Windows and search for **powershell** and right-click
 
 ## Allow Windows PowerShell to Execute Scripts
 
-To fix the error, you need to change the PowerShell execution policy to `remotesigned`. This will allow you to run scripts that are on your local computer unsigned,  and also remote scripts(from the internet) which have been signed.
+To fix the error, you need to change the PowerShell execution policy to `remotesigned`. This will allow you to run scripts that are on your local computer unsigned, and also remote scripts(from the internet) which have been signed.
 
 Type the following command in the PowerShell admin window to change the execution policy:
 
@@ -52,7 +52,6 @@ You will be prompted to accept the change, type `A`(Yes to all), and press **ENT
 
 ![execution policy change](/assets/images/posts/2019-08-25-running-scripts-is-disabled-on-this-system-powershell/execution-policy-change.jpg)
 
-
 Close the PowerShell admin window, and go back to the PowerShell Window where you got the error. Run the command that triggered the error again. Mine was `venv\Scripts\activate`.
 
 If you look at the following screenshot, you will see that am not getting the error anymore and the virtual environment has been activated:
@@ -60,6 +59,3 @@ If you look at the following screenshot, you will see that am not getting the er
 ![virtualenv works](/assets/images/posts/2019-08-25-running-scripts-is-disabled-on-this-system-powershell/virtualenv-works.jpg)
 
 I hope your error has been fixed too. Let me know in the comments if you have any questions. Thank you for reading.
-
-
-

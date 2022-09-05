@@ -15,12 +15,15 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mailchimp/mailchimp_marketing": "^3.0.78",
+    "date-fns": "^2.29.2",
     "googleapis": "^107.0.0",
     "gray-matter": "^4.0.3",
     "moment": "^2.29.4",
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1"
   },
   "devDependencies": {
     "@types/node": "18.7.14",
