@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css";
 import Layout from "../components/layout";
 import Hero from "../components/hero";
 import Articles from "../components/posts";
+import Footer from "../components/footer";
 
 export async function getStaticProps() {
   const recentPosts = await getRecentPosts();
@@ -24,6 +25,7 @@ const Home: NextPage = ({ recentPosts, popularPosts }) => {
       <Hero />
       <Articles data={recentPosts} heading="Recent Posts" />
       <Articles data={popularPosts} heading="Popular Posts" />
+      <Footer />
     </Layout>
   );
 };

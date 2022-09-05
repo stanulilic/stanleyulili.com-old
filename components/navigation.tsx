@@ -12,7 +12,7 @@ const navItems = [
   { url: "/about", label: "about" },
 ];
 
-const socialItems = [
+export const socialItems = [
   { url: "https://github.com/stanulilic", label: "faGithub", name: faGithub },
   { url: "https://twitter.com/home", label: "faTwitter", name: faTwitter },
   {
