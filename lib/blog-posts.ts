@@ -2,8 +2,10 @@ import { google } from "googleapis";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
+const md = require("markdown-it")({}).use(
+  require("@digitalocean/do-markdownit"),
+  {}
+);
 
 const postsDirectory = path.join(process.cwd(), "posts");
 let googleAuth;
@@ -127,10 +129,7 @@ export async function getPostData(id) {
 
   const matterResult = matter(fileContents);
 
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  const contentHtml = md.render(matterResult.content);
 
   return {
     id,

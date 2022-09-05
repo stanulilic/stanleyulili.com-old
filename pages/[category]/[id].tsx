@@ -3,6 +3,7 @@ import NextLink from "next/link";
 import { getAllPostIds, getPostData } from "../../lib/blog-posts";
 import Head from "next/head";
 import Date from "../../components/date";
+import Footer from "../../components/footer";
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -55,6 +56,7 @@ export default function Post({ postData }) {
           className="wrapper"
         />
       </article>
+      <Footer />
     </Layout>
   );
 }
