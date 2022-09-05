@@ -26,7 +26,7 @@ export function Subscribe() {
     }
 
     inputEl.current.value = "";
-    setMessage("Success! You are now subscribed to the newsletter.");
+    setMessage("Success! You are now subscribed to my newsletter.");
   };
 
   return (

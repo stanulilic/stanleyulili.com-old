@@ -38,8 +38,6 @@ async function getPostsWithPageViews() {
     version: "v3",
   });
 
-  //const startDate = req.query.startDate;
-  const startDate = "yesterday";
   const response = await analytics.data.ga.get({
     "start-date": "2019-01-01",
     "end-date": "today",
@@ -73,7 +71,7 @@ async function getPostsWithPageViews() {
 }
 
 export async function getRecentPosts() {
-  const allPostsData = await getPostsWithPageViews();
+  const allPostsData = await getPostsFromFiles();
   return allPostsData
     .sort(({ date: a }, { date: b }) => {
       if (a < b) {

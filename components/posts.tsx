@@ -1,4 +1,5 @@
 import NextLink from "next/link";
+import { isArticleNew } from "../lib/dates";
 
 export default function Articles({ data, heading }) {
   return (
@@ -22,7 +23,9 @@ export default function Articles({ data, heading }) {
                   {heading === "Popular Posts" && (
                     <div className="page-views">{page_views} views</div>
                   )}
-                  {/* <div className="new-article">New!</div> */}
+                  {isArticleNew(date) && (
+                    <div className="new-article">New!</div>
+                  )}
                 </a>
               </NextLink>
             </div>
