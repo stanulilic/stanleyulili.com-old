@@ -33,13 +33,6 @@ export default function Post({ postData }) {
         <header>
           <div className="wrapper">
             <h1 className="">{postData.title}</h1>
-            <div className="post-metadata">
-              {postData.tags.map((tag) => (
-                <NextLink href={`/tags/${tag}`} key={tag}>
-                  <a>{tag}</a>
-                </NextLink>
-              ))}
-            </div>
             <div className="post-author">
               By Stanley Ulili on <Date dateString={postData.date} />
               {postData.last_modified_at && (
@@ -55,6 +48,13 @@ export default function Post({ postData }) {
         <div className="wrapper">
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
           <Subscribe />
+          <div className="post-metadata">
+            {postData.tags.map((tag) => (
+              <NextLink href={`/tags/${tag}`} key={tag}>
+                <a>{tag}</a>
+              </NextLink>
+            ))}
+          </div>
         </div>
       </article>
       <Footer />
