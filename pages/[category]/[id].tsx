@@ -5,6 +5,7 @@ import Head from "next/head";
 import Date from "../../components/date";
 import Footer from "../../components/footer";
 import { Subscribe } from "../../components/subscribe";
+import AuthorBio from "../../components/bio";
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -55,6 +56,7 @@ export default function Post({ postData }) {
               </NextLink>
             ))}
           </div>
+          <AuthorBio />
         </div>
       </article>
       <Footer />
