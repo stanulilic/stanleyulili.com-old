@@ -4,6 +4,7 @@ import { getAllPostIds, getPostData } from "../../lib/blog-posts";
 import Head from "next/head";
 import Date from "../../components/date";
 import Footer from "../../components/footer";
+import { Subscribe } from "../../components/subscribe";
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -51,10 +52,10 @@ export default function Post({ postData }) {
           </div>
         </header>
 
-        <div
-          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-          className="wrapper"
-        />
+        <div className="wrapper">
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <Subscribe />
+        </div>
       </article>
       <Footer />
     </Layout>
