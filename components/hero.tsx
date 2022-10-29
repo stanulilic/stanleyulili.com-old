@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section>
-      <div className="wrapper">
-        <div className="hero-content">
-          <h1 className="hero-title">Hi, I'm Stanley</h1>
-          <p className="hero-description">
+      <div className="wrapper hero">
+        <div className="hero_content">
+          <h1 className="hero_title">Hi, I'm Stanley</h1>
+          <p className="hero_description">
             I'm a software developer in Malawi. I love open-source, writing,
             reading, and exploring places when bored <br />
             <br />

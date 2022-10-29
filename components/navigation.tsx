@@ -5,6 +5,8 @@ import {
   faTwitter,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import styles from './navigation.module.css'
+
 
 const navItems = [
   { url: "/articles", label: "articles" },
@@ -25,14 +27,14 @@ export const socialItems = [
 export default function Navigation() {
   return (
     <header>
-      <div className="wrapper">
+      <div className="wrapper header">
         <div className="logo">
-          <NextLink href="/" className="">
-            <span>Stanley Ulili</span>
+          <NextLink href="/">
+            Stanley Ulili
           </NextLink>
         </div>
-        <nav>
-          <ul>
+        <nav className="header_nav">
+          <ul className="header_nav_ul">
             {navItems.map((item) => (
               <li className="nav-item" key={item.label}>
                 <NextLink href={item.url}>{item.label}</NextLink>
@@ -40,8 +42,8 @@ export default function Navigation() {
             ))}
           </ul>
         </nav>
-        <div className="social-icons">
-          <ul>
+        <div className="header_social">
+          <ul className="header_social_ul">
             {socialItems.map((item) => (
               <li className="nav-item" key={item.label}>
                 <NextLink href={item.url}>
