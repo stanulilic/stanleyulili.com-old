@@ -7,8 +7,8 @@ export default function AuthorBio() {
           priority
           src="/images/bio.png"
           alt="Picture of the author"
-          width={400}
-          height={400}
+          width={200}
+          height={200}
         />
       </div>
       <div className="author-details">
