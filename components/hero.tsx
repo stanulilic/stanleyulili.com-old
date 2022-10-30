@@ -13,7 +13,7 @@ export default function Hero() {
             This website is my digital garden contains notes for my past self
           </p>
         </div>
-        <div className="hero-img">
+        <div className="hero_img">
           <Image
             priority
             src="/images/bio.png"

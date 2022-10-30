@@ -1,11 +1,12 @@
 import NextLink from "next/link";
 import { isArticleNew } from "../lib/dates";
+import Date from "./date";
 
 export default function Articles({ data, heading }) {
   return (
     <section>
-      <div className="wrapper">
-        <h2>
+      <div className="wrapper posts_section">
+        <h2 className="section_title">
           <span>{heading}</span>
           <NextLink href="/articles">
             <a className="section-button">View all</a>
@@ -16,16 +17,13 @@ export default function Articles({ data, heading }) {
             <div className="article" key={id}>
               <NextLink href={`${categories[0].toLowerCase()}/${id}`}>
                 <a>
-                  <div className="article-row">
-                    <time>{date}</time>
+                  <article className="article_row">
                     <h3>{title}</h3>
-                  </div>
-                  {heading === "Popular Posts" && (
-                    <div className="page-views">{page_views} views</div>
-                  )}
+                    <Date dateString={date} />
                   {isArticleNew(date) && (
-                    <div className="new-article">New!</div>
+                    <span className="new_article">New!</span>
                   )}
+                  </article>
                 </a>
               </NextLink>
             </div>
