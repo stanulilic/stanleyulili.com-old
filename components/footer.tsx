@@ -29,31 +29,33 @@ export default function Footer() {
     <section>
       <div className="wrapper">
         <Subscribe />
-        <div className="footer-social-icons">
-          <ul>
-            {footerSocialItems.map((item) => (
-              <li className="nav-item" key={item.label}>
-                <NextLink href={item.url}>
-                  <FontAwesomeIcon icon={item.name} />
-                </NextLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="footer-links">
-          <ul>
-            {footerItems.map((item) => (
-              <li className="nav-item" key={item.label}>
-                <NextLink href={item.url}>{item.label}</NextLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="copyright">
-          <p>
-            © Copyright 2019—2022. Built with passion by Stanley Ulili in Zomba,
-            Malawi.
-          </p>
+        <div className="footer">
+          <div className="footer-social-icons">
+            <ul>
+              {footerSocialItems.map((item) => (
+                <li className="nav-item" key={item.label}>
+                  <NextLink href={item.url}>
+                    <FontAwesomeIcon icon={item.name} />
+                  </NextLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="footer-links">
+            <ul>
+              {footerItems.map((item) => (
+                <li className="nav-item" key={item.label}>
+                  <NextLink href={item.url}>{item.label}</NextLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="copyright">
+            <p>
+              © Copyright 2019—2022. Built with passion by Stanley Ulili in
+              Zomba, Malawi.
+            </p>
+          </div>
         </div>
       </div>
     </section>
