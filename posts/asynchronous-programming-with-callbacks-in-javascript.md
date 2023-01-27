@@ -9,7 +9,7 @@ tags:
   - javascript
 title: "Asynchronous Programming with Callbacks in JavaScript"
 excerpt: In this article, you are going to learn about synchronous and asynchronous programming in JavaScript. After that, you will learn the significance of callbacks in asynchronous programming, how to create callbacks, and the pitfalls you can run into when using callbacks.
-date: '2020-05-11'
+date: "2020-05-11"
 ---
 
 ## Introduction
@@ -53,26 +53,34 @@ When a programming language is **single-threaded** it means that it can do only 
 
 Let's say you have 4 functions in the following order in your code:
 
-```
-function A(){console.log('a')}
-function B(){console.log('b')}
-function C(){console.log('c')}
-function D(){console.log('d')}
-A()
-B()
-C()
-D()
+```javascript
+function A() {
+  console.log("a");
+}
+function B() {
+  console.log("b");
+}
+function C() {
+  console.log("c");
+}
+function D() {
+  console.log("d");
+}
+A();
+B();
+C();
+D();
 ```
 
 When Javascript is executing the code, all the function calls are put on a single [call stack](https://www.freecodecamp.org/news/understanding-the-javascript-call-stack-861e41ae61d4/). Only one function can execute at a given time in a thread. After one function executes, another one gets executed. This goes on until all the code is executed.
 
-```
+```bash
 Thread: A() -> B() -> C() -> D()
 ```
 
 If JavaScript was a multithreaded language, it would have been possible to execute two functions or more functions at the same time.
 
-```
+```bash
 Thread 1: A() -> B()
 Thread 2: C() -> D()
 ```
@@ -81,7 +89,7 @@ Thread 2: C() -> D()
 
 Let's say you have 3 lines:
 
-```
+```javascript
 1 console.log('line one');
 2 console.log('line two');
 3 console.log('line three')

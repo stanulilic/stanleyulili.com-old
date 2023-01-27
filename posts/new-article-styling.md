@@ -36,3 +36,14 @@ This is _italics_, this is **bold**, and this is ~~strikethrough~~.
 
 1. This is a list item.
 2. This list is ordered.
+
+```javascript
+function greeting(name, callback) {
+  console.log("Hello", name);
+  callback();
+}
+
+<^>greeting("Stanley", function () {<^>
+  <^>console.log("am a callback function");<^>
+});
+```

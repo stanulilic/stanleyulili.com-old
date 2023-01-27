@@ -41,7 +41,19 @@ ul {
   margin: 0;
   list-style: none;
 }
-
+table {
+  border: 1px solid var(--link-text);
+  border-collapse: separate;
+  border-spacing: 0;
+  display: table;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  width: 100%;
+}
 .wrapper {
   max-width: var(--content-width);
   margin-right: auto;
@@ -109,7 +121,7 @@ ul {
   height: 20px;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 570px) {
   .logo {
     display: block;
     margin-right: 2rem;
@@ -272,6 +284,102 @@ ul {
   }
 }
 
+/* --------------------------------
+     Post content Styles
+   ---------------------------------*/
+
+.post-content {
+  max-width: 50rem;
+}
+
+.post-content img {
+  display: block;
+  max-width: 100%;
+}
+
+.post-content mark,
+p code {
+  background-color: #dddcdc;
+  border: 1px solid #c7c7c7;
+  padding: 3px;
+}
+.post-content .code-label {
+  display: block;
+  padding: 0.5rem 1rem;
+  background-color: whitesmoke;
+  text-align: center;
+  border-top: 1px solid var(--text-color);
+  /* border-radius: 16px; */
+  border-left: 1px solid var(--text-color);
+  border-radius: 16px 16px 0 0;
+  border-right: 1px solid var(--text-color);
+}
+
+.post-content pre[class*="language-"] {
+  margin-top: 0;
+  border-radius: unset;
+}
+.post-content pre.command {
+  padding: 1rem;
+}
+.post-content pre.command code {
+  white-space: unset;
+}
+.post-content pre.command code ol,
+.post-content pre.custom_prefix code ol {
+  margin-bottom: 0;
+  margin-left: -2rem;
+}
+.post-content pre.command code ol li:before,
+.post-content pre.custom_prefix code ol li:before {
+  content: attr(data-prefix);
+  display: inline-block;
+  margin: 0 10px 0 5px;
+  text-align: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.post-content pre.command li::marker,
+.post-content pre.custom_prefix li::marker {
+  content: "";
+}
+.post-content ul {
+  list-style: disc;
+}
+.post-content ol,
+.post-content p,
+.post-content ul {
+  -webkit-font-smoothing: auto;
+  line-height: 1.625;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+.post-content pre {
+  background: #081b4b;
+  color: #fff;
+  border-radius: 16px;
+  display: block;
+  margin: 1em 0;
+  overflow: auto;
+  overflow-wrap: normal;
+  padding: 1em;
+  white-space: normal;
+  word-wrap: normal;
+}
+
+.post-content .table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.post-content iframe {
+  width: 100%;
+  height: 100%;
+}
 .subscribe {
   margin: 5rem auto 3rem;
   padding: 3rem 1rem;

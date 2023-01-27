@@ -1,3 +1,5 @@
+import React, { useEffect } from "react";
+
 import Layout from "../../components/layout";
 import NextLink from "next/link";
 import { getAllPostIds, getPostData } from "../../lib/blog-posts";
@@ -6,6 +8,11 @@ import Date from "../../components/date";
 import Footer from "../../components/footer";
 import { Subscribe } from "../../components/subscribe";
 import AuthorBio from "../../components/bio";
+
+/*
+const prism = require("prismjs");
+require("prismjs/components/prism-python");
+*/
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -25,6 +32,11 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Post({ postData }) {
+  /*
+  useEffect(() => {
+    prism.highlightAll();
+  }, []);
+  */
   return (
     <Layout>
       <Head>
@@ -47,7 +59,9 @@ export default function Post({ postData }) {
         </header>
 
         <div className="wrapper">
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <div className="post-content">
+            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          </div>
           <Subscribe />
           <div className="post-metadata">
             {postData.tags.map((tag) => (

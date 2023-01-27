@@ -9,30 +9,32 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@digitalocean/do-markdownit": "^1.2.1",
-    "@fortawesome/fontawesome-svg-core": "^6.2.0",
-    "@fortawesome/free-brands-svg-icons": "^6.2.0",
-    "@fortawesome/free-regular-svg-icons": "^6.2.0",
-    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@digitalocean/do-markdownit": "^1.4.0",
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-brands-svg-icons": "^6.2.1",
+    "@fortawesome/free-regular-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@mailchimp/mailchimp_marketing": "^3.0.78",
-    "date-fns": "^2.29.2",
-    "googleapis": "^107.0.0",
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
+    "date-fns": "^2.29.3",
+    "googleapis": "^110.0.0",
     "gray-matter": "^4.0.3",
+    "highlight.js": "^11.7.0",
     "markdown-it": "^13.0.1",
     "moment": "^2.29.4",
-    "next": "^13.1.2",
+    "next": "^13.1.5",
+    "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1"
   },
   "devDependencies": {
-    "@types/node": "18.7.14",
-    "@types/react": "18.0.18",
-    "@types/react-dom": "18.0.6",
-    "eslint": "8.23.0",
-    "eslint-config-next": "^13.1.2",
-    "typescript": "4.8.2"
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "eslint": "8.32.0",
+    "eslint-config-next": "^13.1.5",
+    "typescript": "4.9.4"
   }
 }
