@@ -3,6 +3,7 @@
   --text-color: #111;
   --inline-code: #e2e2d7;
   --link-color: #1a9fe1;
+  --border-bottom-color: #878787;
   --font-family: "Inter", Roboto, Ubuntu, "Droid Sans", "Helvetica Neue",
     sans-serif;
   --content-width: 1060px;
@@ -66,6 +67,7 @@ ul {
 
 .header_nav {
   margin-top: 0.5rem;
+  padding-bottom: 9px; /* unset this on desktop */
 }
 
 .header_nav_ul {
@@ -79,6 +81,10 @@ ul {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin-right: 1.5rem;
+  border-bottom: 2px solid transparent;
+}
+.header_nav_ul a:hover {
+  border-bottom: 2px solid var(--link-color);
 }
 
 .header_nav {
@@ -103,7 +109,6 @@ ul {
 }
 
 @media screen and (min-width: 500px) {
-
   .logo {
     display: block;
     margin-right: 2rem;
@@ -127,28 +132,29 @@ ul {
 
   .header_social {
     margin-left: auto;
-
   }
 }
 
+.hero {
+  padding-top: 2rem;
+}
+
+.hero_img img {
+  max-width: 350px;
+  margin-left: 2rem;
+  border-radius: 50%;
+  border: 3px solid var(--text-color);
+
+  /*
+    max-height: 200px;
+    margin: 1.5rem auto 0;
+*/
+}
 @media screen and (min-width: 800px) {
   .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 2rem;
-  }
-
-  .hero_img img {
-    max-width: 350px;
-    margin-left: 2rem;
-    border-radius: 50%;
-    border: 3px solid var(--text-color);
-
-    /*
-    max-height: 200px;
-    margin: 1.5rem auto 0;
-*/
   }
 }
 
@@ -175,12 +181,35 @@ ul {
   padding: 9px;
 }
 
+.section_title a {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.section_title a:hover {
+  color: var(--link-color);
+}
+
+.article {
+  border-bottom: 1px solid var(--border-bottom-color); /* unset this on larger divices */
+}
 .article a {
   display: block;
   color: var(--text-color);
   padding: 0.5rem 0;
 }
 
+.article a:hover h3 {
+  text-decoration: underline;
+}
+
+.article h3 {
+  font-size: 1rem; /* remember to unset this */
+}
+
+.article time {
+  font-size: 0.8rem;
+}
 .article_row .new_article {
   display: block;
   background: #b9efa5;
@@ -191,18 +220,6 @@ ul {
 .article_row time {
   min-width: 100px;
 }
-
-
-.popular_posts .article {
-  border-bottom: 1px solid var(--text-color);
-}
-
-
-.popular_posts .article a:hover {
-  background: var(--text-color);
-  color: var(--body-bg);
-}
-
 
 /* remove margins on larger screen */
 .popular_posts .article_row h3 {
@@ -222,7 +239,7 @@ ul {
   }
 
   .article_row time {
-    white-space: nowrap
+    white-space: nowrap;
   }
 }
 
@@ -248,7 +265,6 @@ ul {
   .article_row {
     position: relative;
   }
-
 
   .popular_posts .article {
     border-bottom: none;
