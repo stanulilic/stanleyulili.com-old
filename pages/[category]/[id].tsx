@@ -52,7 +52,7 @@ export default function Post({ postData }) {
           <div className="post-metadata">
             {postData.tags.map((tag) => (
               <NextLink href={`/tags/${tag}`} key={tag}>
-                <a>{tag}</a>
+                {tag}
               </NextLink>
             ))}
           </div>
