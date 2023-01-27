@@ -2,10 +2,10 @@ import NextLink from "next/link";
 import { isArticleNew } from "../lib/dates";
 import Date from "./date";
 
-export default function Articles({ data, heading }) {
+export default function Articles({ data, heading, headingClass  }) {
   return (
     <section>
-      <div className="wrapper posts_section">
+      <div className={`wrapper posts_section ${headingClass}`}>
         <h2 className="section_title">
           <span>{heading}</span>
           <NextLink href="/articles">
@@ -19,10 +19,10 @@ export default function Articles({ data, heading }) {
                 <a>
                   <article className="article_row">
                     <h3>{title}</h3>
-                    <Date dateString={date} />
-                  {isArticleNew(date) && (
+                    {isArticleNew(date) && (
                     <span className="new_article">New!</span>
                   )}
+                    <Date dateString={date} />
                   </article>
                 </a>
               </NextLink>

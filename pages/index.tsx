@@ -23,8 +23,8 @@ const Home: NextPage = ({ recentPosts, popularPosts }) => {
   return (
     <Layout className={styles.container}>
       <Hero />
-      <Articles data={recentPosts} heading="Recent Posts" />
-      <Articles data={popularPosts} heading="Popular Posts" />
+      <Articles data={recentPosts} heading="Recent Posts" headingClass='recent_posts' />
+      <Articles data={popularPosts} heading="Popular Posts" headingClass='popular_posts' />
       <Footer />
     </Layout>
   );

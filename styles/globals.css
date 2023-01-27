@@ -161,8 +161,18 @@ ul {
   margin-top: 3.4rem;
 }
 
-.article {
-  border-bottom: 1px solid var(--text-color);
+.section_title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #b9efa5;
+  font-size: var(--text-1x);
+  align-items: center;
+}
+
+.section_title span {
+  background: #b9efa5;
+  color: var(--text-color);
+  padding: 9px;
 }
 
 .article a {
@@ -171,37 +181,36 @@ ul {
   padding: 0.5rem 0;
 }
 
-.article a:hover {
-  background: var(--text-color);
-  color: var(--body-bg);
-}
-
-.section_title {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 3px solid var(--text-color);
-  font-size: var(--text-1x);
-  align-items: center;
-}
-
-.section_title span {
-  background: var(--text-color);
-  color: #FFF;
-  padding: 9px;
-}
-
-.posts_section .article_row {
+.article_row .new_article {
   display: block;
-}
-
-/* remove margins on larger screen */
-.article_row h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+  background: #b9efa5;
+  padding: 0.3rem;
+  border-radius: 4px;
 }
 
 .article_row time {
   min-width: 100px;
+}
+
+
+.popular_posts .article {
+  border-bottom: 1px solid var(--text-color);
+}
+
+
+.popular_posts .article a:hover {
+  background: var(--text-color);
+  color: var(--body-bg);
+}
+
+
+/* remove margins on larger screen */
+.popular_posts .article_row h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.popular_posts .article_row time {
   display: block;
 }
 
@@ -210,6 +219,39 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .article_row time {
+    white-space: nowrap
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .recent_posts .articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .recent_posts .article {
+    flex-basis: 48%;
+  }
+
+  .recent_posts .article_row h3 {
+    line-height: var(--text-2x);
+  }
+
+  .article_row time {
+    margin-left: 0.5rem;
+  }
+
+  .article_row {
+    position: relative;
+  }
+
+
+  .popular_posts .article {
+    border-bottom: none;
   }
 }
 

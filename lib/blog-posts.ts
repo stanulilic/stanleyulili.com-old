@@ -86,7 +86,7 @@ export async function getRecentPosts() {
         return 0;
       }
     })
-    .slice(0, 5);
+    .slice(0, 6);
 }
 
 export async function getPopularPosts() {
