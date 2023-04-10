@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import ReactDOMServer from "react-dom/server";
-import Image from "next/legacy/image";
+import Image from "next/image";
+import sizeOf from "image-size";
+import { join } from "path";
 
 const md = require("markdown-it")({}).use(
   require("@digitalocean/do-markdownit"),
@@ -43,14 +45,14 @@ export default function Post({ postData }) {
     prism.highlightAll();
   }, []);
   */
-  function useNextImageComponent(imagePath) {
+  function useNextImageComponent(imagePath, width, height) {
     return ReactDOMServer.renderToString(
       <Image
         priority
         src={imagePath}
         alt="Picture of the author"
-        width={200}
-        height={200}
+        width={width}
+        height={height}
       />
     );
   }
@@ -58,13 +60,13 @@ export default function Post({ postData }) {
   md.renderer.rules.image = function (tokens, idx, options, env, self) {
     const token = tokens[idx];
     const imagePath = token.attrs[0][1];
-
-    return useNextImageComponent(imagePath);
-
-    // pass token to default renderer.
-    return defaultRender(tokens, idx, options, env, self);
+    try {
+      const { width, height } = sizeOf(join("public", imagePath));
+      return useNextImageComponent(imagePath, width, height);
+    } catch (e) {
+      console.log(`An error ${e} was thrown`);
+    }
   };
-  console.log(postData.content);
   const contentHtml = md.render(postData.contentMD);
   return (
     <Layout>
