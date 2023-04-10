@@ -1,7 +1,7 @@
 ---
 header:
-  teaser: /assets/images/posts/personal-featured-image/featured-image.jpg
-feature_image: /assets/images/posts/personal-featured-image/featured-image.jpg
+  teaser: /images/posts/personal-featured-image/featured-image.jpg
+feature_image: /images/posts/personal-featured-image/featured-image.jpg
 featured_image_alt: featured-image
 categories:
   - Personal
@@ -10,7 +10,7 @@ tags:
   - personal
 title: "2020 Year in Review"
 excerpt: I have been reading year in review posts lately, they have inspired me to start a habit of documenting my annual progress.
-date: '2020-12-31'
+date: "2020-12-31"
 ---
 
 I have been reading year in review posts lately, they have inspired me to start a habit of documenting my annual progress. I had a lot of goals for 2020, sadly I failed to achieve most of them. But still, there are some that I have achieved that are worth sharing, and of course, It's also worth sharing my failures. Hopefully, in a few years, I will look back at this post and see how far I have come.
@@ -33,13 +33,13 @@ Despite the few articles, my blog grew unexpectedly, which surprised me. I have 
 
 This year I got 159, 047 page views and roughly 120,000 users.
 
-![blog visitors](/assets/images/posts/2020-12-31-year-in-review/blog-stats.png)
+![blog visitors](/images/posts/2020-12-31-year-in-review/blog-stats.png)
 
 The spike in May is when my [blog post](https://www.stanleyulili.com/javascript/asynchronous-programming-with-callbacks-in-javascript/) trended on Reddit.
 
 ### Top Visitors by Country
 
-![blog visitors by country](/assets/images/posts/2020-12-31-year-in-review/country-stats.png)
+![blog visitors by country](/images/posts/2020-12-31-year-in-review/country-stats.png)
 
 ### Top Articles
 
@@ -68,7 +68,7 @@ This year I worked on a few personal projects. I wanted to create 10 big project
 
 I made 175 contributions on Github. Who knows, maybe it would have been more if my freelance contributions were added to my profile.
 
-![Github contributions](/assets/images/posts/2020-12-31-year-in-review/github-contribs.png)
+![Github contributions](/images/posts/2020-12-31-year-in-review/github-contribs.png)
 
 - [Markdown Editor](https://stanulilic.github.io/markdown-editor/)- this was my first React project, inspired by [stackedit](https://stackedit.io/app).
 

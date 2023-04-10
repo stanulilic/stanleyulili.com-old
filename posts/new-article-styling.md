@@ -1,7 +1,7 @@
 ---
 header:
-  teaser: /assets/images/posts/personal-featured-image/featured-image.jpg
-feature_image: /assets/images/posts/personal-featured-image/featured-image.jpg
+  teaser: /images/posts/personal-featured-image/featured-image.jpg
+feature_image: /images/posts/personal-featured-image/featured-image.jpg
 featured_image_alt: featured-image
 categories:
   - Personal

@@ -1,7 +1,7 @@
 ---
 header:
-  teaser: /assets/images/posts/2019-08-13-install-git-bash/featured-image.jpg
-feature_image: /assets/images/posts/2019-08-13-install-git-bash/featured-image.jpg
+  teaser: /images/posts/2019-08-13-install-git-bash/featured-image.jpg
+feature_image: /images/posts/2019-08-13-install-git-bash/featured-image.jpg
 featured_image_alt: featured-image
 excerpt: "In this tutorial, we are going to learn how to install Git Bash on Windows. Git Bash for Windows is a package that comprises of `git` and `bash`."
 
@@ -49,11 +49,11 @@ Open your preferred browser and visit Git Bash downloads page by clicking the fo
 
 Once the page loads, click the **Download for Windows** button.
 
-![git bash official page](/assets/images/posts/2019-08-13-install-git-bash/download-page.jpg)
+![git bash official page](/images/posts/2019-08-13-install-git-bash/download-page.jpg)
 
 Next, you will be redirected to a different page and download will start automatically in a few seconds.
 
-![git bash download page](/assets/images/posts/2019-08-13-install-git-bash/download-starting.jpg)
+![git bash download page](/images/posts/2019-08-13-install-git-bash/download-starting.jpg)
 
 **Tip:** If the download doesn't start, click on the **click here to download manually** link.
 {: .notice--info}
@@ -68,25 +68,25 @@ Windows will prompt you with the message "Do you want to allow this app to make 
 
 Next, read the GNU General Public License and click **Next**.
 
-![accept license](/assets/images/posts/2019-08-13-install-git-bash/accept-license.jpg)
+![accept license](/images/posts/2019-08-13-install-git-bash/accept-license.jpg)
 
 ## Step 3: Selecting the Destination Location
 
 In this step, the installer will ask you select the location you want to install Git Bash. Proceed with the default option, and click **Next**.
 
-![choose default](/assets/images/posts/2019-08-13-install-git-bash/installation-directory.jpg)
+![choose default](/images/posts/2019-08-13-install-git-bash/installation-directory.jpg)
 
 ## Step 4: Selecting Components
 
 Select the components you want to install. I prefer selecting the **Additional icons** component which creates a Git Bash shortcut on the desktop. After you've selected the components, click **Next**.
 
-![select components](/assets/images/posts/2019-08-13-install-git-bash/select-components.jpg)
+![select components](/images/posts/2019-08-13-install-git-bash/select-components.jpg)
 
 ## Step 5: Selecting the Start Menu Folder
 
 The installer will ask you to choose the folder to create Start Menu folder. Proceed with the default name by clicking **Next**.
 
-![select start menu folder](/assets/images/posts/2019-08-13-install-git-bash/select-start-menu-folder.jpg)
+![select start menu folder](/images/posts/2019-08-13-install-git-bash/select-start-menu-folder.jpg)
 
 ## Step 6: Choosing the Default Editor for Git
 
@@ -96,11 +96,11 @@ Instead, choose a text editor that you like. If you looking for recommendations,
 
 I prefer Visual Studio code, so I will select that.
 
-![Choose visual studio code editor](/assets/images/posts/2019-08-13-install-git-bash/choose-editor.jpg)
+![Choose visual studio code editor](/images/posts/2019-08-13-install-git-bash/choose-editor.jpg)
 
 After choosing the editor, click **Next**.
 
-![editor chosen](/assets/images/posts/2019-08-13-install-git-bash/editor-chosen.jpg)
+![editor chosen](/images/posts/2019-08-13-install-git-bash/editor-chosen.jpg)
 
 ## Step 7: Adjusting the Name of the Initial Branch in New Repositories.
 
@@ -108,7 +108,7 @@ The installer will now ask you to choose the branch name for new repositories. N
 
 So in this step, we will name the branch name **main**. select the **Override the default branch name for new repositories** option, and type **main**. After that, click **Next**.
 
-![choose branch name](/assets/images/posts/2019-08-13-install-git-bash/choose-branch-name.jpg)
+![choose branch name](/images/posts/2019-08-13-install-git-bash/choose-branch-name.jpg)
 
 ## Step 8: Adjusting your PATH Environment
 
@@ -122,71 +122,71 @@ In this section, the installer will ask you to choose how you want to use Git. I
 
 We will go with the default option **Git from the command line and also from 3rd-party software**. We will be able to use Git on all terminals: CMD, PowerShell and Git Bash terminal. And we can always open the Git Bash Terminal when we need more bash tools. Click **Next** to proceed.
 
-![Adjust Path Environment](/assets/images/posts/2019-08-13-install-git-bash/path-environment.jpg)
+![Adjust Path Environment](/images/posts/2019-08-13-install-git-bash/path-environment.jpg)
 
 ## Step 9: Choosing the SSH executable
 
 Select the Secure Shell(SSH) client, it's recommended to go with the default option. So select **Use bundled OpenSSH**, and click **Next**.
 
-![choose ssh executable](/assets/images/posts/2019-08-13-install-git-bash/ssh-executable.jpg)
+![choose ssh executable](/images/posts/2019-08-13-install-git-bash/ssh-executable.jpg)
 
 ## Step 10: Choosing HTTPS Transport Backend
 
 The installer will ask you to choose the SSL/TLS library for Git HTTPS connections. Proceed with the default option **Use the OpenSSL library** and click **Next**.
 
-![choose https transport backend](/assets/images/posts/2019-08-13-install-git-bash/choosing-https-transport.jpg)
+![choose https transport backend](/images/posts/2019-08-13-install-git-bash/choosing-https-transport.jpg)
 
 ## Step 11: Configuring the Line Ending Conversions
 
 In this step, you will be prompted to choose how Git should treat line endings in text files. Since you are on Windows system, go with the default option **Checkout Windows-Style, commit Unix-style line endings** and click **Next**.
 
-![configure line endings conversions](/assets/images/posts/2019-08-13-install-git-bash/configuring-line-endings.jpg)
+![configure line endings conversions](/images/posts/2019-08-13-install-git-bash/configuring-line-endings.jpg)
 
 ## Step 12: Configuring the Terminal Emulator to use with Git Bash
 
 Choose the terminal emulator you want Git Bash to use. MinTTY works well, so I would recommend you to proceed with the default option **Use MinTTY(the default terminal of MSYS2)** and click **Next**.
 
-![choose terminal emulator](/assets/images/posts/2019-08-13-install-git-bash/terminal-emulator.jpg)
+![choose terminal emulator](/images/posts/2019-08-13-install-git-bash/terminal-emulator.jpg)
 
 ## Step 13: Choosing the Default Behaviour of `git pull`
 
 In this step, the installer asks you if you want to change the default behaviour of `git pull`(a git command). Unless you know what you doing, proceed with the default option **Default (fast-forward or merge)** and click **Next**.
 
-![modify git pull behaviour](/assets/images/posts/2019-08-13-install-git-bash/modify-git-pull.jpg)
+![modify git pull behaviour](/images/posts/2019-08-13-install-git-bash/modify-git-pull.jpg)
 
 ## Step 14: Choosing a Credential Manager
 
 In this step, you will be asked to choose a credential manager. Proceed with the default option **Git Credential Manager Core** and click **Next**.
 
-![choose credential Manager](/assets/images/posts/2019-08-13-install-git-bash/choose-credentials-manager.jpg)
+![choose credential Manager](/images/posts/2019-08-13-install-git-bash/choose-credentials-manager.jpg)
 
 ## Step 15: Configuring Extra Options
 
 Select the features you want. I find the default options sufficient for my needs. You can proceed with them and click **Next**.
 
-![enable features](/assets/images/posts/2019-08-13-install-git-bash/extra-options.jpg)
+![enable features](/images/posts/2019-08-13-install-git-bash/extra-options.jpg)
 
 ## Step 16: Configuring Experimental Options
 
 If you are feeling adventurous, you can try new experimental features. I like to play it safe and I don't enable them, so I will proceed to start the installation process by clicking **Install**.
 
-![enable experimental options](/assets/images/posts/2019-08-13-install-git-bash/experimental-options.jpg)
+![enable experimental options](/images/posts/2019-08-13-install-git-bash/experimental-options.jpg)
 
 ## Step 17: Waiting for Git Bash to install
 
 In this step, you take a step back and wait for a few minutes for the Setup Wizard to install Git Bash on your computer.
 
-![Setup wizard](/assets/images/posts/2019-08-13-install-git-bash/installation.jpg)
+![Setup wizard](/images/posts/2019-08-13-install-git-bash/installation.jpg)
 
 ## Step 18: Completing the Installation
 
 After the installation has finished, select **Launch Git Bash** and click **Finish** to launch Git Bash.
 
-![finish installation](/assets/images/posts/2019-08-13-install-git-bash/complete-installation.jpg)
+![finish installation](/images/posts/2019-08-13-install-git-bash/complete-installation.jpg)
 
 The Git Bash terminal will now open and you will be able to enter Git and Bash commands.
 
-![git bash opened](/assets/images/posts/2019-08-13-install-git-bash/launch-git-bash.jpg)
+![git bash opened](/images/posts/2019-08-13-install-git-bash/launch-git-bash.jpg)
 
 Congratulations on successfully installing Git Bash.
 
@@ -196,11 +196,11 @@ The following are just some tips on how you can easily launch Git Bash.
 
 **1.** Right-click on any folder, anywhere and it will have the launch Git Bash option on the context menu.
 
-![folder context](/assets/images/posts/2019-08-13-install-git-bash/folder-context.jpg)
+![folder context](/images/posts/2019-08-13-install-git-bash/folder-context.jpg)
 
 **2.** If you enabled the "Additional icons" option on **Step 4**, you can easily launch Git Bash by clicking the Git Bash desktop icon.
 
-![git bash shortcut](/assets/images/posts/2019-08-13-install-git-bash/git-bash-shortcut.jpg)
+![git bash shortcut](/images/posts/2019-08-13-install-git-bash/git-bash-shortcut.jpg)
 
 As mentioned in **Step 7**, you will be able to run Git commands on Git bash terminal, Windows Command Prompt, and Powershell.
 
@@ -212,9 +212,9 @@ Quickly, lets verify that Git works on **CMD** and **PowerShell** by typing the 
 
 `git --version` tells you the Git version currently installed on your system.
 
-![git bash cmd](/assets/images/posts/2019-08-13-install-git-bash/git-works-cmd.jpg)
+![git bash cmd](/images/posts/2019-08-13-install-git-bash/git-works-cmd.jpg)
 
-![git bash cmd](/assets/images/posts/2019-08-13-install-git-bash/git-works-powershell.jpg)
+![git bash cmd](/images/posts/2019-08-13-install-git-bash/git-works-powershell.jpg)
 
 ## Conclusion
 

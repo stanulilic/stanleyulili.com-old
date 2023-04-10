@@ -1,7 +1,7 @@
 ---
 header:
- teaser: /assets/images/posts/2019-10-17-introduction-to-arrow-functions/featured-image.jpg
-feature_image: /assets/images/posts/2019-10-17-introduction-to-arrow-functions/featured-image.jpg
+  teaser: /images/posts/2019-10-17-introduction-to-arrow-functions/featured-image.jpg
+feature_image: /images/posts/2019-10-17-introduction-to-arrow-functions/featured-image.jpg
 featured_image_alt: featured-image
 excerpt: In this tutorial, you will learn how to write arrow functions, how `this` works in arrow functions, and when to use or avoid arrow functions.
 
@@ -10,12 +10,12 @@ categories:
 tags:
   - javascript
 title: "An Introduction to Arrow Functions and Lexical 'this'"
-date: '2019-10-17'
+date: "2019-10-17"
 ---
 
 ## Introduction
 
-The introduction of ECMAScript(ES6)  brought a lot of features that JavaScript developers loved. One of the most popular ES6 features is **Arrow functions**. Arrow functions provide an alternative concise syntax to the regular function expressions.
+The introduction of ECMAScript(ES6) brought a lot of features that JavaScript developers loved. One of the most popular ES6 features is **Arrow functions**. Arrow functions provide an alternative concise syntax to the regular function expressions.
 
 In this tutorial, you will learn how to write arrow functions, how `this` works in arrow functions, and when to use or avoid arrow functions.
 
@@ -35,7 +35,7 @@ Let's take a look at a regular function:
 
 ```javascript
 const sayName = function (name) {
- console.log("Your name is " + name);
+  console.log("Your name is " + name);
 };
 ```
 
@@ -66,7 +66,7 @@ Regular function:
 
 ```javascript
 var add = function () {
- return 2 + 3;
+  return 2 + 3;
 };
 
 add(); // 5
@@ -76,7 +76,7 @@ To turn it into an arrow function, remove the `function` keyword and add a fat a
 
 ```javascript
 var add = () => {
- return 2 + 3;
+  return 2 + 3;
 };
 
 add(); // 5
@@ -110,7 +110,7 @@ Regular function:
 
 ```javascript
 var add = function (x) {
- return 2 + x;
+  return 2 + x;
 };
 
 add(3); // 5
@@ -122,7 +122,7 @@ Arrow function with one parameter.
 
 ```javascript
 var add = (x) => {
- return 2 + x;
+  return 2 + x;
 };
 
 add(3); // 5
@@ -139,7 +139,7 @@ add(3); // 5
 When you have **only one** parameter, you can also omit the parentheses:
 
 ```javascript
-var add = x => 2 + x;
+var add = (x) => 2 + x;
 
 add(3); // 5
 ```
@@ -152,7 +152,7 @@ Regular function with two parameters.
 
 ```javascript
 var add = function (x, y) {
- return x + y;
+  return x + y;
 };
 
 add(2, 3); // 5
@@ -176,9 +176,9 @@ Regular function:
 
 ```javascript
 var person = function () {
- return {
- age: 23,
- name: "stanley",
+  return {
+    age: 23,
+    name: "stanley",
   };
 };
 
@@ -200,6 +200,7 @@ var person = () => {age: 23, name: 'stanley'};
 
 person() // Uncaught SyntaxError: Unexpected token :
 ```
+
 The console throws an error because the interpreter thinks that the curly braces are the function's body, and the code inside the curly braces are statements.
 
 ## Arrow functions and lexical `this`
@@ -228,8 +229,8 @@ Before I go into more details, let's review what happens when you define and use
 var x = 4;
 
 function showNumber() {
- var x = 5;
- console.log(x);
+  var x = 5;
+  console.log(x);
 }
 
 showNumber(); // 5
@@ -243,7 +244,7 @@ Now let us remove the x variable inside the function and see what happens:
 var x = 4;
 
 function showNumber() {
- console.log(x);
+  console.log(x);
 }
 
 showNumber(); // 4
@@ -261,24 +262,24 @@ We can see how this behavior properly by using practical examples. We will compa
 
 ```javascript
 var person = {
- name: "stanley",
- sayName: function () {
- console.log(this.name);
+  name: "stanley",
+  sayName: function () {
+    console.log(this.name);
   },
 };
 
 person.sayName(); // stanley
 ```
 
-When the method `sayName()` is invoked, it logs `stanley` because `this` points to the object calling the method 'sayName()` which is `person`.
+When the method `sayName()` is invoked, it logs `stanley` because `this` points to the object calling the method 'sayName()`which is`person`.
 
 Now, compare `this` in an arrow function:
 
 ```javascript
 var person = {
- name: "stanley",
- sayName: () => {
- console.log(this.name);
+  name: "stanley",
+  sayName: () => {
+    console.log(this.name);
   },
 };
 
@@ -289,9 +290,9 @@ If you run the code, you will see that no output is shown. Let's check why by lo
 
 ```javascript
 var person = {
- name: "stanley",
- sayName: () => {
- console.log(this);
+  name: "stanley",
+  sayName: () => {
+    console.log(this);
   },
 };
 
@@ -304,7 +305,7 @@ The answer is when you create an object, `this` is automatically defined and it 
 
 ```javascript
 var person = {
- whatIsThis: this,
+  whatIsThis: this,
 };
 person.whatIsThis; // Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
 ```
@@ -315,9 +316,9 @@ So continuing with the previous example:
 
 ```javascript
 var person = {
- name: "stanley",
- sayName: () => {
- console.log(this);
+  name: "stanley",
+  sayName: () => {
+    console.log(this);
   },
 };
 person.sayName();
@@ -327,7 +328,7 @@ When we called the method `sayName()`, it checks in the sayName() method scope i
 
 It then looks in the enclosing scope which in our case is the `person` object. It finds `this` there which has been defined by the object and it points to the window object, and it uses it and stops looking.
 
-That's why we got the output showing that  `this` points to the `window` object.
+That's why we got the output showing that `this` points to the `window` object.
 
 Let's look at a **second example**, you can use Codepen or your favorite text editor to follow along.
 
@@ -336,14 +337,14 @@ Create an `index.html` file and paste the following code:
 ```html
 <!DOCTYPE html>
 <html lang="en">
- <head>
- <meta charset="UTF-8" />
- <title>this - javascript</title>
- </head>
- <body>
- <a id="btn" href="#">Click Me</a>
- <script src="main.js"></script>
- </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>this - javascript</title>
+  </head>
+  <body>
+    <a id="btn" href="#">Click Me</a>
+    <script src="main.js"></script>
+  </body>
 </html>
 ```
 
@@ -355,7 +356,7 @@ Create 'main.js' and put the following code:
 const btn = document.getElementById("btn");
 
 btn.addEventListener("click", function () {
- console.log(this);
+  console.log(this);
 });
 ```
 
@@ -377,7 +378,7 @@ Let's now see what happens we pass an arrow function into the event listener:
 
 ```javascript
 btn.addEventListener("click", () => {
- console.log(this);
+  console.log(this);
 });
 ```
 
@@ -396,8 +397,8 @@ A `setTimeout()` is a window method that calls a function once after a specified
 
 ```javascript
 btn.addEventListener("click", function () {
- setTimeout(function () {
- console.log(this);
+  setTimeout(function () {
+    console.log(this);
   }, 1000);
 });
 ```
@@ -416,8 +417,8 @@ The previous example could also be rewritten like this and it will show the same
 
 ```javascript
 btn.addEventListener("click", function () {
- window.setTimeout(function () {
- console.log(this);
+  window.setTimeout(function () {
+    console.log(this);
   }, 1000);
 });
 ```
@@ -428,8 +429,8 @@ Lets now convert the `setTimeout` regular function into the an arrow function. W
 
 ```javascript
 btn.addEventListener("click", function () {
- setTimeOut(() => {
- console.log(this);
+  setTimeOut(() => {
+    console.log(this);
   }, 1000);
 });
 ```
@@ -464,7 +465,7 @@ Arrow functions are frequently used with Array methods like filter, forEach, Map
 var numbers = [1, 2, 3, 4];
 
 numbers.map(function (num) {
- return num * 2;
+  return num * 2;
 });
 
 // [2, 4, 6, 8]
@@ -490,13 +491,13 @@ Lets see the Fetch API with a regular function:
 const url = "url comes here";
 fetch(url)
   .then(function (res) {
- return res.json();
+    return res.json();
   })
   .then(function (data) {
- console.log(data);
+    console.log(data);
   })
   .catch(function (e) {
- console.log(error);
+    console.log(error);
   });
 ```
 
@@ -513,6 +514,7 @@ fetch(url)
 With an arrow function, our code is much shorter and readable.
 
 ## When to avoid arrow functions
+
 Arrow functions can significantly improve the readability of your code. Though it comes with a lot of benefits, there are situations where using arrow functions can lead to problems.
 
 ### When you need to use `this` in an event listener
@@ -525,7 +527,7 @@ So in cases where you need to to use `this` in an event listener, it is better t
 const btn = document.getElementById("btn");
 
 btn.addEventListener("click", function () {
- this.innerHTML = "you clicked me";
+  this.innerHTML = "you clicked me";
 });
 ```
 
@@ -535,7 +537,7 @@ On a side note, you can still access the element that an event listener is attac
 const btn = document.getElementById("btn");
 
 btn.addEventListener("click", (event) => {
- target = event.target;
+  target = event.target;
   target.innerHTML = "you clicked me";
 });
 ```

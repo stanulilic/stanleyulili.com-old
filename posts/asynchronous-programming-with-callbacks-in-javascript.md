@@ -1,7 +1,7 @@
 ---
 header:
-  teaser: /assets/images/posts/javascript-featured-image/featured-image.jpg
-feature_image: /assets/images/posts/javascript-featured-image/featured-image.jpg
+  teaser: /images/posts/javascript-featured-image/featured-image.jpg
+feature_image: /images/posts/javascript-featured-image/featured-image.jpg
 featured_image_alt: featured-image
 categories:
   - Javascript

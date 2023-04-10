@@ -1,7 +1,7 @@
 ---
 header:
-  teaser: /assets/images/posts/node-featured-image/featured-image.jpg
-feature_image: /assets/images/posts/node-featured-image/featured-image.jpg
+  teaser: /images/posts/node-featured-image/featured-image.jpg
+feature_image: /images/posts/node-featured-image/featured-image.jpg
 featured_image_alt: featured-image
 categories:
   - node
@@ -10,7 +10,7 @@ tags:
   - javascript
 excerpt: In this tutorial, you will learn how to create Node.js modules. You will also learn how to include functions defined in one file and use them in another file.
 title: "Node.js Modules: Import and use Functions from Another File"
-date: '2020-03-26'
+date: "2020-03-26"
 ---
 
 ## introduction
