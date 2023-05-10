@@ -121,7 +121,7 @@ google-site-verification: "a7bVs9AJyBUrtI7ohUE8S7yS00QUUppjNJBMn0pfRUs"
 analytics:
   provider: "google"
   google:
-    tracking_id: UA-130192148-2
+    tracking_id: G-QZ1ERQ0TJ6
 
 # Social Sharing
 twitter:
