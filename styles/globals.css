@@ -320,8 +320,28 @@ p code {
   margin-top: 0;
   border-radius: unset;
 }
+.post-content pre.custom_prefix {
+  color: #fff;
+  border-radius: 16px;
+  display: block;
+  margin: 1em 0;
+  overflow: auto;
+  overflow-wrap: normal;
+  padding: 1em;
+  white-space: normal;
+  word-wrap: normal;
+}
 .post-content pre.command {
-  padding: 1rem;
+  /* background: #081b4b; */
+  color: #fff;
+  border-radius: 16px;
+  display: block;
+  margin: 1em 0;
+  overflow: auto;
+  overflow-wrap: normal;
+  padding: 1em;
+  white-space: normal;
+  word-wrap: normal;
 }
 .post-content pre.command code {
   white-space: unset;
@@ -346,6 +366,10 @@ p code {
 .post-content pre.command li::marker,
 .post-content pre.custom_prefix li::marker {
   content: "";
+}
+.post-content pre.prefixed.line_numbers code ol li:before {
+  border-right: 1px solid hsla(0, 0%, 100%, 0.5);
+  padding-right: 5px;
 }
 .post-content ul {
   list-style: disc;
