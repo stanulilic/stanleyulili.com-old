@@ -13,6 +13,7 @@ import NextLink from "next/link";
 import { getAllPostIds, getPostData } from "../../lib/blog-posts";
 import Head from "next/head";
 import Date from "../../components/date";
+import StructuredData from "../../components/StructuredData";
 import Footer from "../../components/footer";
 import { Subscribe } from "../../components/subscribe";
 import AuthorBio from "../../components/bio";
@@ -45,6 +46,21 @@ export default function Post({ postData }) {
     prism.highlightAll();
   }, []);
   */
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: postData?.title,
+    description: postData?.excerpt,
+    author: [
+      {
+        "@type": "Person",
+        name: "Stanley Ulili",
+      },
+    ],
+    image: postData?.feature_image,
+    datePublished: postData?.date,
+  };
+
   function useNextImageComponent(imagePath, width, height) {
     return ReactDOMServer.renderToString(
       <Image
@@ -68,6 +84,7 @@ export default function Post({ postData }) {
     }
   };
   const contentHtml = md.render(postData.contentMD);
+
   return (
     <Layout>
       <Head>
@@ -76,6 +93,7 @@ export default function Post({ postData }) {
           <link rel="canonical" href={postData.canonicalUrl} key="canonical" />
         )}
       </Head>
+      <StructuredData data={structuredData} />
       <article>
         <header>
           <div className="wrapper">
