@@ -11,6 +11,7 @@ tags:
 title: "Updated Styling that you should use to test"
 excerpt: tested article that is just
 date: "2023-05-26"
+canonicalUrl: "https://www.digitalocean.com/community/tutorials/how-to-use-editors-regex-and-hooks-with-z-shell"
 ---
 
 # Title Header (H1 header)

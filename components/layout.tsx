@@ -26,6 +26,7 @@ export default function Layout(props) {
         <link
           rel="canonical"
           href={`https://www.stanleyulili.com${router.asPath}`}
+          key="canonical"
         />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Stanley Ulili" />

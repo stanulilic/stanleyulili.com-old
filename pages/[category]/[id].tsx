@@ -72,6 +72,9 @@ export default function Post({ postData }) {
     <Layout>
       <Head>
         <title>{postData.title}</title>
+        {postData.canonicalUrl && (
+          <link rel="canonical" href={postData.canonicalUrl} key="canonical" />
+        )}
       </Head>
       <article>
         <header>
