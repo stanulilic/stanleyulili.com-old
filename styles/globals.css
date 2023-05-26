@@ -314,11 +314,14 @@ p code {
   border-left: 1px solid var(--text-color);
   border-radius: 16px 16px 0 0;
   border-right: 1px solid var(--text-color);
+  font-size: 14px;
 }
+
 
 .post-content pre[class*="language-"] {
   margin-top: 0;
   border-radius: unset;
+  font-size: 14px;
 }
 .post-content pre.custom_prefix {
   color: #fff;
@@ -331,6 +334,38 @@ p code {
   white-space: normal;
   word-wrap: normal;
 }
+
+.post-content ol{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.post-content pre.prefixed code ol li:before {
+  content: attr(data-prefix);
+  display: inline-block;
+  margin: 0 10px 0 5px;
+  text-align: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.post-content .environment-second.prefixed.line_numbers code ol li:before {
+  border-right-color: rgb(245 245 245);
+}
+
+.post-content pre.environment-second code, .post-content pre.environment-second.prefixed code ol li:before {
+  color: #f5f5f5;
+}
+
+.post-content pre.prefixed.line_numbers code ol li:before {
+  border-right: 1px solid hsla(0,0%,100%,.5);
+  padding-right: 5px;
+}
+.post-content pre.prefixed.line_numbers code ol li {
+  margin: 0 0 0 -5px;
+}
+
 .post-content pre.command {
   /* background: #081b4b; */
   color: #fff;
@@ -346,6 +381,11 @@ p code {
 .post-content pre.command code {
   white-space: unset;
 }
+
+.post-content pre ol {
+  margin-bottom: 0;
+}
+
 .post-content pre.command code ol,
 .post-content pre.custom_prefix code ol {
   margin-bottom: 0;
@@ -461,6 +501,8 @@ p code {
   column-gap: 20px;
   flex-wrap: wrap;
 }
+
+/*
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -471,3 +513,4 @@ p code {
     background: black;
   }
 }
+*/
