@@ -41,6 +41,7 @@ ul {
   margin: 0;
   list-style: none;
 }
+
 table {
   border: 1px solid var(--link-text);
   border-collapse: separate;
@@ -54,6 +55,7 @@ table {
   overflow-x: auto;
   width: 100%;
 }
+
 .wrapper {
   max-width: var(--content-width);
   margin-right: auto;
@@ -80,7 +82,8 @@ table {
 
 .header_nav {
   margin-top: 0.5rem;
-  padding-bottom: 9px; /* unset this on desktop */
+  padding-bottom: 9px;
+  /* unset this on desktop */
 }
 
 .header_nav_ul {
@@ -96,6 +99,7 @@ table {
   margin-right: 1.5rem;
   border-bottom: 2px solid transparent;
 }
+
 .header_nav_ul a:hover {
   border-bottom: 2px solid var(--link-color);
 }
@@ -163,6 +167,7 @@ table {
     margin: 1.5rem auto 0;
 */
 }
+
 @media screen and (min-width: 800px) {
   .hero {
     display: flex;
@@ -204,8 +209,10 @@ table {
 }
 
 .article {
-  border-bottom: 1px solid var(--border-bottom-color); /* unset this on larger divices */
+  border-bottom: 1px solid var(--border-bottom-color);
+  /* unset this on larger divices */
 }
+
 .article a {
   display: block;
   color: var(--text-color);
@@ -217,12 +224,14 @@ table {
 }
 
 .article h3 {
-  font-size: 1rem; /* remember to unset this */
+  font-size: 1rem;
+  /* remember to unset this */
 }
 
 .article time {
   font-size: 0.8rem;
 }
+
 .article_row .new_article {
   display: block;
   background: #b9efa5;
@@ -304,6 +313,8 @@ p code {
   border: 1px solid #c7c7c7;
   padding: 3px;
 }
+
+
 .post-content .code-label {
   display: block;
   padding: 0.5rem 1rem;
@@ -323,6 +334,13 @@ p code {
   border-radius: unset;
   font-size: 14px;
 }
+
+.post-content  pre.prefixed code ol li {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+}
+
 .post-content pre.custom_prefix {
   color: #fff;
   border-radius: 16px;
@@ -335,11 +353,19 @@ p code {
   word-wrap: normal;
 }
 
-.post-content ol{
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.post-content pre.prefixed code {
+  white-space: normal;
 }
+.post-content mark {
+  background: rgba(242, 201, 76, .35);
+  border-radius: 8px;
+  color: inherit;
+  display: inline;
+  line-height: calc(1.4em + 1px);
+  padding: 0 2px;
+  border: none;
+}
+
 .post-content pre.prefixed code ol li:before {
   content: attr(data-prefix);
   display: inline-block;
@@ -350,18 +376,27 @@ p code {
   -ms-user-select: none;
   user-select: none;
 }
+
 .post-content .environment-second.prefixed.line_numbers code ol li:before {
   border-right-color: rgb(245 245 245);
 }
 
-.post-content pre.environment-second code, .post-content pre.environment-second.prefixed code ol li:before {
+.post-content pre.environment-second code,
+.post-content pre.environment-second.prefixed code ol li:before {
   color: #f5f5f5;
 }
 
+.post-content pre.environment-second.prefixed code ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .post-content pre.prefixed.line_numbers code ol li:before {
-  border-right: 1px solid hsla(0,0%,100%,.5);
+  border-right: 1px solid hsla(0, 0%, 100%, .5);
   padding-right: 5px;
 }
+
 .post-content pre.prefixed.line_numbers code ol li {
   margin: 0 0 0 -5px;
 }
@@ -378,6 +413,7 @@ p code {
   white-space: normal;
   word-wrap: normal;
 }
+
 .post-content pre.command code {
   white-space: unset;
 }
@@ -391,6 +427,7 @@ p code {
   margin-bottom: 0;
   margin-left: -2rem;
 }
+
 .post-content pre.command code ol li:before,
 .post-content pre.custom_prefix code ol li:before {
   content: attr(data-prefix);
@@ -404,16 +441,19 @@ p code {
 }
 
 .post-content pre.command li::marker,
-.post-content pre.custom_prefix li::marker {
+.post-content pre.custom_prefix li::marker, .post-content .prefixed.line_numbers li::marker{
   content: "";
 }
+
 .post-content pre.prefixed.line_numbers code ol li:before {
   border-right: 1px solid hsla(0, 0%, 100%, 0.5);
   padding-right: 5px;
 }
+
 .post-content ul {
   list-style: disc;
 }
+
 .post-content ol,
 .post-content p,
 .post-content ul {
@@ -445,6 +485,7 @@ p code {
   width: 100%;
   height: 100%;
 }
+
 .subscribe {
   margin: 5rem auto 3rem;
   padding: 3rem 1rem;
@@ -480,9 +521,11 @@ p code {
 .footer a {
   color: var(--text-color);
 }
+
 .footer-social-icons {
   margin-bottom: 20px;
 }
+
 .footer-social-icons ul {
   display: flex;
   flex-wrap: wrap;
@@ -493,9 +536,11 @@ p code {
   width: 30px;
   height: 30px;
 }
+
 .footer-links {
   margin-bottom: 10px;
 }
+
 .footer-links ul {
   display: flex;
   column-gap: 20px;
