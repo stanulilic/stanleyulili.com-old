@@ -70,19 +70,21 @@ async function getPostsWithPageViews() {
   return allPosts;
 }
 
-export async function getRecentPosts() {
+export async function getAllPostsSortedByDate() {
   const allPostsData = await getPostsFromFiles();
-  return allPostsData
-    .sort(({ date: a }, { date: b }) => {
-      if (a < b) {
-        return 1;
-      } else if (a > b) {
-        return -1;
-      } else {
-        return 0;
-      }
-    })
-    .slice(0, 6);
+  return allPostsData.sort(({ date: a }, { date: b }) => {
+    if (a < b) {
+      return 1;
+    } else if (a > b) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+}
+export async function getRecentPosts() {
+  const recentPosts = await getAllPostsSortedByDate();
+  return recentPosts.slice(0, 6);
 }
 
 export async function getPopularPosts() {
@@ -117,6 +119,19 @@ export function getAllPostIds() {
       },
     };
   });
+}
+
+export function getAllPostCategories() {
+  const filenames = getAllPostIds();
+  const categoriesCount = filenames
+    .flatMap((singlePost) => singlePost.params.category)
+    .filter(Boolean)
+    .reduce((prev, curr) => ({ ...prev, [curr]: (prev[curr] || 0) + 1 }), {});
+  const categories = [];
+  for (const [key, value] of Object.entries(categoriesCount)) {
+    categories.push({ category: key, category_count: value });
+  }
+  return categories;
 }
 
 export async function getPostData(id) {

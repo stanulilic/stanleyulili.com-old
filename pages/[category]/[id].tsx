@@ -12,7 +12,7 @@ import Layout from "../../components/layout";
 import NextLink from "next/link";
 import { getAllPostIds, getPostData } from "../../lib/blog-posts";
 import Head from "next/head";
-import Date from "../../components/date";
+import ParseDate from "../../components/date";
 import StructuredData from "../../components/StructuredData";
 import Footer from "../../components/footer";
 import { Subscribe } from "../../components/subscribe";
@@ -99,10 +99,11 @@ export default function Post({ postData }) {
           <div className="wrapper">
             <h1 className="">{postData.title}</h1>
             <div className="post-author">
-              By Stanley Ulili on <Date dateString={postData.date} />
+              By Stanley Ulili on <ParseDate dateString={postData.date} />
               {postData.last_modified_at && (
                 <span>
-                  (Updated on <Date dateString={postData.last_modified_at} />)
+                  (Updated on{" "}
+                  <ParseDate dateString={postData.last_modified_at} />)
                 </span>
               )}
             </div>
